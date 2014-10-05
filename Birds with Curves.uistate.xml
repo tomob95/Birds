@@ -13,6 +13,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout>Layout 1</layout>
         <layout active="1">Character Select</layout>
         <event-sheet>Event sheet 1</event-sheet>
+        <event-sheet>Character Select</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

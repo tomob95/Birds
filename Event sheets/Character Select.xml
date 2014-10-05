@@ -2,5 +2,114 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Character Select</name>
-    <events />
+    <events>
+        <event-block sid="7339091312495129">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="8114809497700916" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-group collapsed="1" description="" sid="9769817174690205" title="Wings">
+                    <sub-events>
+                        <event-block sid="995792938787379">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="4376580960077821" type="SliderBar">
+                                    <param id="0" name="Unique ID">16</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="4301440173124526" type="Sprite6">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">SliderBar.Value</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2706533918414427">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="2771803251420238" type="SliderBar">
+                                    <param id="0" name="Unique ID">17</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="2656247266153855" type="Sprite6">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">SliderBar.Value</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1724028930201878">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="9778863640685975" type="SliderBar">
+                                    <param id="0" name="Unique ID">18</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="8642297309143177" type="Sprite6">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">SliderBar.Value</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="2854104123740365" title="Body">
+                    <sub-events>
+                        <event-block sid="995792938787379">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="4376580960077821" type="SliderBar">
+                                    <param id="0" name="Unique ID">24</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="4301440173124526" type="Sprite7">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">SliderBar.Value</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2706533918414427">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="2771803251420238" type="SliderBar">
+                                    <param id="0" name="Unique ID">25</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="2656247266153855" type="Sprite7">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">SliderBar.Value</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1724028930201878">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="9778863640685975" type="SliderBar">
+                                    <param id="0" name="Unique ID">26</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="8642297309143177" type="Sprite7">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">SliderBar.Value</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-block>
+        <event-block sid="8645862646907389">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="8827733166951935" type="System" />
+            </conditions>
+            <actions>
+                <action id="-24" name="Move to top" sid="2068976556603309" type="Sprite6" />
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>

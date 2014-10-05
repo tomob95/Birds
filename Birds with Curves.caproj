@@ -15,6 +15,7 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="sliderbar" version="1">Slider bar</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
@@ -23,7 +24,9 @@
         <behavior author="Scirra" id="shadowcaster" version="1">Shadow Caster</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Scirra" id="tint">Tint</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -33,6 +36,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>Character Select</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -130,7 +134,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="Player2">
+        <object-folder expanded="0" name="Player2">
             <object-type name="Bird2" sid="9117859277070366">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -196,6 +200,104 @@
                                 <point x="0.875427" y="0.504823" />
                                 <point x="0.994143" y="0.582788" />
                                 <point x="0.860421" y="0.679684" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder expanded="1" name="Beaks" />
+        <object-folder expanded="1" name="Birds">
+            <object-type name="Bird3" sid="18494087806831">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="SpawnX" sid="7495735709737053" type="number" />
+                    <instance-variable name="SpawnY" sid="8918400361862806" type="number" />
+                    <instance-variable name="Dead" sid="390845584387175" type="number" />
+                    <instance-variable name="Respawn" sid="4917427152006735" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Physics" sid="5423460373932798">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="LineOfSight" sid="3368682300923839">
+                        <behavior id="LOS" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4174399021149784" speed="5">
+                        <frame duration="1" hotspotX="0.508475" hotspotY="0.511864">
+                            <collision-poly>
+                                <point x="0.153735" y="0.499738" />
+                                <point x="0.316735" y="0.225161" />
+                                <point x="0.538913" y="0.15228" />
+                                <point x="0.748308" y="0.242958" />
+                                <point x="0.856007" y="0.4455" />
+                                <point x="0.840082" y="0.76782" />
+                                <point x="0.554541" y="0.853711" />
+                                <point x="0.171087" y="0.727572" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.508475" hotspotY="0.511864">
+                            <collision-poly>
+                                <point x="0.153735" y="0.499738" />
+                                <point x="0.316735" y="0.225161" />
+                                <point x="0.538913" y="0.15228" />
+                                <point x="0.748308" y="0.242958" />
+                                <point x="0.856007" y="0.4455" />
+                                <point x="0.840082" y="0.76782" />
+                                <point x="0.554541" y="0.853711" />
+                                <point x="0.171087" y="0.727572" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Sprite7" sid="2177233607233221">
+                <plugin id="Sprite" />
+                <effects>
+                    <effect-type name="Tint">
+                        <effect id="tint" />
+                    </effect-type>
+                </effects>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7765655689333595" speed="5">
+                        <frame duration="1" hotspotX="0.501272" hotspotY="0.501272" original-source="C:\Users\Tom\Documents\GitHub\Birds\Sprites\Body\001.png">
+                            <collision-poly>
+                                <point x="0.29771" y="0.356234" />
+                                <point x="0.501272" y="0.307888" />
+                                <point x="0.709923" y="0.384224" />
+                                <point x="0.796438" y="0.615776" />
+                                <point x="0.709924" y="0.821883" />
+                                <point x="0.483461" y="0.903308" />
+                                <point x="0.267176" y="0.791349" />
+                                <point x="0.19084" y="0.580152" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder expanded="1" name="Wings">
+            <object-type name="Sprite6" sid="3866412677305234">
+                <plugin id="Sprite" />
+                <effects>
+                    <effect-type name="Tint">
+                        <effect id="tint" />
+                    </effect-type>
+                </effects>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9991359577232463" speed="5">
+                        <frame duration="1" hotspotX="0.501272" hotspotY="0.501272" original-source="C:\Users\Tom\Documents\GitHub\Birds\Sprites\Wing\001.png">
+                            <collision-poly>
+                                <point x="0.180661" y="0.0203563" />
+                                <point x="0.386769" y="0.198473" />
+                                <point x="0.580153" y="0.323155" />
+                                <point x="0.592875" y="0.414759" />
+                                <point x="0.519084" y="0.496183" />
+                                <point x="0.468193" y="0.470738" />
+                                <point x="0.221375" y="0.526717" />
+                                <point x="0.0992366" y="0.477099" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -281,6 +383,33 @@
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4891007977884456" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\MDS\GAD1J01 Game Design Principles\MakeAGame\Sprites\blob.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SliderBar" sid="7786532646021948">
+            <plugin id="sliderbar" />
+        </object-type>
+        <object-type name="Sprite5" sid="4391783274862726">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8948187617378858" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite8" sid="6909893694869558">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6514902375587671" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite9" sid="2111675586470794">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4479020351330856" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
