@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Birds with Curves</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>avcr6oze7now</unique-id>
+    <saved-with-version>17800</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="shadowcaster" version="1">Shadow Caster</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1680</width>
+        <height>1050</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D web</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder expanded="1">
+        <object-folder expanded="1" name="Player1">
+            <object-type name="Bird1" sid="6683662234493325">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="SpawnX" sid="6138419981287579" type="number" />
+                    <instance-variable name="SpawnY" sid="6416375931573181" type="number" />
+                    <instance-variable name="Dead" sid="1658454556490729" type="number" />
+                    <instance-variable name="Respawn" sid="1054496467809022" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Physics" sid="1651999204937736">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="LineOfSight" sid="4474626565495766">
+                        <behavior id="LOS" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>Bird1</type>
+                    <type>Beak1</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6487522195283188" speed="5">
+                        <frame duration="1" hotspotX="0.508475" hotspotY="0.511864">
+                            <collision-poly>
+                                <point x="0.153735" y="0.499738" />
+                                <point x="0.316735" y="0.225161" />
+                                <point x="0.538913" y="0.15228" />
+                                <point x="0.748308" y="0.242958" />
+                                <point x="0.856007" y="0.4455" />
+                                <point x="0.840082" y="0.76782" />
+                                <point x="0.554541" y="0.853711" />
+                                <point x="0.171087" y="0.727572" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.508475" hotspotY="0.511864">
+                            <collision-poly>
+                                <point x="0.153735" y="0.499738" />
+                                <point x="0.316735" y="0.225161" />
+                                <point x="0.538913" y="0.15228" />
+                                <point x="0.748308" y="0.242958" />
+                                <point x="0.856007" y="0.4455" />
+                                <point x="0.840082" y="0.76782" />
+                                <point x="0.554541" y="0.853711" />
+                                <point x="0.171087" y="0.727572" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Beak1" sid="5079130925783663">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="8257540209032237">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                    <behavior-type name="Solid" sid="7139577419857569">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>Bird1</type>
+                    <type>Beak1</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8133692581434725" speed="5">
+                        <frame duration="1" hotspotX="0.508475" hotspotY="0.511864">
+                            <collision-poly>
+                                <point x="0.819837" y="0.642111" />
+                                <point x="0.801625" y="0.590678" />
+                                <point x="0.818187" y="0.544784" />
+                                <point x="0.875427" y="0.504823" />
+                                <point x="0.994143" y="0.582788" />
+                                <point x="0.860421" y="0.679684" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder expanded="1" name="Player2">
+            <object-type name="Bird2" sid="9117859277070366">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="SpawnX" sid="5393566088856391" type="number" />
+                    <instance-variable name="SpawnY" sid="3632137976972417" type="number" />
+                    <instance-variable name="Dead" sid="9449720809780503" type="number" />
+                    <instance-variable name="Respawn" sid="4472513963725938" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Physics" sid="7369527083188939">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="LineOfSight" sid="6001112120072639">
+                        <behavior id="LOS" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="843427529653481" speed="5">
+                        <frame duration="1" hotspotX="0.508475" hotspotY="0.511864">
+                            <collision-poly>
+                                <point x="0.153735" y="0.499738" />
+                                <point x="0.316735" y="0.225161" />
+                                <point x="0.538913" y="0.15228" />
+                                <point x="0.748308" y="0.242958" />
+                                <point x="0.856007" y="0.4455" />
+                                <point x="0.840082" y="0.76782" />
+                                <point x="0.554541" y="0.853711" />
+                                <point x="0.171087" y="0.727572" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.508475" hotspotY="0.511864">
+                            <collision-poly>
+                                <point x="0.153735" y="0.499738" />
+                                <point x="0.316735" y="0.225161" />
+                                <point x="0.538913" y="0.15228" />
+                                <point x="0.748308" y="0.242958" />
+                                <point x="0.856007" y="0.4455" />
+                                <point x="0.840082" y="0.76782" />
+                                <point x="0.554541" y="0.853711" />
+                                <point x="0.171087" y="0.727572" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Beak2" sid="1149907401462546">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="2951131042070298">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                    <behavior-type name="ShadowCaster" sid="1485560026038163">
+                        <behavior id="shadowcaster" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5317419482257099" speed="5">
+                        <frame duration="1" hotspotX="0.508475" hotspotY="0.511864">
+                            <collision-poly>
+                                <point x="0.819837" y="0.642111" />
+                                <point x="0.801625" y="0.590678" />
+                                <point x="0.818187" y="0.544784" />
+                                <point x="0.875427" y="0.504823" />
+                                <point x="0.994143" y="0.582788" />
+                                <point x="0.860421" y="0.679684" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="Sprite2" sid="1826255207031328">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="8165986285441687">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8283591567284025" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\MDS\GAD1J01 Game Design Principles\MakeAGame\Sprites\ball.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="3468836939450099">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Sprite3" sid="2381928140816954">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="442344945494774">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4735180336746371" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.192" y="0.176" />
+                            <point x="0.408" y="0.06" />
+                            <point x="0.648" y="0.168" />
+                            <point x="0.668" y="0.372" />
+                            <point x="0.472" y="0.708" />
+                            <point x="0.352" y="0.708" />
+                            <point x="0.16" y="0.38" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Scores" sid="5168464840623875">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Particles" sid="4932510247084087">
+            <plugin id="Particles" />
+            <texture original-source="F:\MDS\GAD1J01 Game Design Principles\MakeAGame\Sprites\feather.png" />
+        </object-type>
+        <object-type name="Sprite" sid="489327409853344">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="7306517657798283">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9918247695748797" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\MDS\GAD1J01 Game Design Principles\MakeAGame\Sprites\ball.png">
+                        <collision-poly>
+                            <point x="0.148" y="0.148" />
+                            <point x="0.5" y="0.004" />
+                            <point x="0.848" y="0.152" />
+                            <point x="0.984" y="0.5" />
+                            <point x="0.84" y="0.84" />
+                            <point x="0.5" y="0.984" />
+                            <point x="0.152" y="0.848" />
+                            <point x="0.004" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground" sid="3176057606732628">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Sprite4" sid="3127681685528907">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4891007977884456" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\MDS\GAD1J01 Game Design Principles\MakeAGame\Sprites\blob.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder expanded="1">
+        <layout>Layout 1.xml</layout>
+        <layout>Character Select.xml</layout>
+    </layout-folder>
+    <event-folder expanded="1">
+        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Character Select.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="5" />
+    </global-instances>
+    <sounds-folder expanded="1" />
+    <music-folder expanded="1" />
+    <files-folder expanded="1">
+        <file-folder expanded="0" name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
