@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Layout 1</name>
+    <name>Game Test</name>
     <sid>8377313475895365</sid>
-    <event-sheet>Event sheet 1</event-sheet>
+    <event-sheet>Game Test</event-sheet>
     <size>
         <width>1680</width>
         <height>1050</height>
@@ -58,7 +58,7 @@
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Custom</obstacles>
-                                <range>250</range>
+                                <range>200</range>
                                 <cone-of-view>60</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
@@ -245,6 +245,20 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>No</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>Yes</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -319,7 +333,7 @@
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Custom</obstacles>
-                                <range>250</range>
+                                <range>200</range>
                                 <cone-of-view>60</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
@@ -349,11 +363,23 @@
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
-                        <behavior-instance type="ShadowCaster">
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>No</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>Yes</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
-                                <height>100</height>
-                                <tag></tag>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -468,6 +494,11 @@
                                 <linear-damping>0</linear-damping>
                                 <angular-damping>0.01</angular-damping>
                                 <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>

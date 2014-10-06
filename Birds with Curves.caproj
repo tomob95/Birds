@@ -21,7 +21,6 @@
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
-        <behavior author="Scirra" id="shadowcaster" version="1">Shadow Caster</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
@@ -113,6 +112,9 @@
                     <behavior-type name="Solid" sid="7139577419857569">
                         <behavior id="solid" />
                     </behavior-type>
+                    <behavior-type name="Physics" sid="3710982282786422">
+                        <behavior id="Physics" />
+                    </behavior-type>
                 </behaviors>
                 <container>
                     <type>Bird1</type>
@@ -134,7 +136,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="Player2">
+        <object-folder expanded="1" name="Player2">
             <object-type name="Bird2" sid="9117859277070366">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -186,8 +188,11 @@
                     <behavior-type name="Pin" sid="2951131042070298">
                         <behavior id="Pin" />
                     </behavior-type>
-                    <behavior-type name="ShadowCaster" sid="1485560026038163">
-                        <behavior id="shadowcaster" />
+                    <behavior-type name="Physics" sid="6233407561222486">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="Solid" sid="5433117077580591">
+                        <behavior id="solid" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder expanded="1">
@@ -356,6 +361,9 @@
                 <behavior-type name="Physics" sid="7306517657798283">
                     <behavior id="Physics" />
                 </behavior-type>
+                <behavior-type name="Solid" sid="1106436738982474">
+                    <behavior id="solid" />
+                </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9918247695748797" speed="5">
@@ -416,11 +424,11 @@
     </object-folder>
     <families />
     <layout-folder expanded="1">
-        <layout>Layout 1.xml</layout>
+        <layout>Game Test.xml</layout>
         <layout>Character Select.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Game Test.xml</event-sheet>
         <event-sheet>Character Select.xml</event-sheet>
     </event-folder>
     <global-instances>
