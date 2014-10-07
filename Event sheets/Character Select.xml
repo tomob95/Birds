@@ -9,6 +9,86 @@
             </conditions>
             <actions />
             <sub-events>
+                <event-group description="" sid="126959664570363" title="Beak">
+                    <sub-events>
+                        <event-block sid="995792938787379">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="4376580960077821" type="SliderBar">
+                                    <param id="0" name="Unique ID">37</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="4301440173124526" type="Beaks">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">SliderBar.Value</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2706533918414427">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="2771803251420238" type="SliderBar">
+                                    <param id="0" name="Unique ID">38</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="2656247266153855" type="Beaks">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">SliderBar.Value</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1724028930201878">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="9778863640685975" type="SliderBar">
+                                    <param id="0" name="Unique ID">39</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="8642297309143177" type="Beaks">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">SliderBar.Value</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1868454587419891">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="1256227104942407" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">OptionLeft</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="3409750174126652" type="OptionLeft">
+                                    <param id="0" name="Unique ID">36</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="8176363453941269" type="Beaks">
+                                    <param id="0" name="Frame number">Beaks.AnimationFrame &gt; 0 ? Beaks.AnimationFrame - 1 :  Beaks.AnimationFrameCount</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5519277444521086">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="6178357229290139" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">OptionRight</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="1558025841032361" type="OptionLeft">
+                                    <param id="0" name="Unique ID">35</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="2810000154198488" type="Beaks">
+                                    <param id="0" name="Frame number">Beaks.AnimationFrame &lt; Beaks.AnimationFrameCount ? Beaks.AnimationFrame + 1 : 0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-group collapsed="1" description="" sid="9769817174690205" title="Wings">
                     <sub-events>
                         <event-block sid="995792938787379">
@@ -17,13 +97,7 @@
                                     <param id="0" name="Unique ID">16</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-28" name="Set effect parameter" sid="4301440173124526" type="Sprite6">
-                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
-                                    <param id="1" name="Parameter index">0</param>
-                                    <param id="2" name="Value">SliderBar.Value</param>
-                                </action>
-                            </actions>
+                            <actions />
                         </event-block>
                         <event-block sid="2706533918414427">
                             <conditions>
@@ -31,13 +105,7 @@
                                     <param id="0" name="Unique ID">17</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-28" name="Set effect parameter" sid="2656247266153855" type="Sprite6">
-                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
-                                    <param id="1" name="Parameter index">1</param>
-                                    <param id="2" name="Value">SliderBar.Value</param>
-                                </action>
-                            </actions>
+                            <actions />
                         </event-block>
                         <event-block sid="1724028930201878">
                             <conditions>
@@ -45,17 +113,11 @@
                                     <param id="0" name="Unique ID">18</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-28" name="Set effect parameter" sid="8642297309143177" type="Sprite6">
-                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
-                                    <param id="1" name="Parameter index">2</param>
-                                    <param id="2" name="Value">SliderBar.Value</param>
-                                </action>
-                            </actions>
+                            <actions />
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="2854104123740365" title="Body">
+                <event-group collapsed="1" description="" sid="2854104123740365" title="Body">
                     <sub-events>
                         <event-block sid="995792938787379">
                             <conditions>
@@ -63,13 +125,7 @@
                                     <param id="0" name="Unique ID">24</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-28" name="Set effect parameter" sid="4301440173124526" type="Sprite7">
-                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
-                                    <param id="1" name="Parameter index">0</param>
-                                    <param id="2" name="Value">SliderBar.Value</param>
-                                </action>
-                            </actions>
+                            <actions />
                         </event-block>
                         <event-block sid="2706533918414427">
                             <conditions>
@@ -77,13 +133,7 @@
                                     <param id="0" name="Unique ID">25</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-28" name="Set effect parameter" sid="2656247266153855" type="Sprite7">
-                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
-                                    <param id="1" name="Parameter index">1</param>
-                                    <param id="2" name="Value">SliderBar.Value</param>
-                                </action>
-                            </actions>
+                            <actions />
                         </event-block>
                         <event-block sid="1724028930201878">
                             <conditions>
@@ -91,13 +141,7 @@
                                     <param id="0" name="Unique ID">26</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-28" name="Set effect parameter" sid="8642297309143177" type="Sprite7">
-                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
-                                    <param id="1" name="Parameter index">2</param>
-                                    <param id="2" name="Value">SliderBar.Value</param>
-                                </action>
-                            </actions>
+                            <actions />
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -108,7 +152,8 @@
                 <condition id="-2" name="On start of layout" sid="8827733166951935" type="System" />
             </conditions>
             <actions>
-                <action id="-24" name="Move to top" sid="2068976556603309" type="Sprite6" />
+                <action id="2" name="Stop" sid="8341368991166417" type="Beaks" />
+                <action id="2" name="Stop" sid="7880355277528351" type="Bodys" />
             </actions>
         </event-block>
     </events>
