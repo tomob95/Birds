@@ -32,8 +32,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>1680</width>
-        <height>1050</height>
+        <width>1920</width>
+        <height>1080</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -232,6 +232,9 @@
             <object-type global="1" name="P4Custom" sid="2965958442309544">
                 <plugin id="Arr" />
             </object-type>
+            <object-type global="1" name="obj_optionHeadings" sid="5909976089927081">
+                <plugin id="Arr" />
+            </object-type>
         </object-folder>
         <object-type name="Sprite2" sid="1826255207031328">
             <plugin id="Sprite" />
@@ -368,37 +371,78 @@
         </object-type>
         <object-type name="Bodys" sid="2664666174473088">
             <plugin id="Sprite" />
+            <effects>
+                <effect-type name="Tint">
+                    <effect id="tint" />
+                </effect-type>
+            </effects>
             <animation-folder expanded="1">
                 <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1355052184108398" speed="5">
                     <frame duration="1" hotspotX="0.549618" hotspotY="0.661578">
-                        <image-point name="Beak" x="0.819338" y="0.648855" />
+                        <image-point name="Beak" x="0.83715" y="0.659033" />
+                        <image-point name="Wings" x="0.526718" y="0.468193" />
                     </frame>
                     <frame duration="1" hotspotX="0.541985" hotspotY="0.636132">
-                        <image-point name="Beak" x="0.816794" y="0.643766" />
+                        <image-point name="Beak" x="0.826972" y="0.643766" />
+                        <image-point name="Wings" x="0.468193" y="0.46056" />
                     </frame>
                     <frame duration="1" hotspotX="0.531807" hotspotY="0.638677">
-                        <image-point name="Beak" x="0.750636" y="0.656489" />
+                        <image-point name="Beak" x="0.768448" y="0.656489" />
+                        <image-point name="Wings" x="0.48855" y="0.475827" />
                     </frame>
                     <frame duration="1" hotspotX="0.562341" hotspotY="0.557252">
-                        <image-point name="Beak" x="0.819338" y="0.577608" />
+                        <image-point name="Beak" x="0.83715" y="0.577608" />
+                        <image-point name="Wings" x="0.531807" y="0.43257" />
                     </frame>
                     <frame duration="1" hotspotX="0.562341" hotspotY="0.529262">
-                        <image-point name="Beak" x="0.867684" y="0.526718" />
+                        <image-point name="Beak" x="0.880407" y="0.529262" />
+                        <image-point name="Wings" x="0.478372" y="0.417303" />
                     </frame>
                     <frame duration="1" hotspotX="0.544529" hotspotY="0.575064">
-                        <image-point name="Beak" x="0.819338" y="0.618321" />
+                        <image-point name="Beak" x="0.83715" y="0.615776" />
+                        <image-point name="Wings" x="0.483461" y="0.43257" />
                     </frame>
                     <frame duration="1" hotspotX="0.437659" hotspotY="0.483461">
-                        <image-point name="Beak" x="0.638677" y="0.534351" />
+                        <image-point name="Beak" x="0.669211" y="0.529262" />
+                        <image-point name="Wings" x="0.384224" y="0.374046" />
                     </frame>
                     <frame duration="1" hotspotX="0.557252" hotspotY="0.585242">
-                        <image-point name="Beak" x="0.816794" y="0.603053" />
+                        <image-point name="Beak" x="0.829517" y="0.600509" />
+                        <image-point name="Wings" x="0.486005" y="0.445293" />
                     </frame>
                     <frame duration="1" hotspotX="0.605598" hotspotY="0.544529">
-                        <image-point name="Beak" x="0.791349" y="0.608142" />
+                        <image-point name="Beak" x="0.821883" y="0.610687" />
+                        <image-point name="Wings" x="0.531807" y="0.422392" />
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="SelectedOption" sid="5811028074816186">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Wings" sid="8630376615524337">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="Tint">
+                    <effect id="tint" />
+                </effect-type>
+            </effects>
+            <animation-folder expanded="1">
+                <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4771831772714529" speed="5">
+                    <frame duration="1" hotspotX="0.587786" hotspotY="0.475827" />
+                    <frame duration="1" hotspotX="0.531807" hotspotY="0.46056" />
+                    <frame duration="1" hotspotX="0.554707" hotspotY="0.414758" />
+                    <frame duration="1" hotspotX="0.59542" hotspotY="0.399491" />
+                    <frame duration="1" hotspotX="0.62341" hotspotY="0.412214" />
+                    <frame duration="1" hotspotX="0.554707" hotspotY="0.371501" />
+                    <frame duration="1" hotspotX="0.473282" hotspotY="0.305344" />
+                    <frame duration="1" hotspotX="0.562341" hotspotY="0.335878" />
+                    <frame duration="1" hotspotX="0.608142" hotspotY="0.389313" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SelectedStyle" sid="8445443456861204">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />

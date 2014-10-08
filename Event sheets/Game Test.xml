@@ -413,7 +413,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7448223327043187" title="Respawn Player 1">
+        <event-group description="" sid="7448223327043187" title="Respawn Player 1">
             <sub-events>
                 <event-block sid="2421091008958683">
                     <conditions>
@@ -451,11 +451,14 @@
                             <param id="0" name="Instance variable">Dead</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action behavior="Physics" id="9" name="Set angular velocity" sid="9176471535300675" type="Bird1">
+                            <param id="0" name="Angular velocity">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6154153798998695" title="Respawn Player 2">
+        <event-group description="" sid="6154153798998695" title="Respawn Player 2">
             <sub-events>
                 <event-block sid="2421091008958683">
                     <conditions>
@@ -492,6 +495,9 @@
                         <action id="-10" name="Set value" sid="6118934844803858" type="Bird2">
                             <param id="0" name="Instance variable">Dead</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Physics" id="9" name="Set angular velocity" sid="1162843363934315" type="Bird2">
+                            <param id="0" name="Angular velocity">0</param>
                         </action>
                     </actions>
                 </event-block>
