@@ -63,6 +63,7 @@
                     <instance-variable name="SpawnY" sid="6416375931573181" type="number" />
                     <instance-variable name="Dead" sid="1658454556490729" type="number" />
                     <instance-variable name="Respawn" sid="1054496467809022" type="number" />
+                    <instance-variable name="Lightning" sid="7432500751268637" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="1651999204937736">
@@ -146,6 +147,7 @@
                     <instance-variable name="SpawnY" sid="3632137976972417" type="number" />
                     <instance-variable name="Dead" sid="9449720809780503" type="number" />
                     <instance-variable name="Respawn" sid="4472513963725938" type="number" />
+                    <instance-variable name="Lightning" sid="3372724390136786" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="7369527083188939">
@@ -234,6 +236,24 @@
             </object-type>
             <object-type global="1" name="obj_optionHeadings" sid="5909976089927081">
                 <plugin id="Arr" />
+            </object-type>
+        </object-folder>
+        <object-folder expanded="1" name="PowerUps">
+            <object-type name="Lightning" sid="8173271990812038">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Active" sid="3868746920855822" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="7902449007573044">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2044285502939893" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-type name="Sprite2" sid="1826255207031328">
@@ -461,7 +481,7 @@
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
     <files-folder expanded="1">
-        <file-folder expanded="0" name="Icons">
+        <file-folder expanded="1" name="Icons">
             <file name="icon-16.png" />
             <file name="icon-32.png" />
             <file name="icon-114.png" />
