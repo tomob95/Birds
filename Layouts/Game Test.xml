@@ -40,6 +40,7 @@
                         <Dead>0</Dead>
                         <Respawn>0</Respawn>
                         <Lightning>false</Lightning>
+                        <Invulnerability>false</Invulnerability>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">
@@ -316,6 +317,7 @@
                         <Dead>0</Dead>
                         <Respawn>0</Respawn>
                         <Lightning>false</Lightning>
+                        <Invulnerability>false</Invulnerability>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">
@@ -567,6 +569,28 @@
                         <z>0</z>
                         <width>79</width>
                         <height>74</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Invulnerability" uid="24">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2198</x>
+                        <y>-103</y>
+                        <z>0</z>
+                        <width>77</width>
+                        <height>68</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

@@ -64,6 +64,7 @@
                     <instance-variable name="Dead" sid="1658454556490729" type="number" />
                     <instance-variable name="Respawn" sid="1054496467809022" type="number" />
                     <instance-variable name="Lightning" sid="7432500751268637" type="boolean" />
+                    <instance-variable name="Invulnerability" sid="3953783264585093" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="1651999204937736">
@@ -148,6 +149,7 @@
                     <instance-variable name="Dead" sid="9449720809780503" type="number" />
                     <instance-variable name="Respawn" sid="4472513963725938" type="number" />
                     <instance-variable name="Lightning" sid="3372724390136786" type="boolean" />
+                    <instance-variable name="Invulnerability" sid="7562635099596214" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="7369527083188939">
@@ -251,6 +253,14 @@
                 </behaviors>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2044285502939893" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Invulnerability" sid="7222015498175398">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9591144008957154" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>

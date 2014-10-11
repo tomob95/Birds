@@ -503,112 +503,293 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="987980385061314" title="PowerUps" />
-        <event-block sid="1737987593563819">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="109103787213217" type="Bird1">
-                    <param id="0" name="Object">Lightning</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="3199286448883141" type="Lightning" />
-                <action id="-14" name="Toggle boolean" sid="8707319405425166" type="Bird1">
-                    <param id="0" name="Instance variable">Lightning</param>
-                </action>
-                <action id="-16" name="Wait" sid="400240322056978" type="System">
-                    <param id="0" name="Seconds">3</param>
-                </action>
-                <action id="-14" name="Toggle boolean" sid="8410726845723336" type="Bird1">
-                    <param id="0" name="Instance variable">Lightning</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="630105257641495">
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="7177692643547787" type="Bird1">
-                    <param id="0" name="Instance variable">Lightning</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Physics" id="9" name="Set angular velocity" sid="1664697790681464" type="Bird2">
-                    <param id="0" name="Angular velocity">0</param>
-                </action>
-                <action behavior="Physics" id="15" name="Set velocity" sid="3803150680812619" type="Bird2">
-                    <param id="0" name="X component">0</param>
-                    <param id="1" name="Y component">100</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="6530385698637371">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="62516687118169" type="Bird2">
-                    <param id="0" name="Object">Lightning</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="6553672830968846" type="Lightning" />
-                <action id="-14" name="Toggle boolean" sid="5186733392572388" type="Bird2">
-                    <param id="0" name="Instance variable">Lightning</param>
-                </action>
-                <action id="-16" name="Wait" sid="7763845203129716" type="System">
-                    <param id="0" name="Seconds">3</param>
-                </action>
-                <action id="-14" name="Toggle boolean" sid="7349416479839335" type="Bird2">
-                    <param id="0" name="Instance variable">Lightning</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="5907383770847296">
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="4225469017622628" type="Bird2">
-                    <param id="0" name="Instance variable">Lightning</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Physics" id="15" name="Set velocity" sid="5415577100414541" type="Bird1">
-                    <param id="0" name="X component">0</param>
-                    <param id="1" name="Y component">100</param>
-                </action>
-                <action behavior="Physics" id="9" name="Set angular velocity" sid="5286685544446398" type="Bird1">
-                    <param id="0" name="Angular velocity">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="7963493532530447">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="951436259753566" type="System">
-                    <param id="0" name="Interval (seconds)">10</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-3" name="Create object" sid="5336577814835319" type="System">
-                    <param id="0" name="Object to create">Lightning</param>
-                    <param id="1" name="Layer">0</param>
-                    <param id="2" name="X">830</param>
-                    <param id="3" name="Y">755</param>
-                </action>
-                <action id="-16" name="Wait" sid="4868684020235632" type="System">
-                    <param id="0" name="Seconds">5</param>
-                </action>
-                <action id="-9" name="Destroy" sid="9653627352143007" type="Lightning" />
-            </actions>
-        </event-block>
-        <event-block sid="6123488033046619">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="5933280643999454" type="System" />
-            </conditions>
-            <actions>
-                <action id="-3" name="Create object" sid="7747067705888482" type="System">
-                    <param id="0" name="Object to create">Lightning</param>
-                    <param id="1" name="Layer">0</param>
-                    <param id="2" name="X">830</param>
-                    <param id="3" name="Y">755</param>
-                </action>
-                <action id="-16" name="Wait" sid="920962281287674" type="System">
-                    <param id="0" name="Seconds">5</param>
-                </action>
-                <action id="-9" name="Destroy" sid="1346742764966597" type="Lightning" />
-            </actions>
-        </event-block>
+        <event-group description="" sid="987980385061314" title="PowerUps">
+            <sub-events>
+                <comment>Lightning Start</comment>
+                <event-block sid="1737987593563819">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="109103787213217" type="Bird1">
+                            <param id="0" name="Object">Lightning</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="3199286448883141" type="Lightning" />
+                        <action id="-14" name="Toggle boolean" sid="8707319405425166" type="Bird1">
+                            <param id="0" name="Instance variable">Lightning</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="400240322056978" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-14" name="Toggle boolean" sid="8410726845723336" type="Bird1">
+                            <param id="0" name="Instance variable">Lightning</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1118287540336005">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="6421860228761251" type="Bird1">
+                            <param id="0" name="Instance variable">Lightning</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="9" name="Set angular velocity" sid="4124275877050557" type="Bird2">
+                            <param id="0" name="Angular velocity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="630105257641495">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="6955774670890481" type="Keyboard">
+                            <param id="0" name="Key">87 (W)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4397432349071739">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="7177692643547787" type="Bird1">
+                                    <param id="0" name="Instance variable">Lightning</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="239096842459877" type="Bird2">
+                                    <param id="0" name="Impulse">-25</param>
+                                    <param id="1" name="Angle">Bird2.Angle</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6530385698637371">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="62516687118169" type="Bird2">
+                            <param id="0" name="Object">Lightning</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="6553672830968846" type="Lightning" />
+                        <action id="-14" name="Toggle boolean" sid="5186733392572388" type="Bird2">
+                            <param id="0" name="Instance variable">Lightning</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="7763845203129716" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-14" name="Toggle boolean" sid="7349416479839335" type="Bird2">
+                            <param id="0" name="Instance variable">Lightning</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7320912482916935">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="7040422311546679" type="Bird2">
+                            <param id="0" name="Instance variable">Lightning</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="9" name="Set angular velocity" sid="5317089964115574" type="Bird1">
+                            <param id="0" name="Angular velocity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5907383770847296">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="3517068200980193" type="Keyboard">
+                            <param id="0" name="Key">38 (Up arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5860379125427528">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="4225469017622628" type="Bird2">
+                                    <param id="0" name="Instance variable">Lightning</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="1613943926383511" type="Bird1">
+                                    <param id="0" name="Impulse">-25</param>
+                                    <param id="1" name="Angle">Bird1.Angle</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7963493532530447">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="951436259753566" type="System">
+                            <param id="0" name="Interval (seconds)">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="5336577814835319" type="System">
+                            <param id="0" name="Object to create">Lightning</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">830</param>
+                            <param id="3" name="Y">755</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="4868684020235632" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="9653627352143007" type="Lightning" />
+                    </actions>
+                </event-block>
+                <event-block sid="6123488033046619">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="5933280643999454" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="7747067705888482" type="System">
+                            <param id="0" name="Object to create">Lightning</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">830</param>
+                            <param id="3" name="Y">755</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="920962281287674" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1346742764966597" type="Lightning" />
+                    </actions>
+                </event-block>
+                <comment>Lightning End</comment>
+                <comment>Invulnerability Start</comment>
+                <event-block sid="9601998885978543">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8738518844053048" type="Bird1">
+                            <param id="0" name="Instance variable">Invulnerability</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Set collisions enabled" sid="288756082439902" type="Bird1">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="9362273319515132" type="Beak2">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7210806716669767">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="3058961544139139" type="Bird1">
+                            <param id="0" name="Instance variable">Invulnerability</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Set collisions enabled" sid="102615701445257" type="Bird1">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="8191321957087071" type="Beak2">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3032203715619865">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="6666315084487962" type="Bird1">
+                            <param id="0" name="Object">Invulnerability</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="5287824036144932" type="Invulnerability" />
+                        <action id="-14" name="Toggle boolean" sid="8691939320719689" type="Bird1">
+                            <param id="0" name="Instance variable">Invulnerability</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2555297812688904" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-14" name="Toggle boolean" sid="3300717989687435" type="Bird1">
+                            <param id="0" name="Instance variable">Invulnerability</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6737052397088502">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="1286305221682378" type="Bird2">
+                            <param id="0" name="Instance variable">Invulnerability</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Set collisions enabled" sid="2919147097196182" type="Bird2">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="3757806449274437" type="Beak1">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9298333713947817">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4578058877392258" type="Bird2">
+                            <param id="0" name="Instance variable">Invulnerability</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Set collisions enabled" sid="1831684254017014" type="Bird2">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="8151314470025599" type="Beak1">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1860215148738736">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="867466557665662" type="Bird2">
+                            <param id="0" name="Object">Invulnerability</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="5485817705072975" type="Invulnerability" />
+                        <action id="-14" name="Toggle boolean" sid="5965812047885469" type="Bird2">
+                            <param id="0" name="Instance variable">Invulnerability</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="8651447218656858" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-14" name="Toggle boolean" sid="5381224982293876" type="Bird2">
+                            <param id="0" name="Instance variable">Invulnerability</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5068080082378708">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="8006954232762103" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="6937045722966564" type="System">
+                            <param id="0" name="Object to create">Invulnerability</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">1100</param>
+                            <param id="3" name="Y">755</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2508656956054055" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="2642069283824504" type="Invulnerability" />
+                    </actions>
+                </event-block>
+                <event-block sid="9992372123919606">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="7503074417842773" type="System">
+                            <param id="0" name="Interval (seconds)">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="819924189529046" type="System">
+                            <param id="0" name="Object to create">Invulnerability</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">1100</param>
+                            <param id="3" name="Y">755</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="3952552656645054" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1186408197778469" type="Invulnerability" />
+                    </actions>
+                </event-block>
+                <comment>Invulnerability End</comment>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
