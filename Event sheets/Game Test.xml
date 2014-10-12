@@ -635,6 +635,23 @@
                         <action id="-9" name="Destroy" sid="9653627352143007" type="Lightning" />
                     </actions>
                 </event-block>
+                <event-block sid="6123488033046619">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="5933280643999454" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="7747067705888482" type="System">
+                            <param id="0" name="Object to create">Lightning</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">830</param>
+                            <param id="3" name="Y">755</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="920962281287674" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1346742764966597" type="Lightning" />
+                    </actions>
+                </event-block>
                 <comment>Lightning End</comment>
                 <comment>Invulnerability Start</comment>
                 <event-block sid="9601998885978543">
@@ -733,6 +750,23 @@
                         <action id="-14" name="Toggle boolean" sid="5381224982293876" type="Bird2">
                             <param id="0" name="Instance variable">Invulnerability</param>
                         </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5068080082378708">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="8006954232762103" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="6937045722966564" type="System">
+                            <param id="0" name="Object to create">Invulnerability</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">1100</param>
+                            <param id="3" name="Y">755</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2508656956054055" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="2642069283824504" type="Invulnerability" />
                     </actions>
                 </event-block>
                 <event-block sid="9992372123919606">
@@ -938,6 +972,23 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="9148656968484702">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="5146993734570612" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="2848727188285577" type="System">
+                            <param id="0" name="Object to create">FireTrail</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">1300</param>
+                            <param id="3" name="Y">755</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="8211904164018948" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1676512574131902" type="FireTrail" />
+                    </actions>
+                </event-block>
                 <event-block sid="7917081576368572">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="5075407901805847" type="System">
@@ -955,71 +1006,6 @@
                             <param id="0" name="Seconds">5</param>
                         </action>
                         <action id="-9" name="Destroy" sid="967817110711138" type="FireTrail" />
-                    </actions>
-                </event-block>
-                <comment>FireTrail End</comment>
-                <comment>Blink Start</comment>
-                <event-block sid="7683354786356085">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="510248820650214" type="Bird1">
-                            <param id="0" name="Object">Blink</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="5418472570676876" type="Blink" />
-                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="1681318510770298" type="Bird1">
-                            <param id="0" name="Impulse">1000</param>
-                            <param id="1" name="Angle">Bird1.Angle</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="9694802226927793" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action behavior="Physics" id="15" name="Set velocity" sid="5656478970310247" type="Bird1">
-                            <param id="0" name="X component">0</param>
-                            <param id="1" name="Y component">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6102855065758268">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="5910524913295191" type="Bird2">
-                            <param id="0" name="Object">Blink</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="236864289558204" type="Blink" />
-                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="3870146296012748" type="Bird2">
-                            <param id="0" name="Impulse">1000</param>
-                            <param id="1" name="Angle">Bird2.Angle</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="156481569252316" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action behavior="Physics" id="15" name="Set velocity" sid="1950384418015974" type="Bird2">
-                            <param id="0" name="X component">0</param>
-                            <param id="1" name="Y component">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="9745053959263287">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="2568424620688809" type="System">
-                            <param id="0" name="Interval (seconds)">10</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="9363900815287394" type="System">
-                            <param id="0" name="Object to create">Blink</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">600</param>
-                            <param id="3" name="Y">755</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="605617746840987" type="System">
-                            <param id="0" name="Seconds">5</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="1098708473914501" type="Blink" />
                     </actions>
                 </event-block>
             </sub-events>
