@@ -278,13 +278,13 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Scores" uid="13">
+                <instance type="Player2Score" uid="13">
                     <properties>
-                        <text></text>
+                        <text>0</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-27,400,0</font>
+                        <font>Arial,-64,400,0</font>
                         <color>0,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
+                        <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
@@ -293,11 +293,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>736</x>
-                        <y>9</y>
+                        <x>1834</x>
+                        <y>47</y>
                         <z>0</z>
-                        <width>264</width>
-                        <height>71</height>
+                        <width>210</width>
+                        <height>121</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -512,8 +512,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>817</x>
-                        <y>240</y>
+                        <x>855</x>
+                        <y>293</y>
                         <z>0</z>
                         <width>250</width>
                         <height>250</height>
@@ -679,6 +679,87 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Player1Score" uid="34">
+                    <properties>
+                        <text>0</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-64,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>567</x>
+                        <y>48</y>
+                        <z>0</z>
+                        <width>184</width>
+                        <height>93</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PrePlayer2Score" uid="35">
+                    <properties>
+                        <text>Player 2&apos;s Score: </text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-64,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1344</x>
+                        <y>46</y>
+                        <z>0</z>
+                        <width>504</width>
+                        <height>102</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PrePlayer1Score" uid="36">
+                    <properties>
+                        <text>Player 1&apos;s Score: </text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-64,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>69</x>
+                        <y>45</y>
+                        <z>0</z>
+                        <width>520</width>
+                        <height>109</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

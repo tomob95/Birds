@@ -1022,6 +1022,60 @@
                         <action id="-9" name="Destroy" sid="1098708473914501" type="Blink" />
                     </actions>
                 </event-block>
+                <comment>Blink End</comment>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="7525466437671726" title="ScoreBoard">
+            <sub-events>
+                <event-block sid="4867949636855675">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="8988960979129379" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="6898334539739286" type="Player1Score">
+                            <param id="0" name="Text">Player1Score</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3285665668471652" type="Player2Score">
+                            <param id="0" name="Text">Player2Score</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3175625381028674">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6971501197300838" type="Bird1">
+                            <param id="0" name="Instance variable">Respawn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="1546055300273645" type="System">
+                            <param id="0" name="Variable">Player1Score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="1835416087313651" type="Player1Score">
+                            <param id="0" name="Text">Player1Score</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9316589861250036">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9429236722394655" type="Bird2">
+                            <param id="0" name="Instance variable">Respawn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="5936666612547445" type="System">
+                            <param id="0" name="Variable">Player2Score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8818450896746569" type="Player2Score">
+                            <param id="0" name="Text">Player2Score</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
     </events>

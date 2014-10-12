@@ -288,6 +288,20 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder expanded="1" name="ScoreBoard">
+            <object-type name="Player2Score" sid="5168464840623875">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Player1Score" sid="3046100381132369">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="PrePlayer1Score" sid="6336376615648643">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="PrePlayer2Score" sid="9784988618266606">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
         <object-type name="Sprite2" sid="1826255207031328">
             <plugin id="Sprite" />
             <behaviors>
@@ -323,9 +337,6 @@
                     </frame>
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="Scores" sid="5168464840623875">
-            <plugin id="Text" />
         </object-type>
         <object-type name="Particles" sid="4932510247084087">
             <plugin id="Particles" />
