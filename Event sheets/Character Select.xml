@@ -2,5 +2,256 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Character Select</name>
-    <events />
+    <events>
+        <variable comment="0=Body, 1=Wings, 2=Beak, 3=Tail, 4=Eyes" constant="0" name="SelectedOption" sid="4955570517623512" static="0" type="number">0</variable>
+        <event-block sid="7339091312495129">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="8114809497700916" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-group description="" sid="8298152179892037" title="PartSelect">
+                    <sub-events>
+                        <event-block sid="8138905694513173">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="6649278351066706" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">OptionLeft</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="6604385694001582" type="OptionLeft">
+                                    <param id="0" name="Unique ID">16</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6201202559668296" type="System">
+                                    <param id="0" name="Variable">SelectedOption</param>
+                                    <param id="1" name="Value">SelectedOption &gt; 0 ? SelectedOption - 1 : 4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5228469167723326">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="5423222856198188" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">OptionRight</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="6663911305327488" type="OptionRight">
+                                    <param id="0" name="Unique ID">17</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="76855754614173" type="System">
+                                    <param id="0" name="Variable">SelectedOption</param>
+                                    <param id="1" name="Value">SelectedOption &lt; 4 ? SelectedOption + 1 : 0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="4632376528416589" title="StyleSelect">
+                    <sub-events>
+                        <event-block sid="2111457257087825">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="1880232381636885" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">OptionLeft</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="3587362288035133" type="OptionLeft">
+                                    <param id="0" name="Unique ID">20</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="4604066278342352">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="6930785131475679" type="System">
+                                            <param id="0" name="Variable">SelectedOption</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="5312283138524612" type="Bodys">
+                                            <param id="0" name="Frame number">Bodys.AnimationFrame &gt; 0 ? Bodys.AnimationFrame - 1 : Bodys.AnimationFrameCount -1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4799972795579053">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="9514778846791878" type="System">
+                                            <param id="0" name="Variable">SelectedOption</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="8892206394696088" type="Wings">
+                                            <param id="0" name="Frame number">Wings.AnimationFrame &gt; 0 ? Wings.AnimationFrame - 1 : Wings.AnimationFrameCount -1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7726630550692394">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="5217617163648859" type="System">
+                                            <param id="0" name="Variable">SelectedOption</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="6133372829144272" type="Beaks">
+                                            <param id="0" name="Frame number">Beaks.AnimationFrame &gt; 0 ? Beaks.AnimationFrame - 1 : Beaks.AnimationFrameCount -1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="2116513802596921">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="9740550866811011" type="System">
+                                            <param id="0" name="Variable">SelectedOption</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="466072884090072" type="Bodys">
+                                            <param id="0" name="Frame number">Bodys.AnimationFrame &gt; 0 ? Bodys.AnimationFrame - 1 : Bodys.AnimationFrameCount -1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="7906171426759159">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="8112904189665167" type="System">
+                                            <param id="0" name="Variable">SelectedOption</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="6693810302124845" type="Bodys">
+                                            <param id="0" name="Frame number">Bodys.AnimationFrame &gt; 0 ? Bodys.AnimationFrame - 1 : Bodys.AnimationFrameCount -1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="8217470013968041">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="5404344711317931" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">OptionRight</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="3066501015937697" type="OptionRight">
+                                    <param id="0" name="Unique ID">21</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="5913972492447224">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="8077062814581206" type="System">
+                                            <param id="0" name="Variable">SelectedOption</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="5240134929999898" type="Bodys">
+                                            <param id="0" name="Frame number">Bodys.AnimationFrame &lt; Bodys.AnimationFrameCount - 1 ? Bodys.AnimationFrame + 1 : 0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5495005065922694">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="6565869546587626" type="System">
+                                            <param id="0" name="Variable">SelectedOption</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="2619154168012482" type="Wings">
+                                            <param id="0" name="Frame number">Wings.AnimationFrame &lt; Wings.AnimationFrameCount - 1 ? Wings.AnimationFrame + 1 : 0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1774402881509152">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="4304495280680857" type="System">
+                                            <param id="0" name="Variable">SelectedOption</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="3521958441645548" type="Beaks">
+                                            <param id="0" name="Frame number">Beaks.AnimationFrame &lt; Beaks.AnimationFrameCount - 1 ? Beaks.AnimationFrame + 1 : 0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="9067516146505817">
+                    <conditions />
+                    <actions>
+                        <action id="-3" name="Set position" sid="6180929610747897" type="Bodys">
+                            <param id="0" name="X">Player1Container.X</param>
+                            <param id="1" name="Y">Player1Container.Y</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="2800954095251896" type="Beaks">
+                            <param id="0" name="Object">Bodys</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="2795114161164343" type="Wings">
+                            <param id="0" name="Object">Bodys</param>
+                            <param id="1" name="Image point (optional)">2</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4282514098855715" type="SelectedOption">
+                            <param id="0" name="Text">obj_optionHeadings.At(SelectedOption)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8645862646907389">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="8827733166951935" type="System" />
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="8341368991166417" type="Beaks" />
+                <action id="2" name="Stop" sid="7880355277528351" type="Bodys" />
+                <action id="2" name="Stop" sid="586128885459331" type="Wings" />
+                <action id="3" name="Set at XY" sid="2048674575034083" type="obj_optionHeadings">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">&quot;Body&quot;</param>
+                </action>
+                <action id="3" name="Set at XY" sid="8456006828463589" type="obj_optionHeadings">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">&quot;Wings&quot;</param>
+                </action>
+                <action id="3" name="Set at XY" sid="4828292982790918" type="obj_optionHeadings">
+                    <param id="0" name="X">2</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">&quot;Beak&quot;</param>
+                </action>
+                <action id="3" name="Set at XY" sid="1396605500294742" type="obj_optionHeadings">
+                    <param id="0" name="X">3</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">&quot;Tail&quot;</param>
+                </action>
+                <action id="3" name="Set at XY" sid="4322813809444921" type="obj_optionHeadings">
+                    <param id="0" name="X">4</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">&quot;Eyes&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>

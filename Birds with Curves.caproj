@@ -10,29 +10,34 @@
     <unique-id>avcr6oze7now</unique-id>
     <saved-with-version>17800</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="sliderbar" version="1">Slider bar</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
-        <behavior author="Scirra" id="shadowcaster" version="1">Shadow Caster</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Scirra" id="tint">Tint</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>1680</width>
-        <height>1050</height>
+        <width>1920</width>
+        <height>1080</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>Character Select</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -45,7 +50,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D web</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -58,6 +63,9 @@
                     <instance-variable name="SpawnY" sid="6416375931573181" type="number" />
                     <instance-variable name="Dead" sid="1658454556490729" type="number" />
                     <instance-variable name="Respawn" sid="1054496467809022" type="number" />
+                    <instance-variable name="Lightning" sid="7432500751268637" type="boolean" />
+                    <instance-variable name="Invulnerability" sid="3953783264585093" type="boolean" />
+                    <instance-variable name="FireTrail" sid="8604735504740699" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="1651999204937736">
@@ -109,6 +117,9 @@
                     <behavior-type name="Solid" sid="7139577419857569">
                         <behavior id="solid" />
                     </behavior-type>
+                    <behavior-type name="Physics" sid="3710982282786422">
+                        <behavior id="Physics" />
+                    </behavior-type>
                 </behaviors>
                 <container>
                     <type>Bird1</type>
@@ -138,6 +149,9 @@
                     <instance-variable name="SpawnY" sid="3632137976972417" type="number" />
                     <instance-variable name="Dead" sid="9449720809780503" type="number" />
                     <instance-variable name="Respawn" sid="4472513963725938" type="number" />
+                    <instance-variable name="Lightning" sid="3372724390136786" type="boolean" />
+                    <instance-variable name="Invulnerability" sid="7562635099596214" type="boolean" />
+                    <instance-variable name="FireTrail" sid="3699853444794302" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="7369527083188939">
@@ -182,8 +196,11 @@
                     <behavior-type name="Pin" sid="2951131042070298">
                         <behavior id="Pin" />
                     </behavior-type>
-                    <behavior-type name="ShadowCaster" sid="1485560026038163">
-                        <behavior id="shadowcaster" />
+                    <behavior-type name="Physics" sid="6233407561222486">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="Solid" sid="5433117077580591">
+                        <behavior id="solid" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder expanded="1">
@@ -202,6 +219,67 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder expanded="1" name="Technical">
+            <object-type name="Keyboard" sid="3468836939450099">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="Mouse" sid="1174383271105027">
+                <plugin id="Mouse" />
+            </object-type>
+            <object-type global="1" name="P1Custom" sid="8078444643569629">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="P2Custom" sid="935110815451324">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="P3Custom" sid="5268864185689089">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="P4Custom" sid="2965958442309544">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="obj_optionHeadings" sid="5909976089927081">
+                <plugin id="Arr" />
+            </object-type>
+        </object-folder>
+        <object-folder expanded="1" name="PowerUps">
+            <object-type name="Lightning" sid="8173271990812038">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Active" sid="3868746920855822" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="7902449007573044">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2044285502939893" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Invulnerability" sid="7222015498175398">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9591144008957154" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FireTrail" sid="2488861935464878">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2197573910702202" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FireTrailParticle" sid="1964850229244955">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
+        </object-folder>
         <object-type name="Sprite2" sid="1826255207031328">
             <plugin id="Sprite" />
             <behaviors>
@@ -214,9 +292,6 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\MDS\GAD1J01 Game Design Principles\MakeAGame\Sprites\ball.png" />
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="Keyboard" sid="3468836939450099">
-            <plugin id="Keyboard" />
         </object-type>
         <object-type name="Sprite3" sid="2381928140816954">
             <plugin id="Sprite" />
@@ -254,6 +329,9 @@
                 <behavior-type name="Physics" sid="7306517657798283">
                     <behavior id="Physics" />
                 </behavior-type>
+                <behavior-type name="Solid" sid="1106436738982474">
+                    <behavior id="solid" />
+                </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9918247695748797" speed="5">
@@ -284,23 +362,150 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="SliderBar" sid="7786532646021948">
+            <plugin id="sliderbar" />
+        </object-type>
+        <object-type name="Player1Container" sid="4391783274862726">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8948187617378858" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="OptionRight" sid="6909893694869558">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6514902375587671" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="OptionLeft" sid="2111675586470794">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4479020351330856" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Player1Headers" sid="3215994268160798">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Beaks" sid="3026881457364619">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="Tint">
+                    <effect id="tint" />
+                </effect-type>
+            </effects>
+            <animation-folder expanded="1">
+                <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9794057780445146" speed="5">
+                    <frame duration="1" hotspotX="0.834606" hotspotY="0.664122" />
+                    <frame duration="1" hotspotX="0.78117" hotspotY="0.641221" />
+                    <frame duration="1" hotspotX="0.834606" hotspotY="0.648855" />
+                    <frame duration="1" hotspotX="0.826972" hotspotY="0.597964" />
+                    <frame duration="1" hotspotX="0.872774" hotspotY="0.554707" />
+                    <frame duration="1" hotspotX="0.816794" hotspotY="0.671756" />
+                    <frame duration="1" hotspotX="0.664122" hotspotY="0.56743" />
+                    <frame duration="1" hotspotX="0.821883" hotspotY="0.633588" />
+                    <frame duration="1" hotspotX="0.832061" hotspotY="0.605598" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bodys" sid="2664666174473088">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="Tint">
+                    <effect id="tint" />
+                </effect-type>
+            </effects>
+            <animation-folder expanded="1">
+                <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1355052184108398" speed="5">
+                    <frame duration="1" hotspotX="0.549618" hotspotY="0.661578">
+                        <image-point name="Beak" x="0.83715" y="0.659033" />
+                        <image-point name="Wings" x="0.526718" y="0.468193" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.541985" hotspotY="0.636132">
+                        <image-point name="Beak" x="0.826972" y="0.643766" />
+                        <image-point name="Wings" x="0.468193" y="0.46056" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.531807" hotspotY="0.638677">
+                        <image-point name="Beak" x="0.768448" y="0.656489" />
+                        <image-point name="Wings" x="0.48855" y="0.475827" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.562341" hotspotY="0.557252">
+                        <image-point name="Beak" x="0.83715" y="0.577608" />
+                        <image-point name="Wings" x="0.531807" y="0.43257" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.562341" hotspotY="0.529262">
+                        <image-point name="Beak" x="0.880407" y="0.529262" />
+                        <image-point name="Wings" x="0.478372" y="0.417303" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.544529" hotspotY="0.575064">
+                        <image-point name="Beak" x="0.83715" y="0.615776" />
+                        <image-point name="Wings" x="0.483461" y="0.43257" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.437659" hotspotY="0.483461">
+                        <image-point name="Beak" x="0.669211" y="0.529262" />
+                        <image-point name="Wings" x="0.384224" y="0.374046" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.557252" hotspotY="0.585242">
+                        <image-point name="Beak" x="0.829517" y="0.600509" />
+                        <image-point name="Wings" x="0.486005" y="0.445293" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.605598" hotspotY="0.544529">
+                        <image-point name="Beak" x="0.821883" y="0.610687" />
+                        <image-point name="Wings" x="0.531807" y="0.422392" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SelectedOption" sid="5811028074816186">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Wings" sid="8630376615524337">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="Tint">
+                    <effect id="tint" />
+                </effect-type>
+            </effects>
+            <animation-folder expanded="1">
+                <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4771831772714529" speed="5">
+                    <frame duration="1" hotspotX="0.587786" hotspotY="0.475827" />
+                    <frame duration="1" hotspotX="0.531807" hotspotY="0.46056" />
+                    <frame duration="1" hotspotX="0.554707" hotspotY="0.414758" />
+                    <frame duration="1" hotspotX="0.59542" hotspotY="0.399491" />
+                    <frame duration="1" hotspotX="0.62341" hotspotY="0.412214" />
+                    <frame duration="1" hotspotX="0.554707" hotspotY="0.371501" />
+                    <frame duration="1" hotspotX="0.473282" hotspotY="0.305344" />
+                    <frame duration="1" hotspotX="0.562341" hotspotY="0.335878" />
+                    <frame duration="1" hotspotX="0.608142" hotspotY="0.389313" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SelectedStyle" sid="8445443456861204">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
-        <layout>Layout 1.xml</layout>
+        <layout>Game Test.xml</layout>
         <layout>Character Select.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Game Test.xml</event-sheet>
         <event-sheet>Character Select.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="5" />
+        <global-instance type="Mouse" uid="41" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
     <files-folder expanded="1">
-        <file-folder expanded="0" name="Icons">
+        <file-folder expanded="1" name="Icons">
             <file name="icon-16.png" />
             <file name="icon-32.png" />
             <file name="icon-114.png" />
