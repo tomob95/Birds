@@ -65,6 +65,7 @@
                     <instance-variable name="Respawn" sid="1054496467809022" type="number" />
                     <instance-variable name="Lightning" sid="7432500751268637" type="boolean" />
                     <instance-variable name="Invulnerability" sid="3953783264585093" type="boolean" />
+                    <instance-variable name="FireTrail" sid="8604735504740699" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="1651999204937736">
@@ -150,6 +151,7 @@
                     <instance-variable name="Respawn" sid="4472513963725938" type="number" />
                     <instance-variable name="Lightning" sid="3372724390136786" type="boolean" />
                     <instance-variable name="Invulnerability" sid="7562635099596214" type="boolean" />
+                    <instance-variable name="FireTrail" sid="3699853444794302" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="7369527083188939">
@@ -264,6 +266,18 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="FireTrail" sid="2488861935464878">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2197573910702202" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FireTrailParticle" sid="1964850229244955">
+                <plugin id="Particles" />
+                <texture />
             </object-type>
         </object-folder>
         <object-type name="Sprite2" sid="1826255207031328">

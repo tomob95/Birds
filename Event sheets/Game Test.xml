@@ -661,10 +661,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="11" name="Set collisions enabled" sid="288756082439902" type="Bird1">
+                        <action id="11" name="Set collisions enabled" sid="9362273319515132" type="Beak2">
                             <param id="0" name="Collisions">1</param>
                         </action>
-                        <action id="11" name="Set collisions enabled" sid="9362273319515132" type="Beak2">
+                        <action id="11" name="Set collisions enabled" sid="5961803443542017" type="Bird1">
                             <param id="0" name="Collisions">1</param>
                         </action>
                     </actions>
@@ -676,10 +676,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="11" name="Set collisions enabled" sid="102615701445257" type="Bird1">
+                        <action id="11" name="Set collisions enabled" sid="8191321957087071" type="Beak2">
                             <param id="0" name="Collisions">0</param>
                         </action>
-                        <action id="11" name="Set collisions enabled" sid="8191321957087071" type="Beak2">
+                        <action id="11" name="Set collisions enabled" sid="4218941562699891" type="Bird1">
                             <param id="0" name="Collisions">0</param>
                         </action>
                     </actions>
@@ -703,21 +703,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="6737052397088502">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="1286305221682378" type="Bird2">
-                            <param id="0" name="Instance variable">Invulnerability</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="11" name="Set collisions enabled" sid="2919147097196182" type="Bird2">
-                            <param id="0" name="Collisions">0</param>
-                        </action>
-                        <action id="11" name="Set collisions enabled" sid="3757806449274437" type="Beak1">
-                            <param id="0" name="Collisions">0</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="9298333713947817">
                     <conditions>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4578058877392258" type="Bird2">
@@ -725,11 +710,26 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="11" name="Set collisions enabled" sid="1831684254017014" type="Bird2">
-                            <param id="0" name="Collisions">1</param>
-                        </action>
                         <action id="11" name="Set collisions enabled" sid="8151314470025599" type="Beak1">
                             <param id="0" name="Collisions">1</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="3434137634137489" type="Bird2">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6737052397088502">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="1286305221682378" type="Bird2">
+                            <param id="0" name="Instance variable">Invulnerability</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Set collisions enabled" sid="3757806449274437" type="Beak1">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="2661990639743559" type="Bird2">
+                            <param id="0" name="Collisions">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -789,6 +789,225 @@
                     </actions>
                 </event-block>
                 <comment>Invulnerability End</comment>
+                <comment>FireTrail Start</comment>
+                <event-block sid="5322180007056954">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2525532411423926" type="Bird1">
+                            <param id="0" name="Object">FireTrail</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="4756458078715483" type="FireTrail" />
+                        <action id="-14" name="Toggle boolean" sid="7491899729076292" type="Bird1">
+                            <param id="0" name="Instance variable">FireTrail</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="226543916768059" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-14" name="Toggle boolean" sid="607389801797271" type="Bird1">
+                            <param id="0" name="Instance variable">FireTrail</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9058883732336405">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="2003180754047147" type="Bird1">
+                            <param id="0" name="Instance variable">FireTrail</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1201126131887328">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="3645806102136487" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="4011539846313497" type="FireTrailParticle">
+                                    <param id="0" name="Opacity">35</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="5371345504664422" type="Bird1">
+                                    <param id="0" name="Object">FireTrailParticle</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">Bird1.BBoxLeft</param>
+                                </action>
+                                <action id="18" name="Set timeout" sid="6151409119138145" type="FireTrailParticle">
+                                    <param id="0" name="Timeout">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="2454430061549629" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="9523822288305128" type="FireTrailParticle" />
+                                <action id="14" name="Set gravity" sid="3288547158380087" type="FireTrailParticle">
+                                    <param id="0" name="Gravity">10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5895569711427925">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8975530880961445" type="Bird2">
+                            <param id="0" name="Object">FireTrailParticle</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9510963466256609">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="6317761409414767" type="Bird1">
+                                    <param id="0" name="Instance variable">FireTrail</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="6390545893889698" type="System">
+                                    <param id="0" name="Object to create">Particles</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Bird2.X</param>
+                                    <param id="3" name="Y">Bird2.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="6034906165531408" type="Bird2">
+                                    <param id="0" name="X">-1000</param>
+                                    <param id="1" name="Y">-1000</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="4837899136239375" type="Beak2">
+                                    <param id="0" name="X">-1000</param>
+                                    <param id="1" name="Y">-1000</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="3936543584616844" type="Bird2">
+                                    <param id="0" name="Instance variable">Dead</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2371345407429197">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2207561566948015" type="Bird2">
+                            <param id="0" name="Object">FireTrail</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="5310415991810437" type="FireTrail" />
+                        <action id="-14" name="Toggle boolean" sid="5145558309057039" type="Bird2">
+                            <param id="0" name="Instance variable">FireTrail</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="3600392653040524" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-14" name="Toggle boolean" sid="3460234456871755" type="Bird2">
+                            <param id="0" name="Instance variable">FireTrail</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8448569059941694">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="599597395088178" type="Bird2">
+                            <param id="0" name="Instance variable">FireTrail</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7581926969304198">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="143251831303351" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="8815239062220781" type="FireTrailParticle">
+                                    <param id="0" name="Opacity">35</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="4529778237598429" type="Bird2">
+                                    <param id="0" name="Object">FireTrailParticle</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">Bird2.BBoxLeft</param>
+                                </action>
+                                <action id="18" name="Set timeout" sid="3401518508590243" type="FireTrailParticle">
+                                    <param id="0" name="Timeout">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="6371946154250361" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="2320126361746225" type="FireTrailParticle" />
+                                <action id="14" name="Set gravity" sid="6274191664775096" type="FireTrailParticle">
+                                    <param id="0" name="Gravity">10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1188315787818585">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1111638658637753" type="Bird1">
+                            <param id="0" name="Object">FireTrailParticle</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1491283110135181">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="9237713223922716" type="Bird2">
+                                    <param id="0" name="Instance variable">FireTrail</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="6402860065697987" type="System">
+                                    <param id="0" name="Object to create">Particles</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Bird1.X</param>
+                                    <param id="3" name="Y">Bird1.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="7709525629483453" type="Bird1">
+                                    <param id="0" name="X">-1000</param>
+                                    <param id="1" name="Y">-1000</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="2684118110036918" type="Beak1">
+                                    <param id="0" name="X">-1000</param>
+                                    <param id="1" name="Y">-1000</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="8942569773662702" type="Bird1">
+                                    <param id="0" name="Instance variable">Dead</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9148656968484702">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="5146993734570612" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="2848727188285577" type="System">
+                            <param id="0" name="Object to create">FireTrail</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">1300</param>
+                            <param id="3" name="Y">755</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="8211904164018948" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1676512574131902" type="FireTrail" />
+                    </actions>
+                </event-block>
+                <event-block sid="7917081576368572">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="5075407901805847" type="System">
+                            <param id="0" name="Interval (seconds)">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="2145119434785278" type="System">
+                            <param id="0" name="Object to create">FireTrail</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">1300</param>
+                            <param id="3" name="Y">755</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="7688549313362079" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="967817110711138" type="FireTrail" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
     </events>
