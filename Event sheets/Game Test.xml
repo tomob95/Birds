@@ -59,7 +59,7 @@
                 <action id="-26" name="Restart layout" sid="4506661291028923" type="System" />
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" disabled="1" sid="8733741707988844" title="Player1">
+        <event-group description="" disabled="1" sid="8733741707988844" title="Player1">
             <sub-events>
                 <event-block sid="6053853594747804">
                     <conditions>
@@ -1015,7 +1015,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="A message log to print out connection statuses etc..." sid="9492911041966917" title="Message Log">
+        <event-group collapsed="1" description="A message log to print out connection statuses etc..." sid="9492911041966917" title="Message Log">
             <sub-events>
                 <event-block sid="1949899392030433">
                     <conditions>
@@ -1107,11 +1107,12 @@
                             <param id="2" name="Precision">2</param>
                             <param id="3" name="Bandwidth">0</param>
                         </action>
-                        <action disabled="1" id="11" name="Sync object" sid="4938065775109922" type="Multiplayer">
-                            <param id="0" name="Object">Bird2</param>
-                            <param id="1" name="Data">3</param>
-                            <param id="2" name="Precision">2</param>
-                            <param id="3" name="Bandwidth">0</param>
+                        <action id="12" name="Sync instance variable" sid="7907252418083801" type="Multiplayer">
+                            <param id="0" name="Object">Bird</param>
+                            <param id="1" name="Instance variable">Bird|inputs</param>
+                            <param id="2" name="Precision">3</param>
+                            <param id="3" name="Interpolation">0</param>
+                            <param id="4" name="Client value tag">&quot;inputs&quot;</param>
                         </action>
                         <action id="1" name="Connect" sid="2549238876523007" type="Multiplayer">
                             <param id="0" name="Server">&quot;wss://multiplayer.scirra.com&quot;</param>
