@@ -72,6 +72,7 @@
                     <instance-variable name="FireTrail" sid="8604735504740699" type="boolean" />
                     <instance-variable name="birdid" sid="5823047758506161" type="string" />
                     <instance-variable name="inputs" sid="2974703407912511" type="number" />
+                    <instance-variable name="dash" sid="4912878819837401" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="1651999204937736">

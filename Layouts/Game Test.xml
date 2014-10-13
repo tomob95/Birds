@@ -44,6 +44,7 @@
                         <FireTrail>false</FireTrail>
                         <birdid></birdid>
                         <inputs>0</inputs>
+                        <dash>false</dash>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">
