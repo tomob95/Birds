@@ -59,7 +59,7 @@
                 <action id="-26" name="Restart layout" sid="4506661291028923" type="System" />
             </actions>
         </event-block>
-        <event-group description="" disabled="1" sid="8733741707988844" title="Player1">
+        <event-group collapsed="1" description="" disabled="1" sid="8733741707988844" title="Player1">
             <sub-events>
                 <event-block sid="6053853594747804">
                     <conditions>
@@ -1087,7 +1087,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="This manages the connection to the signalling server and joining/hosting rooms" sid="4977954836031889" title="Signalling">
+        <event-group collapsed="1" description="This manages the connection to the signalling server and joining/hosting rooms" sid="4977954836031889" title="Signalling">
             <sub-events>
                 <comment>On start of layout, connect to the signalling server. We also set up which client input values the peers will be using, and sync the Peer object with its position and additional instance variables for the look position, current inputs and player stats.</comment>
                 <comment>At the moment it only syncs the bird object, but future value and object changes will need to be updated or added here.</comment>
@@ -1104,7 +1104,7 @@
                         <action id="11" name="Sync object" sid="4040586638526389" type="Multiplayer">
                             <param id="0" name="Object">Bird</param>
                             <param id="1" name="Data">3</param>
-                            <param id="2" name="Precision">2</param>
+                            <param id="2" name="Precision">0</param>
                             <param id="3" name="Bandwidth">0</param>
                         </action>
                         <action id="12" name="Sync instance variable" sid="7907252418083801" type="Multiplayer">
@@ -1498,13 +1498,30 @@
                                             <param id="2" name="Second value">1</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="1009735568736507" type="Bird">
-                                            <param id="0" name="Impulse">Impulse</param>
-                                            <param id="1" name="Angle">Bird.Angle</param>
-                                            <param id="2" name="Image point">0</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="5816297711959021">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4994278079654877" type="Bird">
+                                                    <param id="0" name="Instance variable">dash</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="1009735568736507" type="Bird">
+                                                    <param id="0" name="Impulse">Impulse</param>
+                                                    <param id="1" name="Angle">Bird.Angle</param>
+                                                    <param id="2" name="Image point">0</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="6859325135929785" type="Bird">
+                                                    <param id="0" name="Frame number">1</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="6639991871332096" type="Bird">
+                                                    <param id="0" name="Instance variable">dash</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="3810773048813459">
                                     <conditions>
@@ -1517,6 +1534,10 @@
                                     <actions>
                                         <action id="5" name="Set frame" sid="2225921824726656" type="Bird">
                                             <param id="0" name="Frame number">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="782281021772048" type="Bird">
+                                            <param id="0" name="Instance variable">dash</param>
+                                            <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1654,40 +1675,6 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="577589148377096">
-                                    <conditions>
-                                        <condition id="-1" name="Every tick" sid="9473409346108424" type="System" />
-                                        <condition id="-13" name="Is between angles" sid="6800231431910115" type="Bird">
-                                            <param id="0" name="First angle">270</param>
-                                            <param id="1" name="Second angle">90</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="8" name="Set flipped" sid="8032094042715779" type="Bird">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                        <action id="8" name="Set flipped" sid="1179388822450172" type="Beak">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="4331385290435061">
-                                    <conditions>
-                                        <condition id="-1" name="Every tick" sid="31860273766826" type="System" />
-                                        <condition id="-13" name="Is between angles" sid="9227209952458142" type="Bird">
-                                            <param id="0" name="First angle">91</param>
-                                            <param id="1" name="Second angle">269</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="8" name="Set flipped" sid="429295637055569" type="Bird">
-                                            <param id="0" name="State">0</param>
-                                        </action>
-                                        <action id="8" name="Set flipped" sid="8198767709198749" type="Beak">
-                                            <param id="0" name="State">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
                                 <event-block disabled="1" sid="9209763536234608">
                                     <conditions>
                                         <condition id="0" name="On collision with another object" sid="4375022938033995" type="Beak">
@@ -1751,83 +1738,120 @@
                             </actions>
                             <sub-events>
                                 <comment>As host we are also responsible for moving each peer. Now that we have updated the &apos;inputs&apos; variable, we can simulate controls for the player depending on what their current inputs are. Since the host has the authoritative version of the game, this is their &quot;true&quot; movement; the peers will be moving themselves immediately, but if there is a discrepency, the host takes precedent and the peer must correct its own position to match that of the host.</comment>
-                                <event-block sid="8628901389403746">
+                                <event-block sid="2387137502520487">
                                     <conditions>
-                                        <condition id="-8" name="Compare two values" sid="921032355557033" type="System">
+                                        <condition id="-8" name="Compare two values" sid="4938308328430635" type="System">
                                             <param id="0" name="First value">getbit(Bird.inputs, 0)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Physics" id="9" name="Set angular velocity" sid="6427793740857081" type="Bird">
+                                        <action behavior="Physics" id="9" name="Set angular velocity" sid="7117488751293564" type="Bird">
                                             <param id="0" name="Angular velocity">-AngVel</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="3766090996676252">
+                                <event-block sid="1547143000582833">
                                     <conditions>
-                                        <condition id="-8" name="Compare two values" sid="5388653434530647" type="System">
+                                        <condition id="-8" name="Compare two values" sid="7581508601222367" type="System">
                                             <param id="0" name="First value">getbit(Bird.inputs, 1)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Physics" id="9" name="Set angular velocity" sid="2334133243295221" type="Bird">
+                                        <action behavior="Physics" id="9" name="Set angular velocity" sid="7767298721364301" type="Bird">
                                             <param id="0" name="Angular velocity">AngVel</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block any="1" sid="7516560229695322">
+                                <event-block sid="7881067764086747">
                                     <conditions>
-                                        <condition id="-8" name="Compare two values" sid="5713356094105879" type="System">
+                                        <condition id="-8" name="Compare two values" sid="5653508763432956" type="System">
                                             <param id="0" name="First value">getbit(Bird.inputs, 0)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">0</param>
                                         </condition>
-                                        <condition id="-8" name="Compare two values" sid="1755062846197259" type="System">
+                                        <condition id="-8" name="Compare two values" sid="2191016395188916" type="System">
                                             <param id="0" name="First value">getbit(Bird.inputs, 1)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Physics" id="9" name="Set angular velocity" sid="5763198652013477" type="Bird">
+                                        <action behavior="Physics" id="9" name="Set angular velocity" sid="6975590651750052" type="Bird">
                                             <param id="0" name="Angular velocity">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="1390556101263051">
+                                <event-block sid="1971632997367754">
                                     <conditions>
-                                        <condition id="-8" name="Compare two values" sid="1030195894475359" type="System">
-                                            <param id="0" name="First value">getbit(Bird.inputs, 2)</param>
+                                        <condition id="-8" name="Compare two values" sid="2879159427616759" type="System">
+                                            <param id="0" name="First value">getbit(Bird.inputs, 0)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="4414381835960848" type="System">
+                                            <param id="0" name="First value">getbit(Bird.inputs,  1)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="9717722857567647" type="Bird">
-                                            <param id="0" name="Impulse">Impulse</param>
-                                            <param id="1" name="Angle">Bird.Angle</param>
-                                            <param id="2" name="Image point">0</param>
-                                        </action>
-                                        <action id="5" name="Set frame" sid="3866733950220379" type="Bird">
-                                            <param id="0" name="Frame number">1</param>
+                                        <action behavior="Physics" id="9" name="Set angular velocity" sid="1929107295879865" type="Bird">
+                                            <param id="0" name="Angular velocity">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="1845832547461898">
+                                <event-block sid="9999676217350977">
                                     <conditions>
-                                        <condition id="-8" name="Compare two values" sid="3296869688989208" type="System">
+                                        <condition id="-8" name="Compare two values" sid="3498302474812605" type="System">
+                                            <param id="0" name="First value">getbit(Bird.inputs, 2)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="8512003567296549">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3755659273366831" type="Bird">
+                                                    <param id="0" name="Instance variable">dash</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="3483365376709642" type="Bird">
+                                                    <param id="0" name="Impulse">Impulse</param>
+                                                    <param id="1" name="Angle">Bird.Angle</param>
+                                                    <param id="2" name="Image point">0</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="6358809319570715" type="Bird">
+                                                    <param id="0" name="Frame number">1</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="514469479202781" type="Bird">
+                                                    <param id="0" name="Instance variable">dash</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="8064426120456788">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="3870634657735034" type="System">
                                             <param id="0" name="First value">getbit(Bird.inputs, 2)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="5" name="Set frame" sid="5590617117940584" type="Bird">
+                                        <action id="5" name="Set frame" sid="729441294913342" type="Bird">
                                             <param id="0" name="Frame number">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="8876967416550084" type="Bird">
+                                            <param id="0" name="Instance variable">dash</param>
+                                            <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1846,6 +1870,40 @@
                 </event-group>
                 <event-group description="This is where we handle all the common events that the players share." sid="5748801784744824" title="Common">
                     <sub-events>
+                        <event-block sid="2203621690779287">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="3035893263798431" type="System" />
+                                <condition id="-13" name="Is between angles" sid="3695261026350837" type="Bird">
+                                    <param id="0" name="First angle">270</param>
+                                    <param id="1" name="Second angle">90</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="8" name="Set flipped" sid="8600539012157638" type="Bird">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="8" name="Set flipped" sid="1808879152458331" type="Beak">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3588896122916178">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="453134591067144" type="System" />
+                                <condition id="-13" name="Is between angles" sid="5160698865213103" type="Bird">
+                                    <param id="0" name="First angle">91</param>
+                                    <param id="1" name="Second angle">269</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="8" name="Set flipped" sid="8788892317583574" type="Bird">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="8" name="Set flipped" sid="7793380933752107" type="Beak">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="8154423381593496">
                             <conditions>
                                 <condition id="11" name="On peer connected" sid="9564148629354722" type="Multiplayer" />
