@@ -4,6 +4,7 @@
     <name>Character Select</name>
     <events>
         <variable comment="0=Body, 1=Wings, 2=Beak, 3=Tail, 4=Eyes" constant="0" name="SelectedOption" sid="4955570517623512" static="0" type="number">0</variable>
+        <variable comment="Name entered on login screen" constant="0" name="MyUsername" sid="6821468485113489" static="0" type="text"></variable>
         <event-block sid="7339091312495129">
             <conditions>
                 <condition id="-1" name="Every tick" sid="8114809497700916" type="System" />
@@ -253,5 +254,96 @@
                 </action>
             </actions>
         </event-block>
+        <comment>This is the shit for loging the player onto the multiplayer server with a username</comment>
+        <event-group description="" sid="210058379087474" title="Multiplayer Login">
+            <sub-events>
+                <comment>Focus the game on the text box and check to see if the browser supports multiplayer</comment>
+                <event-block sid="2221194029030434">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="1859012608843981" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Set focused" sid="1937519516269722" type="NameTextBox" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="9662067131196226">
+                            <conditions>
+                                <condition id="12" inverted="1" name="Supports multiplayer" sid="2225821569220623" type="Multiplayer" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="3417775002730774" type="Title">
+                                    <param id="0" name="Text">&quot;Multiplayer not supported&quot;</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="1987180353521193" type="Title">
+                                    <param id="0" name="Color">rgb(255, 0, 0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Enable the join button only when the player has entered a valid username</comment>
+                <event-block sid="5718457953387391">
+                    <conditions>
+                        <condition id="1" name="On text changed" sid="5957423742158536" type="NameTextBox" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1653008610549245">
+                            <conditions>
+                                <condition id="0" name="Compare text" sid="8374285737484387" type="NameTextBox">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set enabled" sid="3030537905565509" type="JoinButton">
+                                    <param id="0" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="369338403423056">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="2588950628615659" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set enabled" sid="2990441055811484" type="JoinButton">
+                                    <param id="0" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>If the join button was clicked, check once again if there was a valid username entry and that the browser supports multiplayer before moving into the game server/room</comment>
+                <event-block any="1" sid="8605209359495258">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="5134892543879271" type="JoinButton" />
+                        <condition id="2" name="Key is down" sid="4112741019062725" type="Keyboard">
+                            <param id="0" name="Key">13 (Return)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6778340278413367">
+                            <conditions>
+                                <condition id="12" name="Supports multiplayer" sid="5641419693607478" type="Multiplayer" />
+                                <condition id="0" inverted="1" name="Compare text" sid="6006506126137291" type="NameTextBox">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="9148111701890054" type="System">
+                                    <param id="0" name="Variable">MyUsername</param>
+                                    <param id="1" name="Value">NameTextBox.Text</param>
+                                </action>
+                                <action id="-25" name="Go to layout (by name)" sid="688703677531785" type="System">
+                                    <param id="0" name="Layout">&quot;Game Test&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

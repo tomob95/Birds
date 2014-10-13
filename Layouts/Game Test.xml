@@ -27,7 +27,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Bird1" uid="0">
+                <instance type="Bird" uid="0">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -42,6 +42,8 @@
                         <Lightning>false</Lightning>
                         <Invulnerability>false</Invulnerability>
                         <FireTrail>false</FireTrail>
+                        <birdid></birdid>
+                        <inputs>0</inputs>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">
@@ -234,7 +236,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Beak1" uid="12">
+                <instance type="Beak" uid="12">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -301,105 +303,6 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Bird2" uid="14">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <SpawnX>1250</SpawnX>
-                        <SpawnY>500</SpawnY>
-                        <Dead>0</Dead>
-                        <Respawn>0</Respawn>
-                        <Lightning>false</Lightning>
-                        <Invulnerability>false</Invulnerability>
-                        <FireTrail>false</FireTrail>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>No</immovable>
-                                <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.5</friction>
-                                <elasticity>0.3</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="LineOfSight">
-                            <properties>
-                                <obstacles>Custom</obstacles>
-                                <range>200</range>
-                                <cone-of-view>60</cone-of-view>
-                                <use-collision-cells>Yes</use-collision-cells>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1237</x>
-                        <y>510</y>
-                        <z>0</z>
-                        <width>150</width>
-                        <height>150</height>
-                        <depth>0</depth>
-                        <hotspotX>0.508474588</hotspotX>
-                        <hotspotY>0.511864424</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Beak2" uid="15">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>No</immovable>
-                                <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>Yes</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.5</friction>
-                                <elasticity>0</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1237</x>
-                        <y>511</y>
-                        <z>0</z>
-                        <width>150</width>
-                        <height>150</height>
-                        <depth>0</depth>
-                        <hotspotX>0.508474588</hotspotX>
-                        <hotspotY>0.511864424</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -474,49 +377,6 @@
                         <z>0</z>
                         <width>617</width>
                         <height>59</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Sprite" uid="7">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>No</immovable>
-                                <collision-mask>Circle</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>0.3</density>
-                                <friction>0.8</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>817</x>
-                        <y>240</y>
-                        <z>0</z>
-                        <width>250</width>
-                        <height>250</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -661,6 +521,87 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="LogText" uid="38">
+                    <properties>
+                        <text>Connecting...</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-35,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>1012</width>
+                        <height>620</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="HostIndicator" uid="42">
+                    <properties>
+                        <text>Host</text>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <font>Arial,-48,700,0</font>
+                        <color>102,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1552</x>
+                        <y>5</y>
+                        <z>0</z>
+                        <width>363</width>
+                        <height>86</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NetStats" uid="43">
+                    <properties>
+                        <text>Stats</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-32,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Bottom</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>323</x>
+                        <y>920</y>
+                        <z>0</z>
+                        <width>1013</width>
+                        <height>132</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -670,6 +611,13 @@
             <properties>
                 <width>5</width>
                 <height>4</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="LogMessages" uid="39">
+            <properties>
+                <width>10</width>
+                <height>1</height>
                 <depth>1</depth>
             </properties>
         </instance>

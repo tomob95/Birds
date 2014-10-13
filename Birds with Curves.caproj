@@ -11,11 +11,15 @@
     <saved-with-version>17800</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Multiplayer" version="1">Multiplayer</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="sliderbar" version="1">Slider bar</plugin>
     </used-plugins>
@@ -56,7 +60,7 @@
     </configuration-settings>
     <object-folder expanded="1">
         <object-folder expanded="1" name="Player1">
-            <object-type name="Bird1" sid="6683662234493325">
+            <object-type name="Bird" sid="6683662234493325">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="SpawnX" sid="6138419981287579" type="number" />
@@ -66,6 +70,8 @@
                     <instance-variable name="Lightning" sid="7432500751268637" type="boolean" />
                     <instance-variable name="Invulnerability" sid="3953783264585093" type="boolean" />
                     <instance-variable name="FireTrail" sid="8604735504740699" type="boolean" />
+                    <instance-variable name="birdid" sid="5823047758506161" type="string" />
+                    <instance-variable name="inputs" sid="2974703407912511" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="1651999204937736">
@@ -76,8 +82,8 @@
                     </behavior-type>
                 </behaviors>
                 <container>
-                    <type>Bird1</type>
-                    <type>Beak1</type>
+                    <type>Bird</type>
+                    <type>Beak</type>
                 </container>
                 <animation-folder expanded="1">
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6487522195283188" speed="5">
@@ -108,7 +114,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Beak1" sid="5079130925783663">
+            <object-type name="Beak" sid="5079130925783663">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="Pin" sid="8257540209032237">
@@ -122,8 +128,8 @@
                     </behavior-type>
                 </behaviors>
                 <container>
-                    <type>Bird1</type>
-                    <type>Beak1</type>
+                    <type>Bird</type>
+                    <type>Beak</type>
                 </container>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8133692581434725" speed="5">
@@ -152,6 +158,7 @@
                     <instance-variable name="Lightning" sid="3372724390136786" type="boolean" />
                     <instance-variable name="Invulnerability" sid="7562635099596214" type="boolean" />
                     <instance-variable name="FireTrail" sid="3699853444794302" type="boolean" />
+                    <instance-variable name="birdid" sid="4264506682339063" type="string" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="7369527083188939">
@@ -240,6 +247,15 @@
             </object-type>
             <object-type global="1" name="obj_optionHeadings" sid="5909976089927081">
                 <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="LogMessages" sid="4955056792889022">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type name="Multiplayer" sid="5280906194168249">
+                <plugin id="Multiplayer" />
+            </object-type>
+            <object-type name="Function" sid="5482954324251057">
+                <plugin id="Function" />
             </object-type>
         </object-folder>
         <object-folder expanded="1" name="PowerUps">
@@ -488,6 +504,27 @@
         <object-type name="SelectedStyle" sid="8445443456861204">
             <plugin id="Text" />
         </object-type>
+        <object-type name="JoinButton" sid="6304787650461116">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Title" sid="4762300046449194">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="NameTextBox" sid="224291596611856">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="FormLabel" sid="7070932038115932">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="LogText" sid="5123178492618176">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="HostIndicator" sid="3702600614483891">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="NetStats" sid="2868734322419272">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -501,6 +538,8 @@
     <global-instances>
         <global-instance type="Keyboard" uid="5" />
         <global-instance type="Mouse" uid="41" />
+        <global-instance type="Multiplayer" uid="37" />
+        <global-instance type="Function" uid="40" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
