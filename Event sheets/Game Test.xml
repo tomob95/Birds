@@ -1049,12 +1049,12 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Add to" sid="1546055300273645" type="System">
-                            <param id="0" name="Variable">Player1Score</param>
+                        <action id="-10" name="Add to" sid="5936666612547445" type="System">
+                            <param id="0" name="Variable">Player2Score</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="0" name="Set text" sid="1835416087313651" type="Player1Score">
-                            <param id="0" name="Text">Player1Score</param>
+                        <action id="0" name="Set text" sid="8818450896746569" type="Player2Score">
+                            <param id="0" name="Text">Player2Score</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1067,16 +1067,34 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Add to" sid="5936666612547445" type="System">
-                            <param id="0" name="Variable">Player2Score</param>
+                        <action id="-10" name="Add to" sid="1546055300273645" type="System">
+                            <param id="0" name="Variable">Player1Score</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="0" name="Set text" sid="8818450896746569" type="Player2Score">
-                            <param id="0" name="Text">Player2Score</param>
+                        <action id="0" name="Set text" sid="1835416087313651" type="Player1Score">
+                            <param id="0" name="Text">Player1Score</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="3185516114702453" title="Environment Objects" />
+        <event-block sid="6668353287366586">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1339151567316226" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="2988254944884391">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="9350774717879136" type="System" />
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="7598790740762053" type="Cloud">
+                    <param id="0" name="Instance variable">CloudSpawn</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

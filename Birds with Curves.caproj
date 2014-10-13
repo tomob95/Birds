@@ -302,6 +302,19 @@
                 <plugin id="Text" />
             </object-type>
         </object-folder>
+        <object-folder expanded="1" name="Environment Objects">
+            <object-type name="Cloud" sid="8311697955846729">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="CloudSpawn" sid="1063996080202701" type="number" />
+                </instance-variables>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3828678704929858" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="Sprite2" sid="1826255207031328">
             <plugin id="Sprite" />
             <behaviors>
