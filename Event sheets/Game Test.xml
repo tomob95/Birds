@@ -1497,19 +1497,12 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">1</param>
                                         </condition>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2588215810634609" type="Bird">
-                                            <param id="0" name="Instance variable">dash</param>
-                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action behavior="Physics" id="5" name="Apply impulse at angle" sid="1009735568736507" type="Bird">
                                             <param id="0" name="Impulse">Impulse</param>
                                             <param id="1" name="Angle">Bird.Angle</param>
                                             <param id="2" name="Image point">0</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="172652885607891" type="Bird">
-                                            <param id="0" name="Instance variable">dash</param>
-                                            <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1524,10 +1517,6 @@
                                     <actions>
                                         <action id="5" name="Set frame" sid="2225921824726656" type="Bird">
                                             <param id="0" name="Frame number">0</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="8744588890704326" type="Bird">
-                                            <param id="0" name="Instance variable">dash</param>
-                                            <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
