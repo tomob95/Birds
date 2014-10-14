@@ -49,7 +49,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="6728387035958273">
+        <event-block disabled="1" sid="6728387035958273">
             <conditions>
                 <condition id="0" name="On key pressed" sid="2009668773279627" type="Keyboard">
                     <param id="0" name="Key">32 (Space)</param>
@@ -1087,7 +1087,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="This manages the connection to the signalling server and joining/hosting rooms" sid="4977954836031889" title="Signalling">
+        <event-group description="This manages the connection to the signalling server and joining/hosting rooms" sid="4977954836031889" title="Signalling">
             <sub-events>
                 <comment>On start of layout, connect to the signalling server. We also set up which client input values the peers will be using, and sync the Peer object with its position and additional instance variables for the look position, current inputs and player stats.</comment>
                 <comment>At the moment it only syncs the bird object, but future value and object changes will need to be updated or added here.</comment>
@@ -1104,7 +1104,7 @@
                         <action id="11" name="Sync object" sid="4040586638526389" type="Multiplayer">
                             <param id="0" name="Object">Bird</param>
                             <param id="1" name="Data">3</param>
-                            <param id="2" name="Precision">0</param>
+                            <param id="2" name="Precision">1</param>
                             <param id="3" name="Bandwidth">0</param>
                         </action>
                         <action id="12" name="Sync instance variable" sid="7907252418083801" type="Multiplayer">
@@ -1297,7 +1297,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="16" name="Enable local input prediction" sid="8499685476913283" type="Multiplayer">
+                                        <action disabled="1" id="16" name="Enable local input prediction" sid="8499685476913283" type="Multiplayer">
                                             <param id="0" name="Object">Bird</param>
                                         </action>
                                     </actions>
@@ -1545,7 +1545,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" inactive="1" sid="2795434342666988" title="Host">
+                <event-group collapsed="1" description="" inactive="1" sid="2795434342666988" title="Host">
                     <sub-events>
                         <comment>As the host, when a peer joins we create a new Peer object for them. &apos;Sync object&apos; will then notify all the peers that this object was created. We set the created instance&apos;s peer ID variable to the associated peer. Finally we use the &apos;Associate object&apos; action in the Multiplayer object to tell it that this instance represents that peer.</comment>
                         <event-block sid="840954631125968">

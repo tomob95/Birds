@@ -11,6 +11,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>Game Test</layout>
+        <layout>Character Select</layout>
         <event-sheet active="1">Game Test</event-sheet>
     </open-tabs>
     <properties>
