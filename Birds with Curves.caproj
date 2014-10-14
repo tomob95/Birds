@@ -310,7 +310,42 @@
                 </instance-variables>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3828678704929858" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\TrailBlazer\Downloads\cloud.png">
+                            <collision-poly>
+                                <point x="0.169837" y="0.480769" />
+                                <point x="0.5" y="0.0576923" />
+                                <point x="0.813179" y="0.528846" />
+                                <point x="0.810462" y="0.5" />
+                                <point x="0.946332" y="0.848077" />
+                                <point x="0.5" y="0.844231" />
+                                <point x="0.0434783" y="0.876923" />
+                                <point x="0.16712" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Background2" sid="7042344753520618">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8153743202585102" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\TrailBlazer\Downloads\daytime_view02_1920x1080.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Background3" sid="5747028004559994">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4919370164140442" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\TrailBlazer\Downloads\daytime_view03_1920x1080.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Sprite5" sid="7908428012942324">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3466279714412598" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\TrailBlazer\Downloads\daytime_view01_1920x1080.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -525,10 +560,12 @@
     <layout-folder expanded="1">
         <layout>Game Test.xml</layout>
         <layout>Character Select.xml</layout>
+        <layout>Sky Arena.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Game Test.xml</event-sheet>
         <event-sheet>Character Select.xml</event-sheet>
+        <event-sheet>Sky Event Sheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="5" />
