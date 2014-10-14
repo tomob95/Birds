@@ -27,6 +27,7 @@
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
@@ -73,6 +74,7 @@
                     <instance-variable name="birdid" sid="5823047758506161" type="string" />
                     <instance-variable name="inputs" sid="2974703407912511" type="number" />
                     <instance-variable name="dash" sid="4912878819837401" type="boolean" />
+                    <instance-variable name="IsDead" sid="8270167163396055" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="1651999204937736">
@@ -80,6 +82,9 @@
                     </behavior-type>
                     <behavior-type name="LineOfSight" sid="4474626565495766">
                         <behavior id="LOS" />
+                    </behavior-type>
+                    <behavior-type name="Timer" sid="5249295250659502">
+                        <behavior id="Timer" />
                     </behavior-type>
                 </behaviors>
                 <container>
@@ -294,6 +299,9 @@
             </object-type>
             <object-type name="FireTrailParticle" sid="1964850229244955">
                 <plugin id="Particles" />
+                <instance-variables>
+                    <instance-variable name="owner" sid="3969589137497969" type="string" />
+                </instance-variables>
                 <texture />
             </object-type>
         </object-folder>

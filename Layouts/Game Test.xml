@@ -45,6 +45,7 @@
                         <birdid></birdid>
                         <inputs>0</inputs>
                         <dash>false</dash>
+                        <IsDead>false</IsDead>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">
@@ -69,6 +70,7 @@
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Timer" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -507,6 +509,9 @@
                         <destroy-mode>Fade to invisible</destroy-mode>
                         <timeout>1</timeout>
                     </properties>
+                    <instance-variables>
+                        <owner></owner>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
