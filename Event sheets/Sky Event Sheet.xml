@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Sky Event Sheet</name>
     <events>
+        <variable constant="0" name="PowerUpChoice" sid="6775744593510464" static="0" type="number">0</variable>
         <variable constant="0" name="DisparationSpeed2" sid="8603609500434302" static="0" type="number">2</variable>
         <variable constant="0" name="Player2Score2" sid="3742507548248188" static="0" type="number">0</variable>
         <variable constant="0" name="Player1Score2" sid="6582920085861257" static="0" type="number">0</variable>
@@ -50,7 +51,7 @@
                 <action id="-26" name="Restart layout" sid="7882128293930899" type="System" />
             </actions>
         </event-block>
-        <event-group description="" sid="3743535411290462" title="Player3">
+        <event-group description="" sid="3743535411290462" title="Sky Player 1">
             <sub-events>
                 <event-block sid="6053853594747804">
                     <conditions>
@@ -206,7 +207,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8271007310560779" title="Player3">
+        <event-group description="" sid="8271007310560779" title="Sky Player 2">
             <sub-events>
                 <event-block sid="6053853594747804">
                     <conditions>
@@ -362,7 +363,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Slow Mo" sid="341534981774126" title="Time Controls2">
+        <event-group description="Slow Mo" sid="341534981774126" title="Sky Time Controls">
             <sub-events>
                 <event-block sid="6127947532616179">
                     <conditions>
@@ -409,7 +410,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8481958391181813" title="Respawn Player 3">
+        <event-group description="" sid="8481958391181813" title="Sky Respawn Player 1">
             <sub-events>
                 <event-block sid="2421091008958683">
                     <conditions>
@@ -454,7 +455,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="1733028782670534" title="Respawn Player 3">
+        <event-group description="" sid="1733028782670534" title="Sky Respawn Player 2">
             <sub-events>
                 <event-block sid="2421091008958683">
                     <conditions>
@@ -499,7 +500,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="7203460537635497" title="PowerUps2">
+        <event-group description="" sid="7203460537635497" title="Sky PowerUps">
             <sub-events>
                 <comment>Lightning Start</comment>
                 <event-block sid="1737987593563819">
@@ -614,16 +615,30 @@
                 </event-block>
                 <event-block sid="7963493532530447">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="951436259753566" type="System">
+                        <condition disabled="1" id="-6" name="Every X seconds" sid="951436259753566" type="System">
                             <param id="0" name="Interval (seconds)">10</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="573094803087253" type="System">
+                            <param id="0" name="Variable">PowerUpChoice</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="5336577814835319" type="System">
+                        <action disabled="1" id="-3" name="Create object" sid="5336577814835319" type="System">
                             <param id="0" name="Object to create">Lightning</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">830</param>
                             <param id="3" name="Y">755</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="3443110962442507" type="PowerupSpawn">
+                            <param id="0" name="Object">Lightning</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">Random(1,5)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3446202902261287" type="System">
+                            <param id="0" name="Variable">PowerUpChoice</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                         <action id="-16" name="Wait" sid="4868684020235632" type="System">
                             <param id="0" name="Seconds">5</param>
@@ -733,16 +748,30 @@
                 </event-block>
                 <event-block sid="9992372123919606">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="7503074417842773" type="System">
+                        <condition disabled="1" id="-6" name="Every X seconds" sid="7503074417842773" type="System">
                             <param id="0" name="Interval (seconds)">10</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="4487276045448746" type="System">
+                            <param id="0" name="Variable">PowerUpChoice</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="819924189529046" type="System">
+                        <action disabled="1" id="-3" name="Create object" sid="819924189529046" type="System">
                             <param id="0" name="Object to create">Invulnerability</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">1100</param>
                             <param id="3" name="Y">755</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="9068455096863124" type="PowerupSpawn">
+                            <param id="0" name="Object">Invulnerability</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">Random(1,5)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4213099400110887" type="System">
+                            <param id="0" name="Variable">PowerUpChoice</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                         <action id="-16" name="Wait" sid="3952552656645054" type="System">
                             <param id="0" name="Seconds">5</param>
@@ -936,16 +965,30 @@
                 </event-block>
                 <event-block sid="7917081576368572">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="5075407901805847" type="System">
+                        <condition disabled="1" id="-6" name="Every X seconds" sid="5075407901805847" type="System">
                             <param id="0" name="Interval (seconds)">10</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="7971085988069527" type="System">
+                            <param id="0" name="Variable">PowerUpChoice</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="2145119434785278" type="System">
+                        <action disabled="1" id="-3" name="Create object" sid="2145119434785278" type="System">
                             <param id="0" name="Object to create">FireTrail</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">1300</param>
                             <param id="3" name="Y">755</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="4869532968931691" type="PowerupSpawn">
+                            <param id="0" name="Object">FireTrail</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">Random(1,5)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4379429277732578" type="System">
+                            <param id="0" name="Variable">PowerUpChoice</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                         <action id="-16" name="Wait" sid="7688549313362079" type="System">
                             <param id="0" name="Seconds">5</param>
@@ -963,6 +1006,9 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="5418472570676876" type="Blink" />
+                        <action behavior="Physics" id="24" name="Set prevent rotation" sid="6989950197651508" type="Bird1">
+                            <param id="0" name="Setting">1</param>
+                        </action>
                         <action behavior="Physics" id="5" name="Apply impulse at angle" sid="1681318510770298" type="Bird1">
                             <param id="0" name="Impulse">1000</param>
                             <param id="1" name="Angle">Bird1.Angle</param>
@@ -975,6 +1021,9 @@
                             <param id="0" name="X component">0</param>
                             <param id="1" name="Y component">0</param>
                         </action>
+                        <action behavior="Physics" id="24" name="Set prevent rotation" sid="2688850642113012" type="Bird1">
+                            <param id="0" name="Setting">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="6102855065758268">
@@ -985,6 +1034,9 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="236864289558204" type="Blink" />
+                        <action behavior="Physics" id="24" name="Set prevent rotation" sid="6515120906051212" type="Bird2">
+                            <param id="0" name="Setting">1</param>
+                        </action>
                         <action behavior="Physics" id="5" name="Apply impulse at angle" sid="3870146296012748" type="Bird2">
                             <param id="0" name="Impulse">1000</param>
                             <param id="1" name="Angle">Bird2.Angle</param>
@@ -997,20 +1049,37 @@
                             <param id="0" name="X component">0</param>
                             <param id="1" name="Y component">0</param>
                         </action>
+                        <action behavior="Physics" id="24" name="Set prevent rotation" sid="5453696650453557" type="Bird2">
+                            <param id="0" name="Setting">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="9745053959263287">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="2568424620688809" type="System">
+                        <condition disabled="1" id="-6" name="Every X seconds" sid="2568424620688809" type="System">
                             <param id="0" name="Interval (seconds)">10</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="9584218493486082" type="System">
+                            <param id="0" name="Variable">PowerUpChoice</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="9363900815287394" type="System">
+                        <action disabled="1" id="-3" name="Create object" sid="3069258516114169" type="System">
                             <param id="0" name="Object to create">Blink</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">600</param>
                             <param id="3" name="Y">755</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="8729125853558684" type="PowerupSpawn">
+                            <param id="0" name="Object">Blink</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">Random(1,5)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5276886198289716" type="System">
+                            <param id="0" name="Variable">PowerUpChoice</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                         <action id="-16" name="Wait" sid="605617746840987" type="System">
                             <param id="0" name="Seconds">5</param>
@@ -1019,9 +1088,23 @@
                     </actions>
                 </event-block>
                 <comment>Blink End</comment>
+                <comment>Powerup spawn system</comment>
+                <event-block sid="3498774894125891">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="7507208686093118" type="System">
+                            <param id="0" name="Interval (seconds)">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5276802943125816" type="System">
+                            <param id="0" name="Variable">PowerUpChoice</param>
+                            <param id="1" name="Value">floor(random(1,5))</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="9315306466318383" title="ScoreBoard2">
+        <event-group description="" sid="9315306466318383" title="Sky ScoreBoard">
             <sub-events>
                 <event-block sid="4867949636855675">
                     <conditions>
@@ -1074,7 +1157,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="9766637774607877" title="Environment Objects2" />
+        <event-group description="" sid="9766637774607877" title="Sky Environment Objects" />
         <event-block sid="4850396582738862">
             <conditions>
                 <condition id="-1" name="Every tick" sid="8145257010442161" type="System" />

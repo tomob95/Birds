@@ -287,6 +287,19 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="PowerupSpawn" sid="4780703541628332">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9781409711828993" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.12" y="0.076" />
+                            <image-point name="Imagepoint 2" x="0.84" y="0.168" />
+                            <image-point name="Imagepoint 3" x="0.16" y="0.832" />
+                            <image-point name="Imagepoint 4" x="0.86" y="0.884" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder expanded="1" name="ScoreBoard">
             <object-type name="Player2Score" sid="5168464840623875">
@@ -341,7 +354,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Sprite5" sid="7908428012942324">
+            <object-type name="Background1" sid="7908428012942324">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3466279714412598" speed="5">
