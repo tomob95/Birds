@@ -1079,12 +1079,6 @@
             </sub-events>
         </event-group>
         <event-group description="" sid="3185516114702453" title="Environment Objects" />
-        <event-block sid="6668353287366586">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="1339151567316226" type="System" />
-            </conditions>
-            <actions />
-        </event-block>
         <event-block sid="2988254944884391">
             <conditions>
                 <condition id="-1" name="Every tick" sid="9350774717879136" type="System" />
@@ -1093,6 +1087,42 @@
                 <action id="-11" name="Add to" sid="7598790740762053" type="Cloud">
                     <param id="0" name="Instance variable">CloudSpawn</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action id="-17" name="Move forward" sid="3523088402282429" type="Cloud">
+                    <param id="0" name="Distance">-5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="30549326522685">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="9276416167385292" type="Cloud">
+                    <param id="0" name="Instance variable">CloudSpawn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">200</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="-3" name="Set position" sid="101714982303983" type="Cloud">
+                    <param id="0" name="X">2300</param>
+                    <param id="1" name="Y">random(1080)</param>
+                </action>
+                <action id="-3" name="Set position" sid="9544811043860247" type="Cloud">
+                    <param id="0" name="X">2000</param>
+                    <param id="1" name="Y">random(70, 1080)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4140079968577348">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="3269091273519061" type="Cloud">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="X co-ordinate">-300</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="6954422254614628" type="Cloud">
+                    <param id="0" name="Instance variable">CloudSpawn</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
