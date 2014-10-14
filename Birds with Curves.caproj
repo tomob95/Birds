@@ -227,7 +227,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="Technical">
+        <object-folder expanded="0" name="Technical">
             <object-type name="Keyboard" sid="3468836939450099">
                 <plugin id="Keyboard" />
             </object-type>
@@ -259,7 +259,7 @@
                 <plugin id="Function" />
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="PowerUps">
+        <object-folder expanded="0" name="PowerUps">
             <object-type name="Lightning" sid="8173271990812038">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -525,6 +525,21 @@
         </object-type>
         <object-type name="NetStats" sid="2868734322419272">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="PlayerContainer" sid="115826613710785">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="BodyStyle" sid="6117206209439546" type="number" />
+                <instance-variable name="WingStyle" sid="4475323043991659" type="number" />
+                <instance-variable name="BeakStyle" sid="5222569324283294" type="number" />
+                <instance-variable name="TailStyle" sid="3089205468639903" type="number" />
+                <instance-variable name="EyeStyle" sid="1363606491045242" type="number" />
+            </instance-variables>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2000829751203329" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />

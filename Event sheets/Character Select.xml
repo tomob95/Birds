@@ -5,6 +5,7 @@
     <events>
         <variable comment="0=Body, 1=Wings, 2=Beak, 3=Tail, 4=Eyes" constant="0" name="SelectedOption" sid="4955570517623512" static="0" type="number">0</variable>
         <variable comment="Name entered on login screen" constant="0" name="MyUsername" sid="6821468485113489" static="0" type="text"></variable>
+        <variable comment="JSON of Customisation" constant="0" name="MyCustomisation" sid="583601000224252" static="0" type="text"></variable>
         <event-block sid="7339091312495129">
             <conditions>
                 <condition id="-1" name="Every tick" sid="8114809497700916" type="System" />
@@ -215,6 +216,31 @@
                         <action id="0" name="Set text" sid="4282514098855715" type="SelectedOption">
                             <param id="0" name="Text">obj_optionHeadings.At(SelectedOption)</param>
                         </action>
+                        <action id="3" name="Set at XY" sid="7954985864208102" type="P1Custom">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">Bodys.AnimationFrame</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="5330474729385766" type="P1Custom">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">Wings.AnimationFrame</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="8806050137785538" type="P1Custom">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">Beaks.AnimationFrame</param>
+                        </action>
+                        <action disabled="1" id="3" name="Set at XY" sid="4332157401631946" type="P1Custom">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">Bodys.AnimationFrame</param>
+                        </action>
+                        <action disabled="1" id="3" name="Set at XY" sid="2625925686930366" type="P1Custom">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">Bodys.AnimationFrame</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -335,6 +361,10 @@
                                 <action id="-9" name="Set value" sid="9148111701890054" type="System">
                                     <param id="0" name="Variable">MyUsername</param>
                                     <param id="1" name="Value">NameTextBox.Text</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1559874642685132" type="System">
+                                    <param id="0" name="Variable">MyCustomisation</param>
+                                    <param id="1" name="Value">P1Custom.AsJSON</param>
                                 </action>
                                 <action id="-25" name="Go to layout (by name)" sid="688703677531785" type="System">
                                     <param id="0" name="Layout">&quot;Game Test&quot;</param>
