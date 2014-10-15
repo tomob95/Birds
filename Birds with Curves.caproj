@@ -122,12 +122,12 @@
             </object-type>
             <object-type name="Beak" sid="5079130925783663">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="beakid" sid="1005959822664877" type="string" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Pin" sid="8257540209032237">
                         <behavior id="Pin" />
-                    </behavior-type>
-                    <behavior-type name="Solid" sid="7139577419857569">
-                        <behavior id="solid" />
                     </behavior-type>
                     <behavior-type name="Physics" sid="3710982282786422">
                         <behavior id="Physics" />
