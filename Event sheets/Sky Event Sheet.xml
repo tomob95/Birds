@@ -169,6 +169,9 @@
                         <condition id="0" name="On collision with another object" sid="4375022938033995" type="Beak1">
                             <param id="0" name="Object">Bird2</param>
                         </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8352161974921592" type="Bird2">
+                            <param id="0" name="Instance variable">Invulnerability</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-3" name="Create object" sid="697705172976945" type="System">
@@ -324,6 +327,9 @@
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="4375022938033995" type="Beak2">
                             <param id="0" name="Object">Bird1</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="609548591380736" type="Bird1">
+                            <param id="0" name="Instance variable">Invulnerability</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -615,9 +621,6 @@
                 </event-block>
                 <event-block sid="7963493532530447">
                     <conditions>
-                        <condition disabled="1" id="-6" name="Every X seconds" sid="951436259753566" type="System">
-                            <param id="0" name="Interval (seconds)">10</param>
-                        </condition>
                         <condition id="-14" name="Compare variable" sid="573094803087253" type="System">
                             <param id="0" name="Variable">PowerUpChoice</param>
                             <param id="1" name="Comparison">0</param>
@@ -625,16 +628,14 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-3" name="Create object" sid="5336577814835319" type="System">
-                            <param id="0" name="Object to create">Lightning</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">830</param>
-                            <param id="3" name="Y">755</param>
-                        </action>
                         <action id="0" name="Spawn another object" sid="3443110962442507" type="PowerupSpawn">
                             <param id="0" name="Object">Lightning</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="Image point">Random(1,5)</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="1100623342044586" type="Lightning">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Object">Cloud</param>
                         </action>
                         <action id="-9" name="Set value" sid="3446202902261287" type="System">
                             <param id="0" name="Variable">PowerUpChoice</param>
@@ -648,36 +649,6 @@
                 </event-block>
                 <comment>Lightning End</comment>
                 <comment>Invulnerability Start</comment>
-                <event-block sid="9601998885978543">
-                    <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8738518844053048" type="Bird1">
-                            <param id="0" name="Instance variable">Invulnerability</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="11" name="Set collisions enabled" sid="9362273319515132" type="Beak2">
-                            <param id="0" name="Collisions">1</param>
-                        </action>
-                        <action id="11" name="Set collisions enabled" sid="5961803443542017" type="Bird1">
-                            <param id="0" name="Collisions">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7210806716669767">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="3058961544139139" type="Bird1">
-                            <param id="0" name="Instance variable">Invulnerability</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="11" name="Set collisions enabled" sid="8191321957087071" type="Beak2">
-                            <param id="0" name="Collisions">0</param>
-                        </action>
-                        <action id="11" name="Set collisions enabled" sid="4218941562699891" type="Bird1">
-                            <param id="0" name="Collisions">0</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="3032203715619865">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="6666315084487962" type="Bird1">
@@ -694,36 +665,6 @@
                         </action>
                         <action id="-14" name="Toggle boolean" sid="3300717989687435" type="Bird1">
                             <param id="0" name="Instance variable">Invulnerability</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="9298333713947817">
-                    <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4578058877392258" type="Bird2">
-                            <param id="0" name="Instance variable">Invulnerability</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="11" name="Set collisions enabled" sid="8151314470025599" type="Beak1">
-                            <param id="0" name="Collisions">1</param>
-                        </action>
-                        <action id="11" name="Set collisions enabled" sid="3434137634137489" type="Bird2">
-                            <param id="0" name="Collisions">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6737052397088502">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="1286305221682378" type="Bird2">
-                            <param id="0" name="Instance variable">Invulnerability</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="11" name="Set collisions enabled" sid="3757806449274437" type="Beak1">
-                            <param id="0" name="Collisions">0</param>
-                        </action>
-                        <action id="11" name="Set collisions enabled" sid="2661990639743559" type="Bird2">
-                            <param id="0" name="Collisions">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -748,9 +689,6 @@
                 </event-block>
                 <event-block sid="9992372123919606">
                     <conditions>
-                        <condition disabled="1" id="-6" name="Every X seconds" sid="7503074417842773" type="System">
-                            <param id="0" name="Interval (seconds)">10</param>
-                        </condition>
                         <condition id="-14" name="Compare variable" sid="4487276045448746" type="System">
                             <param id="0" name="Variable">PowerUpChoice</param>
                             <param id="1" name="Comparison">0</param>
@@ -758,16 +696,14 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-3" name="Create object" sid="819924189529046" type="System">
-                            <param id="0" name="Object to create">Invulnerability</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">1100</param>
-                            <param id="3" name="Y">755</param>
-                        </action>
                         <action id="0" name="Spawn another object" sid="9068455096863124" type="PowerupSpawn">
                             <param id="0" name="Object">Invulnerability</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="Image point">Random(1,5)</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="6330823801667283" type="Invulnerability">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Object">Cloud</param>
                         </action>
                         <action id="-9" name="Set value" sid="4213099400110887" type="System">
                             <param id="0" name="Variable">PowerUpChoice</param>
@@ -965,9 +901,6 @@
                 </event-block>
                 <event-block sid="7917081576368572">
                     <conditions>
-                        <condition disabled="1" id="-6" name="Every X seconds" sid="5075407901805847" type="System">
-                            <param id="0" name="Interval (seconds)">10</param>
-                        </condition>
                         <condition id="-14" name="Compare variable" sid="7971085988069527" type="System">
                             <param id="0" name="Variable">PowerUpChoice</param>
                             <param id="1" name="Comparison">0</param>
@@ -975,16 +908,14 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-3" name="Create object" sid="2145119434785278" type="System">
-                            <param id="0" name="Object to create">FireTrail</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">1300</param>
-                            <param id="3" name="Y">755</param>
-                        </action>
                         <action id="0" name="Spawn another object" sid="4869532968931691" type="PowerupSpawn">
                             <param id="0" name="Object">FireTrail</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="Image point">Random(1,5)</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="8034470031877135" type="FireTrail">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Object">Cloud</param>
                         </action>
                         <action id="-9" name="Set value" sid="4379429277732578" type="System">
                             <param id="0" name="Variable">PowerUpChoice</param>
@@ -1056,9 +987,6 @@
                 </event-block>
                 <event-block sid="9745053959263287">
                     <conditions>
-                        <condition disabled="1" id="-6" name="Every X seconds" sid="2568424620688809" type="System">
-                            <param id="0" name="Interval (seconds)">10</param>
-                        </condition>
                         <condition id="-14" name="Compare variable" sid="9584218493486082" type="System">
                             <param id="0" name="Variable">PowerUpChoice</param>
                             <param id="1" name="Comparison">0</param>
@@ -1066,16 +994,14 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-3" name="Create object" sid="3069258516114169" type="System">
-                            <param id="0" name="Object to create">Blink</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">600</param>
-                            <param id="3" name="Y">755</param>
-                        </action>
                         <action id="0" name="Spawn another object" sid="8729125853558684" type="PowerupSpawn">
                             <param id="0" name="Object">Blink</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="Image point">Random(1,5)</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="9125486907339652" type="Blink">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Object">Cloud</param>
                         </action>
                         <action id="-9" name="Set value" sid="5276886198289716" type="System">
                             <param id="0" name="Variable">PowerUpChoice</param>
