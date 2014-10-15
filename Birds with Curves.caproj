@@ -292,8 +292,8 @@
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9781409711828993" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.12" y="0.076" />
-                            <image-point name="Imagepoint 2" x="0.84" y="0.168" />
+                            <image-point name="Imagepoint 1" x="0.132" y="0.204" />
+                            <image-point name="Imagepoint 2" x="0.844" y="0.232" />
                             <image-point name="Imagepoint 3" x="0.16" y="0.832" />
                             <image-point name="Imagepoint 4" x="0.86" y="0.884" />
                         </frame>
