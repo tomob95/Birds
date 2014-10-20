@@ -141,7 +141,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="Player2">
+        <object-folder expanded="0" name="Player2">
             <object-type name="Bird2" sid="9117859277070366">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -241,8 +241,11 @@
             <object-type global="1" name="obj_optionHeadings" sid="5909976089927081">
                 <plugin id="Arr" />
             </object-type>
+            <object-type name="Title" sid="4398965618486439">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
-        <object-folder expanded="1" name="PowerUps">
+        <object-folder expanded="0" name="PowerUps">
             <object-type name="Lightning" sid="8173271990812038">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -301,7 +304,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="ScoreBoard">
+        <object-folder expanded="0" name="ScoreBoard">
             <object-type name="Player2Score" sid="5168464840623875">
                 <plugin id="Text" />
             </object-type>
@@ -359,6 +362,14 @@
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3466279714412598" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\TrailBlazer\Downloads\daytime_view01_1920x1080.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="MenuBackground" sid="6101578848121404">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="536273017237254" speed="5">
+                        <frame duration="1" hotspotX="0.500252" hotspotY="0.5" original-source="C:\Users\Tom\Documents\GitHub\Birds\Sprites\TitleScreen.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -574,11 +585,13 @@
         <layout>Game Test.xml</layout>
         <layout>Character Select.xml</layout>
         <layout>Sky Arena.xml</layout>
+        <layout>Title Screen.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Game Test.xml</event-sheet>
         <event-sheet>Character Select.xml</event-sheet>
         <event-sheet>Sky Event Sheet.xml</event-sheet>
+        <event-sheet>Title Screen Sheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="5" />
