@@ -79,7 +79,7 @@
                 <animation-folder expanded="1">
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6487522195283188" speed="5">
                         <frame duration="1" hotspotX="0.558376" hotspotY="0.611675" original-source="H:\GitHub\Birds\Sprites\Bird\blue.png">
-                            <image-point name="Imagepoint 1" x="0.387056" y="0.611675" />
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
                             <collision-poly>
                                 <point x="0.36802" y="0.360406" />
                                 <point x="0.497462" y="0.294416" />
@@ -96,6 +96,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.558376" hotspotY="0.611675" original-source="H:\GitHub\Birds\Sprites\Bird\blue_flap.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
                             <collision-poly>
                                 <point x="0.389776" y="0.860145" />
                                 <point x="0.28092" y="0.698745" />
@@ -164,6 +165,7 @@
                 <animation-folder expanded="1">
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="843427529653481" speed="5">
                         <frame duration="1" hotspotX="0.558376" hotspotY="0.611675" original-source="H:\GitHub\Birds\Sprites\Bird\yellow.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
                             <collision-poly>
                                 <point x="0.262872" y="0.517505" />
                                 <point x="0.331963" y="0.39775" />
@@ -179,6 +181,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.558376" hotspotY="0.596447" original-source="H:\GitHub\Birds\Sprites\Bird\yellow_flap.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
                             <collision-poly>
                                 <point x="0.503989" y="0.28654" />
                                 <point x="0.644147" y="0.291151" />
@@ -288,6 +291,54 @@
             <object-type name="SpriteFont" sid="8675527842275767">
                 <plugin id="Spritefont2" />
                 <texture original-source="H:\GitHub\Birds\Sprites\FontFace.png" />
+            </object-type>
+            <object-type name="Sprite4" sid="6031897848518647">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="4764645568420271">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2811068433142704" speed="5">
+                        <frame duration="1" hotspotX="0.509395" hotspotY="0.700508" original-source="H:\GitHub\Birds\Sprites\Buttons\Play1Controls.png">
+                            <collision-poly>
+                                <point x="0.436326" y="0.265228" />
+                                <point x="0.498956" y="0.0126904" />
+                                <point x="0.563674" y="0.265228" />
+                                <point x="0.515658" y="0.200508" />
+                                <point x="0.974948" y="0.387056" />
+                                <point x="0.498956" y="0.293147" />
+                                <point x="0.0229645" y="0.388325" />
+                                <point x="0.488518" y="0.200508" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Sprite7" sid="8995226903658134">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="739009960030204">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6166710815644685" speed="5">
+                        <frame duration="1" hotspotX="0.501044" hotspotY="0.717005" original-source="H:\GitHub\Birds\Sprites\Buttons\Play2Controls.png">
+                            <collision-poly>
+                                <point x="0.436559" y="0.295195" />
+                                <point x="0.501075" y="0.00438408" />
+                                <point x="0.567742" y="0.295195" />
+                                <point x="0.51828" y="0.220665" />
+                                <point x="0.991398" y="0.402284" />
+                                <point x="0.501075" y="0.327345" />
+                                <point x="0.0107527" y="0.402284" />
+                                <point x="0.490323" y="0.220665" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder expanded="0" name="PowerUps">

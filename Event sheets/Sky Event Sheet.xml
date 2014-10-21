@@ -285,30 +285,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <variable constant="0" name="DisparationSpeed2" sid="4464675751176301" static="0" type="number">2</variable>
-                <variable constant="0" name="Player2Score2" sid="6929158451379813" static="0" type="number">0</variable>
-                <variable constant="0" name="Player1Score2" sid="9073151774388099" static="0" type="number">0</variable>
-                <variable constant="0" name="Gravity2" sid="5900521582619696" static="0" type="number">10</variable>
-                <variable comment="400" constant="0" name="AngVel2" sid="5436693750292497" static="0" type="number">375</variable>
-                <variable comment="25" constant="0" name="Impulse2" sid="1900023972128117" static="0" type="number">40</variable>
-                <variable constant="0" name="DisparationSpeed3" sid="8858405837722587" static="0" type="number">2</variable>
-                <variable constant="0" name="Player2Score3" sid="4529959239772981" static="0" type="number">0</variable>
-                <variable constant="0" name="Player1Score3" sid="8444054472705731" static="0" type="number">0</variable>
-                <variable constant="0" name="Gravity3" sid="9902828946420185" static="0" type="number">10</variable>
-                <variable comment="400" constant="0" name="AngVel3" sid="3936796774019906" static="0" type="number">375</variable>
-                <variable comment="25" constant="0" name="Impulse3" sid="7590932471970346" static="0" type="number">40</variable>
-                <variable constant="0" name="DisparationSpeed4" sid="919846534948905" static="0" type="number">2</variable>
-                <variable constant="0" name="Player2Score4" sid="2300225308519163" static="0" type="number">0</variable>
-                <variable constant="0" name="Player1Score4" sid="1211604789013246" static="0" type="number">0</variable>
-                <variable constant="0" name="Gravity4" sid="1071687802432225" static="0" type="number">10</variable>
-                <variable comment="400" constant="0" name="AngVel4" sid="2399689330537332" static="0" type="number">375</variable>
-                <variable comment="25" constant="0" name="Impulse4" sid="4617666629082291" static="0" type="number">40</variable>
-                <variable constant="0" name="DisparationSpeed5" sid="6779056778155978" static="0" type="number">2</variable>
-                <variable constant="0" name="Player2Score5" sid="6339317316172364" static="0" type="number">0</variable>
-                <variable constant="0" name="Player1Score5" sid="794296717519861" static="0" type="number">0</variable>
-                <variable constant="0" name="Gravity5" sid="1760155915538888" static="0" type="number">10</variable>
-                <variable comment="400" constant="0" name="AngVel5" sid="3581996675112828" static="0" type="number">375</variable>
-                <variable comment="25" constant="0" name="Impulse5" sid="9271930161032042" static="0" type="number">40</variable>
                 <event-block sid="9120993255969162">
                     <conditions>
                         <condition id="3" name="On key released" sid="6351359397226012" type="Keyboard">
@@ -575,30 +551,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="630105257641495">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="6955774670890481" type="Keyboard">
-                            <param id="0" name="Key">87 (W)</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="4397432349071739">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="7177692643547787" type="Bird1">
-                                    <param id="0" name="Instance variable">Lightning</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="239096842459877" type="Bird2">
-                                    <param id="0" name="Impulse">-25</param>
-                                    <param id="1" name="Angle">Bird2.Angle</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <event-block sid="6530385698637371">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="62516687118169" type="Bird2">
@@ -632,30 +584,6 @@
                             <param id="0" name="Angular velocity">0</param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block sid="5907383770847296">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="3517068200980193" type="Keyboard">
-                            <param id="0" name="Key">38 (Up arrow)</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="5860379125427528">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="4225469017622628" type="Bird2">
-                                    <param id="0" name="Instance variable">Lightning</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="1613943926383511" type="Bird1">
-                                    <param id="0" name="Impulse">-25</param>
-                                    <param id="1" name="Angle">Bird1.Angle</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
                 <event-block sid="7963493532530447">
                     <conditions>

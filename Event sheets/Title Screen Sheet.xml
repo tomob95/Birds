@@ -21,7 +21,7 @@
                     <param id="0" name="Pin to">Bird2</param>
                     <param id="1" name="Mode">0</param>
                 </action>
-                <action id="-18" name="Rotate clockwise" sid="9096121511692012" type="Bird1">
+                <action id="-18" name="Rotate clockwise" sid="9096121511692012" type="Bird2">
                     <param id="0" name="Degrees">180</param>
                 </action>
                 <action behavior="Physics" id="23" name="Enable/disable collisions" sid="7466082604354941" type="Beak1">
@@ -39,7 +39,7 @@
                 <event-block sid="6053853594747804">
                     <conditions>
                         <condition id="2" name="Key is down" sid="8162957044638927" type="Keyboard">
-                            <param id="0" name="Key">37 (Left arrow)</param>
+                            <param id="0" name="Key">65 (A)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -51,7 +51,7 @@
                 <event-block sid="6855991756605378">
                     <conditions>
                         <condition id="2" name="Key is down" sid="1120738599370142" type="Keyboard">
-                            <param id="0" name="Key">39 (Right arrow)</param>
+                            <param id="0" name="Key">68 (D)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -63,7 +63,7 @@
                 <event-block sid="8833575375873781">
                     <conditions>
                         <condition id="3" name="On key released" sid="8393287570461643" type="Keyboard">
-                            <param id="0" name="Key">37 (Left arrow)</param>
+                            <param id="0" name="Key">65 (A)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -75,7 +75,7 @@
                 <event-block sid="2507616866975822">
                     <conditions>
                         <condition id="3" name="On key released" sid="5619308417335532" type="Keyboard">
-                            <param id="0" name="Key">39 (Right arrow)</param>
+                            <param id="0" name="Key">68 (D)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -87,7 +87,7 @@
                 <event-block sid="3649824442512024">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="2434990484419706" type="Keyboard">
-                            <param id="0" name="Key">38 (Up arrow)</param>
+                            <param id="0" name="Key">87 (W)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -110,7 +110,7 @@
                 <event-block sid="9120993255969162">
                     <conditions>
                         <condition id="3" name="On key released" sid="6351359397226012" type="Keyboard">
-                            <param id="0" name="Key">38 (Up arrow)</param>
+                            <param id="0" name="Key">87 (W)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -172,7 +172,7 @@
                 <event-block sid="6053853594747804">
                     <conditions>
                         <condition id="2" name="Key is down" sid="8162957044638927" type="Keyboard">
-                            <param id="0" name="Key">65 (A)</param>
+                            <param id="0" name="Key">37 (Left arrow)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -184,7 +184,7 @@
                 <event-block sid="6855991756605378">
                     <conditions>
                         <condition id="2" name="Key is down" sid="1120738599370142" type="Keyboard">
-                            <param id="0" name="Key">68 (D)</param>
+                            <param id="0" name="Key">39 (Right arrow)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -196,7 +196,7 @@
                 <event-block sid="8833575375873781">
                     <conditions>
                         <condition id="3" name="On key released" sid="8393287570461643" type="Keyboard">
-                            <param id="0" name="Key">65 (A)</param>
+                            <param id="0" name="Key">37 (Left arrow)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -208,7 +208,7 @@
                 <event-block sid="2507616866975822">
                     <conditions>
                         <condition id="3" name="On key released" sid="5619308417335532" type="Keyboard">
-                            <param id="0" name="Key">68 (D)</param>
+                            <param id="0" name="Key">39 (Right arrow)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -220,7 +220,7 @@
                 <event-block sid="3649824442512024">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="2434990484419706" type="Keyboard">
-                            <param id="0" name="Key">87 (W)</param>
+                            <param id="0" name="Key">38 (Up arrow)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -243,7 +243,7 @@
                 <event-block sid="9120993255969162">
                     <conditions>
                         <condition id="3" name="On key released" sid="6351359397226012" type="Keyboard">
-                            <param id="0" name="Key">87 (W)</param>
+                            <param id="0" name="Key">38 (Up arrow)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -300,5 +300,20 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="3245626543599812">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="757303372984767" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="6679567778656153" type="Sprite4">
+                    <param id="0" name="Object">Bird1</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="1119475530691754" type="Sprite7">
+                    <param id="0" name="Object">Bird2</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
