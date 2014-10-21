@@ -4,12 +4,6 @@
     <name>Sky Event Sheet</name>
     <events>
         <variable constant="0" name="PowerUpChoice" sid="6775744593510464" static="0" type="number">0</variable>
-        <variable constant="0" name="DisparationSpeed2" sid="8603609500434302" static="0" type="number">2</variable>
-        <variable constant="0" name="Player2Score2" sid="3742507548248188" static="0" type="number">0</variable>
-        <variable constant="0" name="Player1Score2" sid="6582920085861257" static="0" type="number">0</variable>
-        <variable constant="0" name="Gravity2" sid="6709763703321807" static="0" type="number">10</variable>
-        <variable constant="0" name="AngVel2" sid="235025620057233" static="0" type="number">400</variable>
-        <variable constant="0" name="Impulse2" sid="5632492142244427" static="0" type="number">25</variable>
         <event-block sid="9019610003252827">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="5993554787802819" type="System" />
@@ -41,14 +35,16 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="8458792965612318">
+        <event-block sid="5346541127339488">
             <conditions>
-                <condition id="0" name="On key pressed" sid="5667529428576682" type="Keyboard">
-                    <param id="0" name="Key">32 (Space)</param>
+                <condition id="0" name="On key pressed" sid="6484598315980627" type="Keyboard">
+                    <param id="0" name="Key">27 (Esc)</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-26" name="Restart layout" sid="7882128293930899" type="System" />
+                <action id="-2" name="Go to layout" sid="9075984210834023" type="System">
+                    <param id="0" name="Layout">Title Screen</param>
+                </action>
             </actions>
         </event-block>
         <event-group description="" sid="3743535411290462" title="Sky Player 1">
@@ -56,7 +52,7 @@
                 <event-block sid="6053853594747804">
                     <conditions>
                         <condition id="2" name="Key is down" sid="8162957044638927" type="Keyboard">
-                            <param id="0" name="Key">37 (Left arrow)</param>
+                            <param id="0" name="Key">65 (A)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -68,7 +64,7 @@
                 <event-block sid="6855991756605378">
                     <conditions>
                         <condition id="2" name="Key is down" sid="1120738599370142" type="Keyboard">
-                            <param id="0" name="Key">39 (Right arrow)</param>
+                            <param id="0" name="Key">68 (D)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -80,7 +76,7 @@
                 <event-block sid="8833575375873781">
                     <conditions>
                         <condition id="3" name="On key released" sid="8393287570461643" type="Keyboard">
-                            <param id="0" name="Key">37 (Left arrow)</param>
+                            <param id="0" name="Key">65 (A)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -92,7 +88,7 @@
                 <event-block sid="2507616866975822">
                     <conditions>
                         <condition id="3" name="On key released" sid="5619308417335532" type="Keyboard">
-                            <param id="0" name="Key">39 (Right arrow)</param>
+                            <param id="0" name="Key">68 (D)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -101,27 +97,33 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="3649824442512024">
+                <event-block sid="1086760276175684">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="2434990484419706" type="Keyboard">
-                            <param id="0" name="Key">38 (Up arrow)</param>
+                        <condition id="0" name="On key pressed" sid="7516107696160334" type="Keyboard">
+                            <param id="0" name="Key">87 (W)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="819306320435141" type="Bird1">
+                        <action behavior="Physics" id="24" name="Set prevent rotation" sid="2599752653156001" type="Bird1">
+                            <param id="0" name="Setting">1</param>
+                        </action>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="5558801574228388" type="Bird1">
                             <param id="0" name="Impulse">Impulse</param>
                             <param id="1" name="Angle">Bird1.Angle</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="5" name="Set frame" sid="2169616164937488" type="Bird1">
+                        <action id="5" name="Set frame" sid="6606427444262895" type="Bird1">
                             <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action behavior="Physics" id="24" name="Set prevent rotation" sid="3737337144767121" type="Bird1">
+                            <param id="0" name="Setting">0</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="9120993255969162">
                     <conditions>
                         <condition id="3" name="On key released" sid="6351359397226012" type="Keyboard">
-                            <param id="0" name="Key">38 (Up arrow)</param>
+                            <param id="0" name="Key">87 (W)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -215,7 +217,7 @@
                 <event-block sid="6053853594747804">
                     <conditions>
                         <condition id="2" name="Key is down" sid="8162957044638927" type="Keyboard">
-                            <param id="0" name="Key">65 (A)</param>
+                            <param id="0" name="Key">37 (Left arrow)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -227,7 +229,7 @@
                 <event-block sid="6855991756605378">
                     <conditions>
                         <condition id="2" name="Key is down" sid="1120738599370142" type="Keyboard">
-                            <param id="0" name="Key">68 (D)</param>
+                            <param id="0" name="Key">39 (Right arrow)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -239,7 +241,7 @@
                 <event-block sid="8833575375873781">
                     <conditions>
                         <condition id="3" name="On key released" sid="8393287570461643" type="Keyboard">
-                            <param id="0" name="Key">65 (A)</param>
+                            <param id="0" name="Key">37 (Left arrow)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -251,7 +253,7 @@
                 <event-block sid="2507616866975822">
                     <conditions>
                         <condition id="3" name="On key released" sid="5619308417335532" type="Keyboard">
-                            <param id="0" name="Key">68 (D)</param>
+                            <param id="0" name="Key">39 (Right arrow)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -263,10 +265,13 @@
                 <event-block sid="3649824442512024">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="2434990484419706" type="Keyboard">
-                            <param id="0" name="Key">87 (W)</param>
+                            <param id="0" name="Key">38 (Up arrow)</param>
                         </condition>
                     </conditions>
                     <actions>
+                        <action behavior="Physics" id="24" name="Set prevent rotation" sid="8096130597098494" type="Bird2">
+                            <param id="0" name="Setting">1</param>
+                        </action>
                         <action behavior="Physics" id="5" name="Apply impulse at angle" sid="819306320435141" type="Bird2">
                             <param id="0" name="Impulse">Impulse</param>
                             <param id="1" name="Angle">Bird2.Angle</param>
@@ -275,12 +280,39 @@
                         <action id="5" name="Set frame" sid="2169616164937488" type="Bird2">
                             <param id="0" name="Frame number">1</param>
                         </action>
+                        <action behavior="Physics" id="24" name="Set prevent rotation" sid="9285910530546663" type="Bird2">
+                            <param id="0" name="Setting">0</param>
+                        </action>
                     </actions>
                 </event-block>
+                <variable constant="0" name="DisparationSpeed2" sid="4464675751176301" static="0" type="number">2</variable>
+                <variable constant="0" name="Player2Score2" sid="6929158451379813" static="0" type="number">0</variable>
+                <variable constant="0" name="Player1Score2" sid="9073151774388099" static="0" type="number">0</variable>
+                <variable constant="0" name="Gravity2" sid="5900521582619696" static="0" type="number">10</variable>
+                <variable comment="400" constant="0" name="AngVel2" sid="5436693750292497" static="0" type="number">375</variable>
+                <variable comment="25" constant="0" name="Impulse2" sid="1900023972128117" static="0" type="number">40</variable>
+                <variable constant="0" name="DisparationSpeed3" sid="8858405837722587" static="0" type="number">2</variable>
+                <variable constant="0" name="Player2Score3" sid="4529959239772981" static="0" type="number">0</variable>
+                <variable constant="0" name="Player1Score3" sid="8444054472705731" static="0" type="number">0</variable>
+                <variable constant="0" name="Gravity3" sid="9902828946420185" static="0" type="number">10</variable>
+                <variable comment="400" constant="0" name="AngVel3" sid="3936796774019906" static="0" type="number">375</variable>
+                <variable comment="25" constant="0" name="Impulse3" sid="7590932471970346" static="0" type="number">40</variable>
+                <variable constant="0" name="DisparationSpeed4" sid="919846534948905" static="0" type="number">2</variable>
+                <variable constant="0" name="Player2Score4" sid="2300225308519163" static="0" type="number">0</variable>
+                <variable constant="0" name="Player1Score4" sid="1211604789013246" static="0" type="number">0</variable>
+                <variable constant="0" name="Gravity4" sid="1071687802432225" static="0" type="number">10</variable>
+                <variable comment="400" constant="0" name="AngVel4" sid="2399689330537332" static="0" type="number">375</variable>
+                <variable comment="25" constant="0" name="Impulse4" sid="4617666629082291" static="0" type="number">40</variable>
+                <variable constant="0" name="DisparationSpeed5" sid="6779056778155978" static="0" type="number">2</variable>
+                <variable constant="0" name="Player2Score5" sid="6339317316172364" static="0" type="number">0</variable>
+                <variable constant="0" name="Player1Score5" sid="794296717519861" static="0" type="number">0</variable>
+                <variable constant="0" name="Gravity5" sid="1760155915538888" static="0" type="number">10</variable>
+                <variable comment="400" constant="0" name="AngVel5" sid="3581996675112828" static="0" type="number">375</variable>
+                <variable comment="25" constant="0" name="Impulse5" sid="9271930161032042" static="0" type="number">40</variable>
                 <event-block sid="9120993255969162">
                     <conditions>
                         <condition id="3" name="On key released" sid="6351359397226012" type="Keyboard">
-                            <param id="0" name="Key">87 (W)</param>
+                            <param id="0" name="Key">38 (Up arrow)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1121,49 +1153,52 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="9766637774607877" title="Sky Environment Objects" />
-        <event-block sid="4850396582738862">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="8145257010442161" type="System" />
-            </conditions>
-            <actions>
-                <action id="-11" name="Add to" sid="5711473310574155" type="Cloud">
-                    <param id="0" name="Instance variable">CloudSpawn</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-17" name="Move forward" sid="1755137352064404" type="Cloud">
-                    <param id="0" name="Distance">-5</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="1092798169241525">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="7579240529329545" type="Cloud">
-                    <param id="0" name="Instance variable">CloudSpawn</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">200</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-3" name="Set position" sid="5847300244893164" type="Cloud">
-                    <param id="0" name="X">2300</param>
-                    <param id="1" name="Y">random(70, 1080)</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="1198199131025803">
-            <conditions>
-                <condition id="-1" name="Compare X" sid="2158919697052328" type="Cloud">
-                    <param id="0" name="Comparison">0</param>
-                    <param id="1" name="X co-ordinate">-300</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="7833631923637989" type="Cloud">
-                    <param id="0" name="Instance variable">CloudSpawn</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="9766637774607877" title="Sky Environment Objects">
+            <sub-events>
+                <event-block sid="4850396582738862">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="8145257010442161" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="5711473310574155" type="Cloud">
+                            <param id="0" name="Instance variable">CloudSpawn</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-17" name="Move forward" sid="1755137352064404" type="Cloud">
+                            <param id="0" name="Distance">-5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1092798169241525">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7579240529329545" type="Cloud">
+                            <param id="0" name="Instance variable">CloudSpawn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">200</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="5847300244893164" type="Cloud">
+                            <param id="0" name="X">2300</param>
+                            <param id="1" name="Y">random(70, 1080)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1198199131025803">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="2158919697052328" type="Cloud">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="X co-ordinate">-300</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="7833631923637989" type="Cloud">
+                            <param id="0" name="Instance variable">CloudSpawn</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

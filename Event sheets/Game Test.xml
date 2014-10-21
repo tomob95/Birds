@@ -6,9 +6,9 @@
         <variable constant="0" name="DisparationSpeed" sid="215759270624451" static="0" type="number">2</variable>
         <variable constant="0" name="Player2Score" sid="1395132170908658" static="0" type="number">0</variable>
         <variable constant="0" name="Player1Score" sid="3340489528706963" static="0" type="number">0</variable>
-        <variable constant="0" name="Gravity" sid="86620975964082" static="0" type="number">10</variable>
-        <variable constant="0" name="AngVel" sid="9082232347000361" static="0" type="number">400</variable>
-        <variable constant="0" name="Impulse" sid="2257617201534871" static="0" type="number">25</variable>
+        <variable constant="0" name="Gravity" sid="86620975964082" static="0" type="number">8</variable>
+        <variable comment="400" constant="0" name="AngVel" sid="9082232347000361" static="0" type="number">400</variable>
+        <variable comment="25" constant="0" name="Impulse" sid="2257617201534871" static="0" type="number">30</variable>
         <event-block sid="6508059842941432">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="2123448840046432" type="System" />

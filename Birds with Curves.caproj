@@ -15,6 +15,7 @@
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="sliderbar" version="1">Slider bar</plugin>
@@ -37,7 +38,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>Character Select</first-layout>
+    <first-layout>Title Screen</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -75,34 +76,37 @@
                         <behavior id="LOS" />
                     </behavior-type>
                 </behaviors>
-                <container>
-                    <type>Bird1</type>
-                    <type>Beak1</type>
-                </container>
                 <animation-folder expanded="1">
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6487522195283188" speed="5">
-                        <frame duration="1" hotspotX="0.508475" hotspotY="0.511864">
+                        <frame duration="1" hotspotX="0.558376" hotspotY="0.611675" original-source="H:\GitHub\Birds\Sprites\Bird\blue.png">
+                            <image-point name="Imagepoint 1" x="0.387056" y="0.611675" />
                             <collision-poly>
-                                <point x="0.153735" y="0.499738" />
-                                <point x="0.316735" y="0.225161" />
-                                <point x="0.538913" y="0.15228" />
-                                <point x="0.748308" y="0.242958" />
-                                <point x="0.856007" y="0.4455" />
-                                <point x="0.840082" y="0.76782" />
-                                <point x="0.554541" y="0.853711" />
-                                <point x="0.171087" y="0.727572" />
+                                <point x="0.36802" y="0.360406" />
+                                <point x="0.497462" y="0.294416" />
+                                <point x="0.642767" y="0.292512" />
+                                <point x="0.772843" y="0.417513" />
+                                <point x="0.845178" y="0.522842" />
+                                <point x="0.847716" y="0.668782" />
+                                <point x="0.784264" y="0.784264" />
+                                <point x="0.675127" y="0.883249" />
+                                <point x="0.527919" y="0.920051" />
+                                <point x="0.368021" y="0.845178" />
+                                <point x="0.280457" y="0.662437" />
+                                <point x="0.271574" y="0.5" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.508475" hotspotY="0.511864">
+                        <frame duration="1" hotspotX="0.558376" hotspotY="0.611675" original-source="H:\GitHub\Birds\Sprites\Bird\blue_flap.png">
                             <collision-poly>
-                                <point x="0.153735" y="0.499738" />
-                                <point x="0.316735" y="0.225161" />
-                                <point x="0.538913" y="0.15228" />
-                                <point x="0.748308" y="0.242958" />
-                                <point x="0.856007" y="0.4455" />
-                                <point x="0.840082" y="0.76782" />
-                                <point x="0.554541" y="0.853711" />
-                                <point x="0.171087" y="0.727572" />
+                                <point x="0.389776" y="0.860145" />
+                                <point x="0.28092" y="0.698745" />
+                                <point x="0.265974" y="0.491659" />
+                                <point x="0.369448" y="0.357503" />
+                                <point x="0.556679" y="0.276645" />
+                                <point x="0.687394" y="0.336866" />
+                                <point x="0.850931" y="0.531795" />
+                                <point x="0.837544" y="0.717058" />
+                                <point x="0.742358" y="0.833407" />
+                                <point x="0.56195" y="0.917928" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -121,13 +125,9 @@
                         <behavior id="Physics" />
                     </behavior-type>
                 </behaviors>
-                <container>
-                    <type>Bird1</type>
-                    <type>Beak1</type>
-                </container>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8133692581434725" speed="5">
-                        <frame duration="1" hotspotX="0.508475" hotspotY="0.511864">
+                        <frame duration="1" hotspotX="0.558376" hotspotY="0.611675" original-source="H:\GitHub\Birds\Sprites\Bird\blue_beak.png">
                             <collision-poly>
                                 <point x="0.819837" y="0.642111" />
                                 <point x="0.801625" y="0.590678" />
@@ -141,7 +141,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="Player2">
+        <object-folder expanded="1" name="Player2">
             <object-type name="Bird2" sid="9117859277070366">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -163,28 +163,34 @@
                 </behaviors>
                 <animation-folder expanded="1">
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="843427529653481" speed="5">
-                        <frame duration="1" hotspotX="0.508475" hotspotY="0.511864">
+                        <frame duration="1" hotspotX="0.558376" hotspotY="0.611675" original-source="H:\GitHub\Birds\Sprites\Bird\yellow.png">
                             <collision-poly>
-                                <point x="0.153735" y="0.499738" />
-                                <point x="0.316735" y="0.225161" />
-                                <point x="0.538913" y="0.15228" />
-                                <point x="0.748308" y="0.242958" />
-                                <point x="0.856007" y="0.4455" />
-                                <point x="0.840082" y="0.76782" />
-                                <point x="0.554541" y="0.853711" />
-                                <point x="0.171087" y="0.727572" />
+                                <point x="0.262872" y="0.517505" />
+                                <point x="0.331963" y="0.39775" />
+                                <point x="0.492838" y="0.294504" />
+                                <point x="0.641023" y="0.295319" />
+                                <point x="0.76734" y="0.406087" />
+                                <point x="0.854907" y="0.544989" />
+                                <point x="0.83824" y="0.70946" />
+                                <point x="0.720792" y="0.851577" />
+                                <point x="0.567869" y="0.916096" />
+                                <point x="0.414947" y="0.879092" />
+                                <point x="0.287838" y="0.73011" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.508475" hotspotY="0.511864">
+                        <frame duration="1" hotspotX="0.558376" hotspotY="0.596447" original-source="H:\GitHub\Birds\Sprites\Bird\yellow_flap.png">
                             <collision-poly>
-                                <point x="0.153735" y="0.499738" />
-                                <point x="0.316735" y="0.225161" />
-                                <point x="0.538913" y="0.15228" />
-                                <point x="0.748308" y="0.242958" />
-                                <point x="0.856007" y="0.4455" />
-                                <point x="0.840082" y="0.76782" />
-                                <point x="0.554541" y="0.853711" />
-                                <point x="0.171087" y="0.727572" />
+                                <point x="0.503989" y="0.28654" />
+                                <point x="0.644147" y="0.291151" />
+                                <point x="0.759726" y="0.401011" />
+                                <point x="0.852369" y="0.52976" />
+                                <point x="0.843317" y="0.679003" />
+                                <point x="0.743635" y="0.843962" />
+                                <point x="0.554541" y="0.919701" />
+                                <point x="0.404692" y="0.866784" />
+                                <point x="0.294235" y="0.743879" />
+                                <point x="0.264387" y="0.525065" />
+                                <point x="0.371595" y="0.362089" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -205,7 +211,7 @@
                 </behaviors>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5317419482257099" speed="5">
-                        <frame duration="1" hotspotX="0.508475" hotspotY="0.511864">
+                        <frame duration="1" hotspotX="0.558376" hotspotY="0.611675" original-source="H:\GitHub\Birds\Sprites\Bird\yellow_beak.png">
                             <collision-poly>
                                 <point x="0.819837" y="0.642111" />
                                 <point x="0.801625" y="0.590678" />
@@ -241,8 +247,47 @@
             <object-type global="1" name="obj_optionHeadings" sid="5909976089927081">
                 <plugin id="Arr" />
             </object-type>
-            <object-type name="Title" sid="4398965618486439">
-                <plugin id="Text" />
+            <object-type name="Title" sid="6990463160535929">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="946850670428285" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="H:\GitHub\Birds\Sprites\TitleLogo.png">
+                            <collision-poly>
+                                <point x="0.159292" y="0.238411" />
+                                <point x="0.5" y="0.142384" />
+                                <point x="0.834071" y="0.248344" />
+                                <point x="0.668142" y="0.5" />
+                                <point x="0.935841" y="0.903974" />
+                                <point x="0.5" y="0.788079" />
+                                <point x="0.0641593" y="0.903974" />
+                                <point x="0.327434" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Button" sid="4242153006552527">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6510016577737777" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="H:\GitHub\Birds\Sprites\Buttons\PlayButton2.png">
+                            <collision-poly>
+                                <point x="0.215" y="0.215" />
+                                <point x="0.5" y="0.0975" />
+                                <point x="0.785" y="0.215" />
+                                <point x="0.905" y="0.5" />
+                                <point x="0.7875" y="0.7875" />
+                                <point x="0.5" y="0.905" />
+                                <point x="0.215" y="0.785" />
+                                <point x="0.0975" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SpriteFont" sid="8675527842275767">
+                <plugin id="Spritefont2" />
+                <texture original-source="H:\GitHub\Birds\Sprites\FontFace.png" />
             </object-type>
         </object-folder>
         <object-folder expanded="0" name="PowerUps">
@@ -304,18 +349,43 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="ScoreBoard">
+        <object-folder expanded="1" name="ScoreBoard">
             <object-type name="Player2Score" sid="5168464840623875">
                 <plugin id="Text" />
             </object-type>
             <object-type name="Player1Score" sid="3046100381132369">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="PrePlayer1Score" sid="6336376615648643">
-                <plugin id="Text" />
+            <object-type name="Sprite5" sid="7472251430040845">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7268447503157018" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="H:\GitHub\Birds\Sprites\Score\Player2.png">
+                            <collision-poly>
+                                <point x="0.0203046" y="0.133333" />
+                                <point x="0.890863" y="0.5" />
+                                <point x="0.890863" y="0.283333" />
+                                <point x="0.0875635" y="0.425" />
+                                <point x="0.0152284" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
             </object-type>
-            <object-type name="PrePlayer2Score" sid="9784988618266606">
-                <plugin id="Text" />
+            <object-type name="Sprite6" sid="392545539353058">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6691542975248837" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="H:\GitHub\Birds\Sprites\Score\Player1.png">
+                            <collision-poly>
+                                <point x="0.0203046" y="0.133333" />
+                                <point x="0.861675" y="0.5" />
+                                <point x="0.0875635" y="0.425" />
+                                <point x="0.0152284" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder expanded="1" name="Environment Objects">
@@ -445,7 +515,7 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
-        <object-type name="Sprite4" sid="3127681685528907">
+        <object-type name="Tester" sid="3127681685528907">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4891007977884456" speed="5">
@@ -599,7 +669,7 @@
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
-    <files-folder expanded="1">
+    <files-folder expanded="0">
         <file-folder expanded="1" name="Icons">
             <file name="icon-16.png" />
             <file name="icon-32.png" />

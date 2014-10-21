@@ -61,7 +61,7 @@
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Custom</obstacles>
-                                <range>200</range>
+                                <range>300</range>
                                 <cone-of-view>60</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
@@ -73,11 +73,11 @@
                         <x>391</x>
                         <y>504</y>
                         <z>0</z>
-                        <width>150</width>
-                        <height>150</height>
+                        <width>400.677978516</width>
+                        <height>400.677978516</height>
                         <depth>0</depth>
-                        <hotspotX>0.508474588</hotspotX>
-                        <hotspotY>0.511864424</hotspotY>
+                        <hotspotX>0.558375657</hotspotX>
+                        <hotspotY>0.611675143</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -269,11 +269,11 @@
                         <x>390</x>
                         <y>504</y>
                         <z>0</z>
-                        <width>150</width>
-                        <height>150</height>
+                        <width>400.677978516</width>
+                        <height>400.677978516</height>
                         <depth>0</depth>
-                        <hotspotX>0.508474588</hotspotX>
-                        <hotspotY>0.511864424</hotspotY>
+                        <hotspotX>0.558375657</hotspotX>
+                        <hotspotY>0.611675143</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -339,7 +339,7 @@
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Custom</obstacles>
-                                <range>200</range>
+                                <range>300</range>
                                 <cone-of-view>60</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
@@ -351,11 +351,11 @@
                         <x>1237</x>
                         <y>510</y>
                         <z>0</z>
-                        <width>150</width>
-                        <height>150</height>
+                        <width>400.677978516</width>
+                        <height>400.677978516</height>
                         <depth>0</depth>
-                        <hotspotX>0.508474588</hotspotX>
-                        <hotspotY>0.511864424</hotspotY>
+                        <hotspotX>0.558375657</hotspotX>
+                        <hotspotY>0.611675143</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -395,11 +395,11 @@
                         <x>1237</x>
                         <y>511</y>
                         <z>0</z>
-                        <width>150</width>
-                        <height>150</height>
+                        <width>400.677978516</width>
+                        <height>400.677978516</height>
                         <depth>0</depth>
-                        <hotspotX>0.508474588</hotspotX>
-                        <hotspotY>0.511864424</hotspotY>
+                        <hotspotX>0.558375657</hotspotX>
+                        <hotspotY>0.611675143</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -524,7 +524,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite4" uid="9">
+                <instance type="Tester" uid="9">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -703,60 +703,6 @@
                         <z>0</z>
                         <width>184</width>
                         <height>93</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="PrePlayer2Score" uid="35">
-                    <properties>
-                        <text>Player 2&apos;s Score: </text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-64,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1344</x>
-                        <y>46</y>
-                        <z>0</z>
-                        <width>504</width>
-                        <height>102</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="PrePlayer1Score" uid="36">
-                    <properties>
-                        <text>Player 1&apos;s Score: </text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-64,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>69</x>
-                        <y>45</y>
-                        <z>0</z>
-                        <width>520</width>
-                        <height>109</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
