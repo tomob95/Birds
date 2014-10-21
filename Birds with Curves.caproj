@@ -52,7 +52,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D web</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">Internet Explorer</prop>
+        <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -342,7 +342,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="PowerUps">
+        <object-folder expanded="1" name="PowerUps">
             <object-type name="Lightning" sid="8173271990812038">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -355,7 +355,15 @@
                 </behaviors>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2044285502939893" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501683" original-source="C:\Users\TrailBlazer\Downloads\LIGHTNING.png">
+                            <collision-poly>
+                                <point x="0.5" y="0.020202" />
+                                <point x="0.964516" y="0.498316" />
+                                <point x="0.748387" y="0.737374" />
+                                <point x="0.5" y="0.969697" />
+                                <point x="0.0322581" y="0.498316" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -363,7 +371,17 @@
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9591144008957154" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.501661" hotspotY="0.5" original-source="C:\Users\TrailBlazer\Downloads\SHIELD.png">
+                            <collision-poly>
+                                <point x="0.239203" y="0.243243" />
+                                <point x="0.498339" y="0.0371622" />
+                                <point x="0.976744" y="0.5" />
+                                <point x="0.750831" y="0.746622" />
+                                <point x="0.498339" y="0.989865" />
+                                <point x="0.222591" y="0.773649" />
+                                <point x="0.0166113" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -371,7 +389,17 @@
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2197573910702202" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501683" original-source="C:\Users\TrailBlazer\Downloads\FLAME.png">
+                            <collision-poly>
+                                <point x="0.218121" y="0.218855" />
+                                <point x="0.5" y="0.00673401" />
+                                <point x="0.979866" y="0.498316" />
+                                <point x="0.775168" y="0.774411" />
+                                <point x="0.5" y="0.976431" />
+                                <point x="0.251678" y="0.747475" />
+                                <point x="0.033557" y="0.498316" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -383,7 +411,17 @@
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="201357524166338" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.501577" hotspotY="0.5" original-source="C:\Users\TrailBlazer\Downloads\DASH.png">
+                            <collision-poly>
+                                <point x="0.242902" y="0.258389" />
+                                <point x="0.498423" y="0.0436242" />
+                                <point x="0.829653" y="0.181208" />
+                                <point x="0.955836" y="0.5" />
+                                <point x="0.498423" y="0.989933" />
+                                <point x="0.141956" y="0.848993" />
+                                <point x="0.0347003" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -439,7 +477,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Text" sid="7926783088402518">
+            <object-type name="WinOrLoseRight" sid="7926783088402518">
                 <plugin id="Text" />
             </object-type>
             <object-type name="Clock" sid="9941614468615747">
@@ -449,6 +487,12 @@
                         <behavior id="Timer" />
                     </behavior-type>
                 </behaviors>
+            </object-type>
+            <object-type name="WinOrLoseLeft" sid="4404930767334829">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Text" sid="877507017346602">
+                <plugin id="Text" />
             </object-type>
         </object-folder>
         <object-folder expanded="1" name="Environment Objects">

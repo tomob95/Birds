@@ -34,6 +34,93 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="4227154428368616">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4311091517461924" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="4587474532080238">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="621140926955844" type="System">
+                            <param id="0" name="Variable">Player1Score</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">Player2Score</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="177391496108816" type="WinOrLoseLeft">
+                            <param id="0" name="Color">rgb(0, 255, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3806734665615241" type="WinOrLoseLeft">
+                            <param id="0" name="Text">&quot;Winner!&quot;</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="9427279171559645" type="WinOrLoseRight">
+                            <param id="0" name="Color">rgb(255, 0, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3625998896805358" type="WinOrLoseRight">
+                            <param id="0" name="Text">&quot;Loser!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4541379430495484">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="489828955228426" type="System">
+                            <param id="0" name="Variable">Player2Score</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">Player1Score</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="7615801755783994" type="WinOrLoseRight">
+                            <param id="0" name="Color">rgb(0, 255, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8078183480181057" type="WinOrLoseRight">
+                            <param id="0" name="Text">&quot;Winner!&quot;</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="1705812170420376" type="WinOrLoseLeft">
+                            <param id="0" name="Color">rgb(255, 0, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="6708607253070096" type="WinOrLoseLeft">
+                            <param id="0" name="Text">&quot;Loser!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7730228995786846">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3366870046419857" type="System">
+                            <param id="0" name="Variable">Player1Score</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Player2Score</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="7570357182673635" type="System">
+                            <param id="0" name="Variable">Player1Score</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="4791225602697986" type="System">
+                            <param id="0" name="Variable">Player2Score</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="7534242615209096" type="WinOrLoseLeft">
+                            <param id="0" name="Color">rgb(255, 255, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="665178613340471" type="WinOrLoseLeft">
+                            <param id="0" name="Text">&quot;Tied&quot;</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="3391227868698354" type="WinOrLoseRight">
+                            <param id="0" name="Color">rgb(255, 255, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8266917926739454" type="WinOrLoseRight">
+                            <param id="0" name="Text">&quot;Tied&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-group description="" sid="7837488843859073" title="Sky Player 3">
             <sub-events>
                 <event-block sid="6053853594747804">

@@ -34,21 +34,26 @@
                     <param id="0" name="Object">Bird2</param>
                     <param id="1" name="State">0</param>
                 </action>
-                <action behavior="Timer" id="0" name="Start timer" sid="8025367927479383" type="Clock">
-                    <param id="0" name="Duration">10</param>
-                    <param id="1" name="Type">0</param>
-                    <param id="2" name="Tag">&quot;Round&quot;</param>
-                </action>
-                <action id="-9" name="Set value" sid="1012380293796825" type="System">
+                <action id="-9" name="Set value" sid="8481711930377533" type="System">
                     <param id="0" name="Variable">ClockTimer</param>
-                    <param id="1" name="Value">10</param>
+                    <param id="1" name="Value">60</param>
+                </action>
+                <action id="-9" name="Set value" sid="998103353353344" type="System">
+                    <param id="0" name="Variable">Player1Score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="3668046879749269" type="System">
+                    <param id="0" name="Variable">Player2Score</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="6321179380590859">
             <conditions>
-                <condition behavior="Timer" id="0" name="On timer" sid="6853629020507619" type="Clock">
-                    <param id="0" name="Tag">&quot;Round&quot;</param>
+                <condition id="-14" name="Compare variable" sid="8329100449942211" type="System">
+                    <param id="0" name="Variable">ClockTimer</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
@@ -1073,7 +1078,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="9315306466318383" title="Sky ScoreBoard">
+        <event-group collapsed="1" description="" sid="9315306466318383" title="Sky ScoreBoard">
             <sub-events>
                 <event-block sid="4867949636855675">
                     <conditions>

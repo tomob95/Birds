@@ -300,33 +300,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player2Score" uid="45">
-                    <properties>
-                        <text>0</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Comic Sans MS,-64,700,0</font>
-                        <color>246,206,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1838</x>
-                        <y>44</y>
-                        <z>0</z>
-                        <width>210</width>
-                        <height>121</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Bird2" uid="46">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -546,14 +519,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2200</x>
-                        <y>48</y>
+                        <x>2224</x>
+                        <y>85</y>
                         <z>0</z>
-                        <width>79</width>
-                        <height>74</height>
+                        <width>120</width>
+                        <height>120</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.501683474</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -571,10 +544,10 @@
                         <x>2202</x>
                         <y>-55</y>
                         <z>0</z>
-                        <width>81</width>
-                        <height>75</height>
+                        <width>120</width>
+                        <height>120</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0.501661122</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -590,14 +563,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2083</x>
-                        <y>-102</y>
+                        <x>2059</x>
+                        <y>-160</y>
                         <z>0</z>
-                        <width>80</width>
-                        <height>71</height>
+                        <width>120</width>
+                        <height>120</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.501683474</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -615,10 +588,10 @@
                         <x>2215</x>
                         <y>-207</y>
                         <z>0</z>
-                        <width>80</width>
-                        <height>77</height>
+                        <width>120</width>
+                        <height>120</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0.501577258</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -649,33 +622,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player1Score" uid="58">
-                    <properties>
-                        <text>0</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Comic Sans MS,-64,700,0</font>
-                        <color>2,63,186</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>635</x>
-                        <y>44</y>
-                        <z>0</z>
-                        <width>184</width>
-                        <height>93</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="PowerupSpawn" uid="63">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -694,6 +640,60 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Player2Score" uid="45">
+                    <properties>
+                        <text>0</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Comic Sans MS,-80,700,0</font>
+                        <color>246,206,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1838</x>
+                        <y>34</y>
+                        <z>0</z>
+                        <width>210</width>
+                        <height>121</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Player1Score" uid="58">
+                    <properties>
+                        <text>0</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Comic Sans MS,-80,700,0</font>
+                        <color>2,63,186</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>635</x>
+                        <y>37</y>
+                        <z>0</z>
+                        <width>206</width>
+                        <height>119</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -746,7 +746,7 @@
                     <properties>
                         <text>60</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>DJB HUNKY CHUNK,-96,700,0</font>
+                        <font>Comic Sans MS,-96,700,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -765,6 +765,33 @@
                         <z>0</z>
                         <width>229</width>
                         <height>175</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Text" uid="75">
+                    <properties>
+                        <text>Press Esc to return to menu</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Comic Sans MS,-27,400,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1026</x>
+                        <y>50</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>88</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
