@@ -75,6 +75,7 @@
                     <instance-variable name="inputs" sid="2974703407912511" type="number" />
                     <instance-variable name="dash" sid="4912878819837401" type="boolean" />
                     <instance-variable name="IsDead" sid="8270167163396055" type="boolean" />
+                    <instance-variable name="health" sid="9495243953263218" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="1651999204937736">
@@ -90,10 +91,12 @@
                 <container>
                     <type>Bird</type>
                     <type>Beak</type>
+                    <type>UserName</type>
                 </container>
                 <animation-folder expanded="1">
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6487522195283188" speed="5">
                         <frame duration="1" hotspotX="0.508475" hotspotY="0.511864">
+                            <image-point name="Imagepoint 1" x="0.511864" y="0.0847458" />
                             <collision-poly>
                                 <point x="0.153735" y="0.499738" />
                                 <point x="0.316735" y="0.225161" />
@@ -136,6 +139,7 @@
                 <container>
                     <type>Bird</type>
                     <type>Beak</type>
+                    <type>UserName</type>
                 </container>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8133692581434725" speed="5">
@@ -232,7 +236,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="Technical">
+        <object-folder expanded="1" name="Technical">
             <object-type name="Keyboard" sid="3468836939450099">
                 <plugin id="Keyboard" />
             </object-type>
@@ -549,8 +553,30 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="UserName" sid="1468743687205877">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="8852940267512642">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="Physics" sid="333651974004008">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Bird</type>
+                <type>Beak</type>
+                <type>UserName</type>
+            </container>
+        </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="TestBeak" plugin-id="Sprite" sid="2317988884837458">
+            <members>
+                <member>Beak</member>
+            </members>
+        </family>
+    </families>
     <layout-folder expanded="1">
         <layout>Game Test.xml</layout>
         <layout>Character Select.xml</layout>

@@ -27,11 +27,18 @@
                     <param id="0" name="Pin to">Bird</param>
                     <param id="1" name="Mode">0</param>
                 </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="8694129135552325" type="UserName">
+                    <param id="0" name="Pin to">Bird</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action id="0" name="Set text" sid="595617162672013" type="UserName">
+                    <param id="0" name="Text">MyUsername</param>
+                </action>
                 <action id="-34" name="Set layer background color" sid="8964314242206066" type="System">
                     <param id="0" name="Layer">0</param>
                     <param id="1" name="Color">rgb(0, 100, 100)</param>
                 </action>
-                <action behavior="Physics" disabled="1" id="23" name="Enable/disable collisions" sid="2978172454734689" type="Beak">
+                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="2978172454734689" type="Beak">
                     <param id="0" name="Object">Bird</param>
                     <param id="1" name="State">0</param>
                 </action>
@@ -671,7 +678,7 @@
                             <param id="0" name="Game">GAME_NAME</param>
                             <param id="1" name="Instance">INSTANCE_NAME</param>
                             <param id="2" name="Room">ROOM_NAME</param>
-                            <param id="3" name="Max peers">0</param>
+                            <param id="3" name="Max peers">4</param>
                         </action>
                     </actions>
                 </event-block>
@@ -839,6 +846,13 @@
                                 <action behavior="Physics" disabled="1" id="23" name="Enable/disable collisions" sid="5364684413058769" type="Beak">
                                     <param id="0" name="Object">Bird</param>
                                     <param id="1" name="State">0</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="6064689438115569" type="UserName">
+                                    <param id="0" name="Pin to">Bird</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="7895808070053993" type="UserName">
+                                    <param id="0" name="Text">MyUsername</param>
                                 </action>
                                 <action id="13" name="Associate object with peer" sid="5678037216542899" type="Multiplayer">
                                     <param id="0" name="Object">Bird</param>
@@ -1104,6 +1118,42 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block disabled="1" sid="4370037500327878">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="3863678272011082" type="Bird">
+                                            <param id="0" name="Instance variable">health</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="4359330925185988" type="System">
+                                            <param id="0" name="Object to create">Particles</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="X">Bird.X</param>
+                                            <param id="3" name="Y">Bird.Y</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="6305218099035621" type="Bird">
+                                            <param id="0" name="Instance variable">IsDead</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="3963846065189156" type="Bird">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="5347966280661908" type="Beak">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="3030408376460818" type="Bird">
+                                            <param id="0" name="X">-1000</param>
+                                            <param id="1" name="Y">-1000</param>
+                                        </action>
+                                        <action behavior="Timer" id="0" name="Start timer" sid="9292260807723164" type="Bird">
+                                            <param id="0" name="Duration">2</param>
+                                            <param id="1" name="Type">0</param>
+                                            <param id="2" name="Tag">&quot;isDead&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                     </sub-events>
@@ -1137,6 +1187,13 @@
                                 <action behavior="Pin" id="0" name="Pin to object" sid="5174219164430566" type="Beak">
                                     <param id="0" name="Pin to">Bird</param>
                                     <param id="1" name="Mode">0</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="4971517413963136" type="UserName">
+                                    <param id="0" name="Pin to">Bird</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="9325509363688338" type="UserName">
+                                    <param id="0" name="Text">MyUsername</param>
                                 </action>
                                 <action behavior="Physics" disabled="1" id="23" name="Enable/disable collisions" sid="5474243566178964" type="Beak">
                                     <param id="0" name="Object">Bird</param>
@@ -1255,41 +1312,6 @@
                                     <actions>
                                         <action id="5" name="Set frame" sid="1161780136608967" type="Bird">
                                             <param id="0" name="Frame number">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="9209763536234608">
-                                    <conditions>
-                                        <condition id="0" name="On collision with another object" sid="4375022938033995" type="Beak">
-                                            <param id="0" name="Object">Bird2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Set position" sid="9260038437996448" type="Bird2">
-                                            <param id="0" name="X">-1000</param>
-                                            <param id="1" name="Y">-1000</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="4817084248915784" type="Beak2">
-                                            <param id="0" name="X">-1000</param>
-                                            <param id="1" name="Y">-1000</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="6826063574493257" type="Bird2">
-                                            <param id="0" name="Instance variable">Dead</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="691937840371278">
-                                    <conditions>
-                                        <condition id="0" name="On collision with another object" sid="8281809831271407" type="Beak">
-                                            <param id="0" name="Object">Beak2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="632841500291875" type="Bird2">
-                                            <param id="0" name="Impulse">1000</param>
-                                            <param id="1" name="Angle">Bird.Angle</param>
-                                            <param id="2" name="Image point">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1435,103 +1457,114 @@
                             </sub-events>
                         </event-block>
                         <comment>Only the host is responsible for finding out who has hit who. Here we go through every peer and test if they hit anyone.</comment>
-                        <event-block sid="2628854155165396">
-                            <conditions>
-                                <condition id="-11" name="For Each" sid="9539826808164574" type="System">
-                                    <param id="0" name="Object">Bird</param>
-                                </condition>
-                            </conditions>
-                            <actions />
+                        <event-group description="" sid="2825189069156976" title="Beak Collision">
                             <sub-events>
-                                <event-group description="" sid="803226756923518" title="Beak Collision2">
+                                <event-block sid="5539138643006371">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="4522098768034665" type="System">
+                                            <param id="0" name="Object">Bird</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
                                     <sub-events>
-                                        <event-block sid="3535685282302818">
+                                        <event-block sid="4644443334002616">
+                                            <conditions />
+                                            <actions>
+                                                <action id="0" name="Call function" sid="517546667569583" type="Function">
+                                                    <param id="0" name="Name">&quot;TestHit&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Beak.UID{###}Bird.birdid</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <variable constant="0" name="BirdBeakID" sid="4465685718106212" static="0" type="text"></variable>
+                                <event-block sid="3325286960560241">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="9785337475973249" type="Function">
+                                            <param id="0" name="Name">&quot;TestHit&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Pick by unique ID" sid="8943015153666768" type="TestBeak">
+                                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="4932389919071211" type="System">
+                                            <param id="0" name="Variable">BirdBeakID</param>
+                                            <param id="1" name="Value">Function.Param(1)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="4245787156816838">
                                             <conditions>
-                                                <condition id="0" name="On collision with another object" sid="218010436507314" type="Bird">
-                                                    <param id="0" name="Object">Beak</param>
+                                                <condition id="-7" name="Compare instance variable" sid="3407780306191914" type="Bird">
+                                                    <param id="0" name="Instance variable">birdid</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">BirdBeakID</param>
+                                                </condition>
+                                                <condition id="-11" name="For Each" sid="4262989163578163" type="System">
+                                                    <param id="0" name="Object">Bird</param>
                                                 </condition>
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <event-block sid="9937404530897473">
+                                                <event-block sid="7590977004305653">
                                                     <conditions>
-                                                        <condition disabled="1" id="-7" name="Compare instance variable" sid="722689305307886" type="Bird">
-                                                            <param id="0" name="Instance variable">birdid</param>
-                                                            <param id="1" name="Comparison">1</param>
-                                                            <param id="2" name="Value">Beak.beakid</param>
+                                                        <condition id="1" name="Is overlapping another object" sid="838602452471216" type="Bird">
+                                                            <param id="0" name="Object">TestBeak</param>
                                                         </condition>
-                                                        <condition disabled="1" id="-7" name="Compare instance variable" sid="7994049286059763" type="Beak">
-                                                            <param id="0" name="Instance variable">beakid</param>
-                                                            <param id="1" name="Comparison">1</param>
-                                                            <param id="2" name="Value">Bird.birdid</param>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3954721303064045" type="Bird">
+                                                            <param id="0" name="Instance variable">IsDead</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="-3" name="Create object" sid="8063647456019624" type="System">
+                                                        <action disabled="1" id="-10" name="Set value" sid="7059689878482363" type="Bird">
+                                                            <param id="0" name="Instance variable">health</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="-3" name="Create object" sid="9776431149392403" type="System">
                                                             <param id="0" name="Object to create">Particles</param>
                                                             <param id="1" name="Layer">0</param>
                                                             <param id="2" name="X">Bird.X</param>
                                                             <param id="3" name="Y">Bird.Y</param>
                                                         </action>
-                                                        <action disabled="1" id="-3" name="Set position" sid="9208734801579383" type="Bird">
-                                                            <param id="0" name="X">-1000</param>
-                                                            <param id="1" name="Y">-1000</param>
-                                                        </action>
-                                                        <action id="-13" name="Set boolean" sid="8994348208093618" type="Bird">
+                                                        <action id="-13" name="Set boolean" sid="1522480684692941" type="Bird">
                                                             <param id="0" name="Instance variable">IsDead</param>
                                                             <param id="1" name="Value">1</param>
                                                         </action>
-                                                        <action behavior="Timer" id="0" name="Start timer" sid="5902418008002342" type="Bird">
+                                                        <action id="-15" name="Set visible" sid="5751722765951928" type="Bird">
+                                                            <param id="0" name="Visibility">0</param>
+                                                        </action>
+                                                        <action id="-15" name="Set visible" sid="1249363208454139" type="Beak">
+                                                            <param id="0" name="Visibility">0</param>
+                                                        </action>
+                                                        <action id="-3" name="Set position" sid="5044132007114551" type="Bird">
+                                                            <param id="0" name="X">-1000</param>
+                                                            <param id="1" name="Y">-1000</param>
+                                                        </action>
+                                                        <action behavior="Timer" id="0" name="Start timer" sid="552208163474617" type="Bird">
                                                             <param id="0" name="Duration">2</param>
                                                             <param id="1" name="Type">0</param>
                                                             <param id="2" name="Tag">&quot;isDead&quot;</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
-                                                <event-block sid="4222808471341892">
-                                                    <conditions>
-                                                        <condition disabled="1" id="-22" name="Else" sid="5201389645383331" type="System" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action behavior="Physics" disabled="1" id="23" name="Enable/disable collisions" sid="6879628180982115" type="Beak">
-                                                            <param id="0" name="Object">Bird</param>
-                                                            <param id="1" name="State">0</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
-                                        </event-block>
-                                        <event-block disabled="1" sid="653419627583322">
-                                            <conditions>
-                                                <condition id="1" name="Is overlapping another object" sid="8683368730828043" type="Bird">
-                                                    <param id="0" name="Object">Beak</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="9865326464429631">
-                                                    <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="794099248649586" type="Beak">
-                                                            <param id="0" name="Instance variable">beakid</param>
-                                                            <param id="1" name="Comparison">1</param>
-                                                            <param id="2" name="Value">Bird.birdid</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-3" name="Create object" sid="5678639663848572" type="System">
-                                                            <param id="0" name="Object to create">Particles</param>
-                                                            <param id="1" name="Layer">0</param>
-                                                            <param id="2" name="X">Bird.X</param>
-                                                            <param id="3" name="Y">Bird.Y</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
                                             </sub-events>
                                         </event-block>
                                     </sub-events>
-                                </event-group>
+                                </event-block>
+                                <event-block disabled="1" sid="8823341332832156">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="9741998820426085" type="Bird">
+                                            <param id="0" name="Instance variable">health</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                </event-block>
                             </sub-events>
-                        </event-block>
+                        </event-group>
                     </sub-events>
                 </event-group>
                 <event-group description="This is where we handle all the common events that the players share." sid="5748801784744824" title="Common">
@@ -1570,6 +1603,43 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block disabled="1" sid="3858423394074905">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="91252404401225" type="Bird">
+                                    <param id="0" name="Instance variable">dash</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="3785127387234937" type="Bird">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="9168014813955829">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="304980183316219" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="8920889729504623" type="Bird">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="924345459364983">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="6321723760492609" type="Bird">
+                                    <param id="0" name="Object">Beak</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="4387940784853815" type="System">
+                                    <param id="0" name="Object to create">Particles</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Bird.X</param>
+                                    <param id="3" name="Y">Bird.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="8154423381593496">
                             <conditions>
                                 <condition id="11" name="On peer connected" sid="9564148629354722" type="Multiplayer" />
@@ -1591,93 +1661,6 @@
                                     <param id="1" name="Parameter {n}">&quot;&apos;&quot; &amp; Multiplayer.PeerAlias &amp; &quot;&apos; left&quot;</param>
                                 </action>
                             </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" disabled="1" sid="2825189069156976" title="Beak Collision">
-                    <sub-events>
-                        <event-block disabled="1" sid="3535685282302818">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="218010436507314" type="Bird">
-                                    <param id="0" name="Object">Beak</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block disabled="1" sid="9937404530897473">
-                                    <conditions>
-                                        <condition disabled="1" id="-7" name="Compare instance variable" sid="722689305307886" type="Bird">
-                                            <param id="0" name="Instance variable">birdid</param>
-                                            <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Value">Beak.beakid</param>
-                                        </condition>
-                                        <condition disabled="1" id="-7" name="Compare instance variable" sid="7994049286059763" type="Beak">
-                                            <param id="0" name="Instance variable">beakid</param>
-                                            <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Value">Bird.birdid</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="8063647456019624" type="System">
-                                            <param id="0" name="Object to create">Particles</param>
-                                            <param id="1" name="Layer">0</param>
-                                            <param id="2" name="X">Bird.X</param>
-                                            <param id="3" name="Y">Bird.Y</param>
-                                        </action>
-                                        <action disabled="1" id="-3" name="Set position" sid="9208734801579383" type="Bird">
-                                            <param id="0" name="X">-1000</param>
-                                            <param id="1" name="Y">-1000</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="8994348208093618" type="Bird">
-                                            <param id="0" name="Instance variable">IsDead</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action behavior="Timer" id="0" name="Start timer" sid="5902418008002342" type="Bird">
-                                            <param id="0" name="Duration">2</param>
-                                            <param id="1" name="Type">0</param>
-                                            <param id="2" name="Tag">&quot;isDead&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="4222808471341892">
-                                    <conditions>
-                                        <condition disabled="1" id="-22" name="Else" sid="5201389645383331" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Physics" disabled="1" id="23" name="Enable/disable collisions" sid="6879628180982115" type="Beak">
-                                            <param id="0" name="Object">Bird</param>
-                                            <param id="1" name="State">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block disabled="1" sid="653419627583322">
-                            <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="8683368730828043" type="Bird">
-                                    <param id="0" name="Object">Beak</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block disabled="1" sid="9865326464429631">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="794099248649586" type="Beak">
-                                            <param id="0" name="Instance variable">beakid</param>
-                                            <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Value">Bird.birdid</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="5678639663848572" type="System">
-                                            <param id="0" name="Object to create">Particles</param>
-                                            <param id="1" name="Layer">0</param>
-                                            <param id="2" name="X">Bird.X</param>
-                                            <param id="3" name="Y">Bird.Y</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -1848,6 +1831,12 @@
                                 <action id="-13" name="Set boolean" sid="8617938200165633" type="Bird">
                                     <param id="0" name="Instance variable">IsDead</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="287413754322255" type="Bird">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="8512700661317379" type="Beak">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="3631876535235365" type="Bird">
                                     <param id="0" name="X">Bird.SpawnX</param>
