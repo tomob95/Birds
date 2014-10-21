@@ -32,6 +32,9 @@
                     <param id="0" name="Object">Bird2</param>
                     <param id="1" name="State">0</param>
                 </action>
+                <action id="-13" name="Set time scale" sid="8948208634171148" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="4227154428368616">
@@ -53,13 +56,13 @@
                             <param id="0" name="Color">rgb(0, 255, 0)</param>
                         </action>
                         <action id="0" name="Set text" sid="3806734665615241" type="WinOrLoseLeft">
-                            <param id="0" name="Text">&quot;Winner!&quot;</param>
+                            <param id="0" name="Text">&quot;Winner! Score: &quot;&amp;Player1Score</param>
                         </action>
                         <action id="4" name="Set font color" sid="9427279171559645" type="WinOrLoseRight">
                             <param id="0" name="Color">rgb(255, 0, 0)</param>
                         </action>
                         <action id="0" name="Set text" sid="3625998896805358" type="WinOrLoseRight">
-                            <param id="0" name="Text">&quot;Loser!&quot;</param>
+                            <param id="0" name="Text">&quot;Loser! Score: &quot;&amp;Player2Score</param>
                         </action>
                     </actions>
                 </event-block>
@@ -76,13 +79,13 @@
                             <param id="0" name="Color">rgb(0, 255, 0)</param>
                         </action>
                         <action id="0" name="Set text" sid="8078183480181057" type="WinOrLoseRight">
-                            <param id="0" name="Text">&quot;Winner!&quot;</param>
+                            <param id="0" name="Text">&quot;Winner! Score: &quot;&amp;Player2Score</param>
                         </action>
                         <action id="4" name="Set font color" sid="1705812170420376" type="WinOrLoseLeft">
                             <param id="0" name="Color">rgb(255, 0, 0)</param>
                         </action>
                         <action id="0" name="Set text" sid="6708607253070096" type="WinOrLoseLeft">
-                            <param id="0" name="Text">&quot;Loser!&quot;</param>
+                            <param id="0" name="Text">&quot;Loser! Score: &quot;&amp;Player1Score</param>
                         </action>
                     </actions>
                 </event-block>
@@ -109,13 +112,13 @@
                             <param id="0" name="Color">rgb(255, 255, 0)</param>
                         </action>
                         <action id="0" name="Set text" sid="665178613340471" type="WinOrLoseLeft">
-                            <param id="0" name="Text">&quot;Tied&quot;</param>
+                            <param id="0" name="Text">&quot;Tied Score: &quot;&amp;Player2Score</param>
                         </action>
                         <action id="4" name="Set font color" sid="3391227868698354" type="WinOrLoseRight">
                             <param id="0" name="Color">rgb(255, 255, 0)</param>
                         </action>
                         <action id="0" name="Set text" sid="8266917926739454" type="WinOrLoseRight">
-                            <param id="0" name="Text">&quot;Tied&quot;</param>
+                            <param id="0" name="Text">&quot;Tied Score: &quot;&amp;Player1Score</param>
                         </action>
                     </actions>
                 </event-block>

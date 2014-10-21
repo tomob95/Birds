@@ -610,8 +610,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>675.5</x>
-                        <y>-566.5</y>
+                        <x>950</x>
+                        <y>-331</y>
                         <z>0</z>
                         <width>925</width>
                         <height>312</height>
@@ -747,7 +747,7 @@
                         <text>60</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Comic Sans MS,-96,700,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -777,7 +777,7 @@
                         <text>Press Esc to return to menu</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Comic Sans MS,-27,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -787,8 +787,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1026</x>
-                        <y>50</y>
+                        <x>693</x>
+                        <y>49</y>
                         <z>0</z>
                         <width>200</width>
                         <height>88</height>
