@@ -24,6 +24,7 @@
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
@@ -437,6 +438,17 @@
                         </frame>
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="Text" sid="7926783088402518">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Clock" sid="9941614468615747">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Timer" sid="4466185298137662">
+                        <behavior id="Timer" />
+                    </behavior-type>
+                </behaviors>
             </object-type>
         </object-folder>
         <object-folder expanded="1" name="Environment Objects">

@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Sky Event Sheet</name>
     <events>
+        <variable constant="0" name="ClockTimer" sid="4392340759112188" static="0" type="number">60</variable>
         <variable constant="0" name="PowerUpChoice" sid="6775744593510464" static="0" type="number">0</variable>
         <event-block sid="9019610003252827">
             <conditions>
@@ -33,6 +34,50 @@
                     <param id="0" name="Object">Bird2</param>
                     <param id="1" name="State">0</param>
                 </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="8025367927479383" type="Clock">
+                    <param id="0" name="Duration">10</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;Round&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="1012380293796825" type="System">
+                    <param id="0" name="Variable">ClockTimer</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6321179380590859">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="6853629020507619" type="Clock">
+                    <param id="0" name="Tag">&quot;Round&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="336865685281918" type="System">
+                    <param id="0" name="Layout">Title Screen</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1012536042594146">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="905187422750304" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="6715424423041237" type="System">
+                    <param id="0" name="Variable">ClockTimer</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5148467646363562">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="6478655871908601" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="8072732949651214" type="Clock">
+                    <param id="0" name="Text">ClockTimer</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="5346541127339488">
@@ -47,7 +92,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="3743535411290462" title="Sky Player 1">
+        <event-group collapsed="1" description="" sid="3743535411290462" title="Sky Player 1">
             <sub-events>
                 <event-block sid="6053853594747804">
                     <conditions>
@@ -204,7 +249,7 @@
                     </conditions>
                     <actions>
                         <action behavior="Physics" id="5" name="Apply impulse at angle" sid="632841500291875" type="Bird2">
-                            <param id="0" name="Impulse">1000</param>
+                            <param id="0" name="Impulse">500</param>
                             <param id="1" name="Angle">Bird1.Angle</param>
                             <param id="2" name="Image point">0</param>
                         </action>
@@ -212,7 +257,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8271007310560779" title="Sky Player 2">
+        <event-group collapsed="1" description="" sid="8271007310560779" title="Sky Player 2">
             <sub-events>
                 <event-block sid="6053853594747804">
                     <conditions>
@@ -369,7 +414,7 @@
                     </conditions>
                     <actions>
                         <action behavior="Physics" id="5" name="Apply impulse at angle" sid="9193956725007532" type="Bird1">
-                            <param id="0" name="Impulse">1000</param>
+                            <param id="0" name="Impulse">500</param>
                             <param id="1" name="Angle">Bird2.Angle</param>
                             <param id="2" name="Image point">0</param>
                         </action>
@@ -377,7 +422,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Slow Mo" sid="341534981774126" title="Sky Time Controls">
+        <event-group collapsed="1" description="Slow Mo" sid="341534981774126" title="Sky Time Controls">
             <sub-events>
                 <event-block sid="6127947532616179">
                     <conditions>
@@ -424,7 +469,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8481958391181813" title="Sky Respawn Player 1">
+        <event-group collapsed="1" description="" sid="8481958391181813" title="Sky Respawn Player 1">
             <sub-events>
                 <event-block sid="2421091008958683">
                     <conditions>
@@ -469,7 +514,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="1733028782670534" title="Sky Respawn Player 2">
+        <event-group collapsed="1" description="" sid="1733028782670534" title="Sky Respawn Player 2">
             <sub-events>
                 <event-block sid="2421091008958683">
                     <conditions>
@@ -514,7 +559,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="7203460537635497" title="Sky PowerUps">
+        <event-group collapsed="1" description="" sid="7203460537635497" title="Sky PowerUps">
             <sub-events>
                 <comment>Lightning Start</comment>
                 <event-block sid="1737987593563819">
@@ -1081,7 +1126,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="9766637774607877" title="Sky Environment Objects">
+        <event-group collapsed="1" description="" sid="9766637774607877" title="Sky Environment Objects">
             <sub-events>
                 <event-block sid="4850396582738862">
                     <conditions>
