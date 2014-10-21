@@ -153,22 +153,46 @@
                             <param id="0" name="Key">87 (W)</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Physics" id="24" name="Set prevent rotation" sid="2599752653156001" type="Bird1">
-                            <param id="0" name="Setting">1</param>
-                        </action>
-                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="5558801574228388" type="Bird1">
-                            <param id="0" name="Impulse">Impulse</param>
-                            <param id="1" name="Angle">Bird1.Angle</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action id="5" name="Set frame" sid="6606427444262895" type="Bird1">
-                            <param id="0" name="Frame number">1</param>
-                        </action>
-                        <action behavior="Physics" id="24" name="Set prevent rotation" sid="3737337144767121" type="Bird1">
-                            <param id="0" name="Setting">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5346369492890605">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="6593972417764197" type="Bird2">
+                                    <param id="0" name="Instance variable">Lightning</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="3" name="Apply impulse" sid="8622173593495681" type="Bird1">
+                                    <param id="0" name="Impulse X">0</param>
+                                    <param id="1" name="Implulse Y">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6459660159482699">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4817250108102025" type="Bird2">
+                                    <param id="0" name="Instance variable">Lightning</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="24" name="Set prevent rotation" sid="2599752653156001" type="Bird1">
+                                    <param id="0" name="Setting">1</param>
+                                </action>
+                                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="5558801574228388" type="Bird1">
+                                    <param id="0" name="Impulse">Impulse</param>
+                                    <param id="1" name="Angle">Bird1.Angle</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="6606427444262895" type="Bird1">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action behavior="Physics" id="24" name="Set prevent rotation" sid="3737337144767121" type="Bird1">
+                                    <param id="0" name="Setting">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="9120993255969162">
                     <conditions>
@@ -318,22 +342,46 @@
                             <param id="0" name="Key">38 (Up arrow)</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Physics" id="24" name="Set prevent rotation" sid="8096130597098494" type="Bird2">
-                            <param id="0" name="Setting">1</param>
-                        </action>
-                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="819306320435141" type="Bird2">
-                            <param id="0" name="Impulse">Impulse</param>
-                            <param id="1" name="Angle">Bird2.Angle</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action id="5" name="Set frame" sid="2169616164937488" type="Bird2">
-                            <param id="0" name="Frame number">1</param>
-                        </action>
-                        <action behavior="Physics" id="24" name="Set prevent rotation" sid="9285910530546663" type="Bird2">
-                            <param id="0" name="Setting">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8679781948500006">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="4633526126108927" type="Bird1">
+                                    <param id="0" name="Instance variable">Lightning</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="3" name="Apply impulse" sid="4879878162958872" type="Bird2">
+                                    <param id="0" name="Impulse X">0</param>
+                                    <param id="1" name="Implulse Y">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2481624798848699">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6372570668546871" type="Bird1">
+                                    <param id="0" name="Instance variable">Lightning</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="24" name="Set prevent rotation" sid="8096130597098494" type="Bird2">
+                                    <param id="0" name="Setting">1</param>
+                                </action>
+                                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="819306320435141" type="Bird2">
+                                    <param id="0" name="Impulse">Impulse</param>
+                                    <param id="1" name="Angle">Bird2.Angle</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="2169616164937488" type="Bird2">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action behavior="Physics" id="24" name="Set prevent rotation" sid="9285910530546663" type="Bird2">
+                                    <param id="0" name="Setting">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="9120993255969162">
                     <conditions>
@@ -474,7 +522,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8481958391181813" title="Sky Respawn Player 1">
+        <event-group description="" sid="8481958391181813" title="Sky Respawn Player 1">
             <sub-events>
                 <event-block sid="2421091008958683">
                     <conditions>
@@ -496,13 +544,13 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="3631876535235365" type="Bird1">
-                            <param id="0" name="X">Bird1.SpawnX</param>
-                            <param id="1" name="Y">Bird1.SpawnY</param>
+                        <action id="-4" name="Set position to another object" sid="3631876535235365" type="Bird1">
+                            <param id="0" name="Object">RespawnSprite</param>
+                            <param id="1" name="Image point (optional)">floor(random(0,5))</param>
                         </action>
-                        <action id="-3" name="Set position" sid="6185562610298616" type="Beak1">
-                            <param id="0" name="X">Bird1.SpawnX</param>
-                            <param id="1" name="Y">Bird1.SpawnY</param>
+                        <action id="-4" name="Set position to another object" sid="6185562610298616" type="Beak1">
+                            <param id="0" name="Object">RespawnSprite</param>
+                            <param id="1" name="Image point (optional)">floor(random(0,5))</param>
                         </action>
                         <action id="-10" name="Set value" sid="2039017403641314" type="Bird1">
                             <param id="0" name="Instance variable">Respawn</param>
@@ -519,7 +567,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1733028782670534" title="Sky Respawn Player 2">
+        <event-group description="" sid="1733028782670534" title="Sky Respawn Player 2">
             <sub-events>
                 <event-block sid="2421091008958683">
                     <conditions>
@@ -541,13 +589,13 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="2176881972511909" type="Bird2">
-                            <param id="0" name="X">Bird2.SpawnX</param>
-                            <param id="1" name="Y">Bird2.SpawnY</param>
+                        <action id="-4" name="Set position to another object" sid="2176881972511909" type="Bird2">
+                            <param id="0" name="Object">RespawnSprite</param>
+                            <param id="1" name="Image point (optional)">floor(random(0,5))</param>
                         </action>
-                        <action id="-3" name="Set position" sid="2406118406727382" type="Beak2">
-                            <param id="0" name="X">Bird2.SpawnX</param>
-                            <param id="1" name="Y">Bird2.SpawnY</param>
+                        <action id="-4" name="Set position to another object" sid="2406118406727382" type="Beak2">
+                            <param id="0" name="Object">RespawnSprite</param>
+                            <param id="1" name="Image point (optional)">floor(random(0,5))</param>
                         </action>
                         <action id="-10" name="Set value" sid="8362209652474002" type="Bird2">
                             <param id="0" name="Instance variable">Respawn</param>
@@ -564,7 +612,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7203460537635497" title="Sky PowerUps">
+        <event-group description="" sid="7203460537635497" title="Sky PowerUps">
             <sub-events>
                 <comment>Lightning Start</comment>
                 <event-block sid="1737987593563819">
