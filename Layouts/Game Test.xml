@@ -678,11 +678,11 @@
                         <x>-301</x>
                         <y>-698</y>
                         <z>0</z>
-                        <width>393</width>
-                        <height>393</height>
+                        <width>295</width>
+                        <height>295</height>
                         <depth>0</depth>
-                        <hotspotX>0.834605575</hotspotX>
-                        <hotspotY>0.664122164</hotspotY>
+                        <hotspotX>0.833898306</hotspotX>
+                        <hotspotY>0.664406776</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

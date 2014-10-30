@@ -27,6 +27,10 @@
                     <param id="0" name="Pin to">Bird</param>
                     <param id="1" name="Mode">0</param>
                 </action>
+                <action id="5" name="Set frame" sid="781286213357174" type="Beak">
+                    <param id="0" name="Frame number">PlayerContainer.BeakStyle</param>
+                </action>
+                <action id="2" name="Stop" sid="9399253401163364" type="Beak" />
                 <action behavior="Pin" id="0" name="Pin to object" sid="8694129135552325" type="UserName">
                     <param id="0" name="Pin to">Bird</param>
                     <param id="1" name="Mode">1</param>
@@ -62,27 +66,27 @@
                     <param id="0" name="Instance variable">EyeStyle</param>
                     <param id="1" name="Value">P1Custom.At(4,0)</param>
                 </action>
-                <action id="2" name="Stop" sid="7578651007115383" type="Bodys" />
-                <action id="2" name="Stop" sid="9204646271383998" type="Beaks" />
-                <action id="2" name="Stop" sid="8937426258727359" type="Wings" />
-                <action id="5" name="Set frame" sid="5286881225557971" type="Bodys">
+                <action disabled="1" id="2" name="Stop" sid="7578651007115383" type="Bodys" />
+                <action disabled="1" id="2" name="Stop" sid="9204646271383998" type="Beaks" />
+                <action disabled="1" id="2" name="Stop" sid="8937426258727359" type="Wings" />
+                <action disabled="1" id="5" name="Set frame" sid="5286881225557971" type="Bodys">
                     <param id="0" name="Frame number">PlayerContainer.BodyStyle</param>
                 </action>
-                <action id="5" name="Set frame" sid="616261596283287" type="Beaks">
+                <action disabled="1" id="5" name="Set frame" sid="616261596283287" type="Beaks">
                     <param id="0" name="Frame number">PlayerContainer.BeakStyle</param>
                 </action>
-                <action id="5" name="Set frame" sid="8595764227826322" type="Wings">
+                <action disabled="1" id="5" name="Set frame" sid="8595764227826322" type="Wings">
                     <param id="0" name="Frame number">PlayerContainer.WingStyle</param>
                 </action>
-                <action id="-4" name="Set position to another object" sid="4459180127375778" type="Bodys">
+                <action disabled="1" id="-4" name="Set position to another object" sid="4459180127375778" type="Bodys">
                     <param id="0" name="Object">PlayerContainer</param>
                     <param id="1" name="Image point (optional)">0</param>
                 </action>
-                <action id="-4" name="Set position to another object" sid="6815069436202251" type="Beaks">
+                <action disabled="1" id="-4" name="Set position to another object" sid="6815069436202251" type="Beaks">
                     <param id="0" name="Object">Bodys</param>
                     <param id="1" name="Image point (optional)">1</param>
                 </action>
-                <action id="-4" name="Set position to another object" sid="4024006035560375" type="Wings">
+                <action disabled="1" id="-4" name="Set position to another object" sid="4024006035560375" type="Wings">
                     <param id="0" name="Object">Bodys</param>
                     <param id="1" name="Image point (optional)">2</param>
                 </action>

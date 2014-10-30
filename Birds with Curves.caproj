@@ -142,7 +142,7 @@
                     <type>UserName</type>
                 </container>
                 <animation-folder expanded="1">
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8133692581434725" speed="5">
+                    <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8133692581434725" speed="5">
                         <frame duration="1" hotspotX="0.508475" hotspotY="0.511864">
                             <collision-poly>
                                 <point x="0.819837" y="0.642111" />
@@ -153,6 +153,14 @@
                                 <point x="0.860421" y="0.679684" />
                             </collision-poly>
                         </frame>
+                        <frame duration="1" hotspotX="0.501695" hotspotY="0.501695" />
+                        <frame duration="1" hotspotX="0.501695" hotspotY="0.501695" />
+                        <frame duration="1" hotspotX="0.501695" hotspotY="0.501695" />
+                        <frame duration="1" hotspotX="0.501695" hotspotY="0.501695" />
+                        <frame duration="1" hotspotX="0.501695" hotspotY="0.501695" />
+                        <frame duration="1" hotspotX="0.501695" hotspotY="0.501695" />
+                        <frame duration="1" hotspotX="0.501695" hotspotY="0.501695" />
+                        <frame duration="1" hotspotX="0.501695" hotspotY="0.501695" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -430,15 +438,15 @@
             </effects>
             <animation-folder expanded="1">
                 <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9794057780445146" speed="5">
-                    <frame duration="1" hotspotX="0.834606" hotspotY="0.664122" />
-                    <frame duration="1" hotspotX="0.78117" hotspotY="0.641221" />
-                    <frame duration="1" hotspotX="0.834606" hotspotY="0.648855" />
-                    <frame duration="1" hotspotX="0.826972" hotspotY="0.597964" />
-                    <frame duration="1" hotspotX="0.872774" hotspotY="0.554707" />
-                    <frame duration="1" hotspotX="0.816794" hotspotY="0.671756" />
-                    <frame duration="1" hotspotX="0.664122" hotspotY="0.56743" />
-                    <frame duration="1" hotspotX="0.821883" hotspotY="0.633588" />
-                    <frame duration="1" hotspotX="0.832061" hotspotY="0.605598" />
+                    <frame duration="1" hotspotX="0.833898" hotspotY="0.664407" />
+                    <frame duration="1" hotspotX="0.779661" hotspotY="0.640678" />
+                    <frame duration="1" hotspotX="0.833898" hotspotY="0.647458" />
+                    <frame duration="1" hotspotX="0.827119" hotspotY="0.59661" />
+                    <frame duration="1" hotspotX="0.871186" hotspotY="0.555932" />
+                    <frame duration="1" hotspotX="0.816949" hotspotY="0.671186" />
+                    <frame duration="1" hotspotX="0.664407" hotspotY="0.566102" />
+                    <frame duration="1" hotspotX="0.820339" hotspotY="0.633898" />
+                    <frame duration="1" hotspotX="0.830508" hotspotY="0.60678" />
                 </animation>
             </animation-folder>
         </object-type>
