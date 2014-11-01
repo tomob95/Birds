@@ -108,6 +108,10 @@
                         <Lightning>false</Lightning>
                         <Invulnerability>false</Invulnerability>
                         <FireTrail>false</FireTrail>
+                        <LightningStored>false</LightningStored>
+                        <FireTrailStored>false</FireTrailStored>
+                        <InvulnerabilityStored>false</InvulnerabilityStored>
+                        <BlinkStored>false</BlinkStored>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">
@@ -163,6 +167,10 @@
                         <Lightning>false</Lightning>
                         <Invulnerability>false</Invulnerability>
                         <FireTrail>false</FireTrail>
+                        <LightningStored>false</LightningStored>
+                        <FireTrailStored>false</FireTrailStored>
+                        <InvulnerabilityStored>false</InvulnerabilityStored>
+                        <BlinkStored>false</BlinkStored>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">

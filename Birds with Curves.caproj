@@ -52,7 +52,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D web</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">Chrome</prop>
+        <prop name="Preview browser">Internet Explorer</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -68,6 +68,10 @@
                     <instance-variable name="Lightning" sid="7432500751268637" type="boolean" />
                     <instance-variable name="Invulnerability" sid="3953783264585093" type="boolean" />
                     <instance-variable name="FireTrail" sid="8604735504740699" type="boolean" />
+                    <instance-variable name="LightningStored" sid="6669545986641301" type="boolean" />
+                    <instance-variable name="FireTrailStored" sid="5968076975348647" type="boolean" />
+                    <instance-variable name="InvulnerabilityStored" sid="9245746883333915" type="boolean" />
+                    <instance-variable name="BlinkStored" sid="7745101098692951" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="1651999204937736">
@@ -154,6 +158,10 @@
                     <instance-variable name="Lightning" sid="3372724390136786" type="boolean" />
                     <instance-variable name="Invulnerability" sid="7562635099596214" type="boolean" />
                     <instance-variable name="FireTrail" sid="3699853444794302" type="boolean" />
+                    <instance-variable name="LightningStored" sid="2516715228190873" type="boolean" />
+                    <instance-variable name="FireTrailStored" sid="7188313846921725" type="boolean" />
+                    <instance-variable name="InvulnerabilityStored" sid="8233995491700482" type="boolean" />
+                    <instance-variable name="BlinkStored" sid="6020556578721864" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="7369527083188939">
@@ -551,6 +559,148 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder expanded="1" name="PowerUps HUD">
+            <object-type name="LightningHUDP1" sid="8200403426538862">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4511592825325743" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501683" original-source="F:\Birds\Animations\Lightning\Default\000.png">
+                            <collision-poly>
+                                <point x="0.5" y="0.020202" />
+                                <point x="0.964516" y="0.498316" />
+                                <point x="0.748387" y="0.737374" />
+                                <point x="0.5" y="0.969697" />
+                                <point x="0.0322581" y="0.498316" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="InvulnerabilityHUDP1" sid="220310550608232">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4394697506400775" speed="5">
+                        <frame duration="1" hotspotX="0.501661" hotspotY="0.5" original-source="F:\Birds\Animations\Invulnerability\Default\000.png">
+                            <collision-poly>
+                                <point x="0.239203" y="0.243243" />
+                                <point x="0.498339" y="0.0371622" />
+                                <point x="0.976744" y="0.5" />
+                                <point x="0.750831" y="0.746622" />
+                                <point x="0.498339" y="0.989865" />
+                                <point x="0.222591" y="0.773649" />
+                                <point x="0.0166113" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BlinkHUDP1" sid="2023715341633612">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4958101476786782" speed="5">
+                        <frame duration="1" hotspotX="0.501577" hotspotY="0.5" original-source="F:\Birds\Animations\Blink\Default\000.png">
+                            <collision-poly>
+                                <point x="0.242902" y="0.258389" />
+                                <point x="0.498423" y="0.0436242" />
+                                <point x="0.829653" y="0.181208" />
+                                <point x="0.955836" y="0.5" />
+                                <point x="0.498423" y="0.989933" />
+                                <point x="0.141956" y="0.848993" />
+                                <point x="0.0347003" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FireTrailHUDP1" sid="1101857904305359">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4836176358646487" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501683" original-source="F:\Birds\Animations\FireTrail\Default\000.png">
+                            <collision-poly>
+                                <point x="0.218121" y="0.218855" />
+                                <point x="0.5" y="0.00673401" />
+                                <point x="0.979866" y="0.498316" />
+                                <point x="0.775168" y="0.774411" />
+                                <point x="0.5" y="0.976431" />
+                                <point x="0.251678" y="0.747475" />
+                                <point x="0.033557" y="0.498316" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="InvulnerabilityHUDP2" sid="423334563588972">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="566767251513734" speed="5">
+                        <frame duration="1" hotspotX="0.501661" hotspotY="0.5" original-source="F:\Birds\Animations\Invulnerability\Default\000.png">
+                            <collision-poly>
+                                <point x="0.239203" y="0.243243" />
+                                <point x="0.498339" y="0.0371622" />
+                                <point x="0.976744" y="0.5" />
+                                <point x="0.750831" y="0.746622" />
+                                <point x="0.498339" y="0.989865" />
+                                <point x="0.222591" y="0.773649" />
+                                <point x="0.0166113" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FireTrailHUDP2" sid="2706187059743361">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9713093857626819" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501683" original-source="F:\Birds\Animations\FireTrail\Default\000.png">
+                            <collision-poly>
+                                <point x="0.218121" y="0.218855" />
+                                <point x="0.5" y="0.00673401" />
+                                <point x="0.979866" y="0.498316" />
+                                <point x="0.775168" y="0.774411" />
+                                <point x="0.5" y="0.976431" />
+                                <point x="0.251678" y="0.747475" />
+                                <point x="0.033557" y="0.498316" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BlinkHUDP2" sid="8490131399257327">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1971786400707612" speed="5">
+                        <frame duration="1" hotspotX="0.501577" hotspotY="0.5" original-source="F:\Birds\Animations\Blink\Default\000.png">
+                            <collision-poly>
+                                <point x="0.242902" y="0.258389" />
+                                <point x="0.498423" y="0.0436242" />
+                                <point x="0.829653" y="0.181208" />
+                                <point x="0.955836" y="0.5" />
+                                <point x="0.498423" y="0.989933" />
+                                <point x="0.141956" y="0.848993" />
+                                <point x="0.0347003" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="LightningHUDP2" sid="890790293319575">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4718524136761638" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501683" original-source="F:\Birds\Animations\Lightning\Default\000.png">
+                            <collision-poly>
+                                <point x="0.5" y="0.020202" />
+                                <point x="0.964516" y="0.498316" />
+                                <point x="0.748387" y="0.737374" />
+                                <point x="0.5" y="0.969697" />
+                                <point x="0.0322581" y="0.498316" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="Sprite2" sid="1826255207031328">
             <plugin id="Sprite" />
             <behaviors>
@@ -756,7 +906,7 @@
         <object-type name="SelectedStyle" sid="8445443456861204">
             <plugin id="Text" />
         </object-type>
-        <object-type name="RespawnSprite" sid="1502759415218483">
+        <object-type name="RespawnSky" sid="1502759415218483">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5821907762133756" speed="5">
