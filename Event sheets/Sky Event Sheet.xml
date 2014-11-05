@@ -286,11 +286,11 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="6227069903141254" type="StunAnimation">
+                                <action id="4" name="Set animation" sid="6227069903141254" type="StunAnimationP2">
                                     <param id="0" name="Animation">&quot;Default&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="3" name="Start" sid="1179248889575147" type="StunAnimation">
+                                <action id="3" name="Start" sid="1179248889575147" type="StunAnimationP2">
                                     <param id="0" name="From">1</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="8390845168108752" type="Bird1">
@@ -302,37 +302,157 @@
                                     <param id="0" name="Instance variable">Lightning</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="-3" name="Create object" sid="3821920208602124" type="System">
+                                    <param id="0" name="Object to create">StunAnimationP2</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Bird2.X</param>
+                                    <param id="3" name="Y">Bird2.Y</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="8143203081864331" type="StunAnimationP2">
+                                    <param id="0" name="Angle">Bird2.Angle</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="6494525223358202" type="StunAnimationP2">
+                                    <param id="0" name="Object">Bird2</param>
+                                    <param id="1" name="Image point (optional)">2</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="9102178973095908" type="StunAnimationP2">
+                                    <param id="0" name="Pin to">Bird2</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
                                 <action id="-16" name="Wait" sid="4659574118844491" type="System">
                                     <param id="0" name="Seconds">1.5</param>
                                 </action>
+                                <action behavior="Pin" id="1" name="Unpin" sid="5610099651805846" type="StunAnimationP2" />
+                                <action id="-9" name="Destroy" sid="3106016912417317" type="StunAnimationP2" />
                                 <action id="-13" name="Set boolean" sid="8312149858312161" type="Bird1">
                                     <param id="0" name="Instance variable">Lightning</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="1450513991038352">
+                                    <conditions>
+                                        <condition id="-13" name="Is between angles" sid="4512523012444671" type="Bird2">
+                                            <param id="0" name="First angle">270</param>
+                                            <param id="1" name="Second angle">90</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="8" name="Set flipped" sid="6575781055985167" type="StunAnimationP2">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3568661076699811">
+                                    <conditions>
+                                        <condition id="-13" name="Is between angles" sid="2047056307814462" type="Bird2">
+                                            <param id="0" name="First angle">91</param>
+                                            <param id="1" name="Second angle">269</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="8" name="Set flipped" sid="1837331593890266" type="StunAnimationP2">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                        <event-block sid="3204852240662105">
+                        <event-block sid="7685949755807019">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="6439472696862071" type="Bird1">
+                                <condition id="-8" name="Is boolean instance variable set" sid="4732896063718024" type="Bird1">
                                     <param id="0" name="Instance variable">InvulnerabilityStored</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="7287053964743932" type="Bird1">
-                                    <param id="0" name="Instance variable">InvulnerabilityStored</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-9" name="Destroy" sid="4421067021969672" type="InvulnerabilityHUDP1" />
-                                <action id="-14" name="Toggle boolean" sid="9023479312333802" type="Bird1">
-                                    <param id="0" name="Instance variable">Invulnerability</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="4028256730523865" type="System">
-                                    <param id="0" name="Seconds">3</param>
-                                </action>
-                                <action id="-14" name="Toggle boolean" sid="6876613150698942" type="Bird1">
-                                    <param id="0" name="Instance variable">Invulnerability</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3204852240662105">
+                                    <conditions>
+                                        <condition id="-13" name="Is between angles" sid="9101586881545992" type="Bird1">
+                                            <param id="0" name="First angle">270</param>
+                                            <param id="1" name="Second angle">90</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="7287053964743932" type="Bird1">
+                                            <param id="0" name="Instance variable">InvulnerabilityStored</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="4421067021969672" type="InvulnerabilityHUDP1" />
+                                        <action id="-14" name="Toggle boolean" sid="9023479312333802" type="Bird1">
+                                            <param id="0" name="Instance variable">Invulnerability</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="3707994954111294" type="System">
+                                            <param id="0" name="Object to create">InvulnerabilityAnimationP1</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="X">Bird1.X</param>
+                                            <param id="3" name="Y">Bird1.Y</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="9925666632122951" type="InvulnerabilityAnimationP1">
+                                            <param id="0" name="Angle">Bird1.Angle</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="2934225486851866" type="InvulnerabilityAnimationP1">
+                                            <param id="0" name="Object">Bird1</param>
+                                            <param id="1" name="Image point (optional)">2</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="7130892586211564" type="InvulnerabilityAnimationP1">
+                                            <param id="0" name="Pin to">Bird1</param>
+                                            <param id="1" name="Mode">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="5129086295043501" type="System">
+                                            <param id="0" name="Seconds">3</param>
+                                        </action>
+                                        <action id="-14" name="Toggle boolean" sid="8463762936305315" type="Bird1">
+                                            <param id="0" name="Instance variable">Invulnerability</param>
+                                        </action>
+                                        <action behavior="Pin" id="1" name="Unpin" sid="1074871140526032" type="InvulnerabilityAnimationP1" />
+                                        <action id="-9" name="Destroy" sid="2441806970993474" type="InvulnerabilityAnimationP1" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3430463068582833">
+                                    <conditions>
+                                        <condition id="-13" name="Is between angles" sid="947417071520935" type="Bird1">
+                                            <param id="0" name="First angle">91</param>
+                                            <param id="1" name="Second angle">269</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="289438596309449" type="Bird1">
+                                            <param id="0" name="Instance variable">InvulnerabilityStored</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="3825164654606543" type="InvulnerabilityHUDP1" />
+                                        <action id="-14" name="Toggle boolean" sid="2663478014288223" type="Bird1">
+                                            <param id="0" name="Instance variable">Invulnerability</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="5578134270231494" type="System">
+                                            <param id="0" name="Object to create">InvulnerabilityAnimationP1</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="X">Bird1.X</param>
+                                            <param id="3" name="Y">Bird1.Y</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="1409930902401542" type="InvulnerabilityAnimationP1">
+                                            <param id="0" name="Angle">Bird1.Angle</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="6902405616080041" type="InvulnerabilityAnimationP1">
+                                            <param id="0" name="Object">Bird1</param>
+                                            <param id="1" name="Image point (optional)">2</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="2334660310753385" type="InvulnerabilityAnimationP1">
+                                            <param id="0" name="Pin to">Bird1</param>
+                                            <param id="1" name="Mode">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="7484690976277808" type="System">
+                                            <param id="0" name="Seconds">3</param>
+                                        </action>
+                                        <action id="-14" name="Toggle boolean" sid="4496097350308745" type="Bird1">
+                                            <param id="0" name="Instance variable">Invulnerability</param>
+                                        </action>
+                                        <action behavior="Pin" id="1" name="Unpin" sid="8705993748171236" type="InvulnerabilityAnimationP1" />
+                                        <action id="-9" name="Destroy" sid="701526724765336" type="InvulnerabilityAnimationP1" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="2497016287936145">
                             <conditions>
@@ -596,11 +716,11 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="2330048336604828" type="StunAnimation">
+                                <action id="4" name="Set animation" sid="2330048336604828" type="StunAnimationP1">
                                     <param id="0" name="Animation">&quot;Default&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="3" name="Start" sid="394823236213465" type="StunAnimation">
+                                <action id="3" name="Start" sid="394823236213465" type="StunAnimationP1">
                                     <param id="0" name="From">1</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="5396594716213572" type="Bird2">
@@ -612,14 +732,61 @@
                                     <param id="0" name="Instance variable">Lightning</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="6120205552401438" type="System">
+                                <action id="-3" name="Create object" sid="4990507509845444" type="System">
+                                    <param id="0" name="Object to create">StunAnimationP1</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Bird1.X</param>
+                                    <param id="3" name="Y">Bird1.Y</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="5245852153984202" type="StunAnimationP1">
+                                    <param id="0" name="Angle">Bird1.Angle</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="8737512131674857" type="StunAnimationP1">
+                                    <param id="0" name="Object">Bird1</param>
+                                    <param id="1" name="Image point (optional)">2</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="1163692534485944" type="StunAnimationP1">
+                                    <param id="0" name="Pin to">Bird1</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="8090992643262271" type="System">
                                     <param id="0" name="Seconds">1.5</param>
                                 </action>
+                                <action behavior="Pin" id="1" name="Unpin" sid="9594410919578636" type="StunAnimationP1" />
+                                <action id="-9" name="Destroy" sid="3522297473263142" type="StunAnimationP1" />
                                 <action id="-13" name="Set boolean" sid="413374749263881" type="Bird2">
                                     <param id="0" name="Instance variable">Lightning</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="2502869672536909">
+                                    <conditions>
+                                        <condition id="-13" name="Is between angles" sid="4092162393215195" type="Bird1">
+                                            <param id="0" name="First angle">270</param>
+                                            <param id="1" name="Second angle">90</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="8" name="Set flipped" sid="2371895060663956" type="StunAnimationP1">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9369697065628274">
+                                    <conditions>
+                                        <condition id="-13" name="Is between angles" sid="366755932990957" type="Bird1">
+                                            <param id="0" name="First angle">91</param>
+                                            <param id="1" name="Second angle">269</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="8" name="Set flipped" sid="6028060240366775" type="StunAnimationP1">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="4267200888878267">
                             <conditions>
@@ -636,13 +803,60 @@
                                 <action id="-14" name="Toggle boolean" sid="3188770212565051" type="Bird2">
                                     <param id="0" name="Instance variable">Invulnerability</param>
                                 </action>
+                                <action id="-3" name="Create object" sid="3871396336405132" type="System">
+                                    <param id="0" name="Object to create">InvulnerabilityAnimationP2</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Bird2.X</param>
+                                    <param id="3" name="Y">Bird2.Y</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="3113530667365503" type="InvulnerabilityAnimationP2">
+                                    <param id="0" name="Angle">Bird1.Angle</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="629501800412822" type="InvulnerabilityAnimationP2">
+                                    <param id="0" name="Object">Bird2</param>
+                                    <param id="1" name="Image point (optional)">2</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="2591328586011799" type="InvulnerabilityAnimationP2">
+                                    <param id="0" name="Pin to">Bird2</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
                                 <action id="-16" name="Wait" sid="8980570539638777" type="System">
                                     <param id="0" name="Seconds">3</param>
                                 </action>
                                 <action id="-14" name="Toggle boolean" sid="5732900012600337" type="Bird2">
                                     <param id="0" name="Instance variable">Invulnerability</param>
                                 </action>
+                                <action behavior="Pin" id="1" name="Unpin" sid="3828059614672097" type="InvulnerabilityAnimationP2" />
+                                <action id="-9" name="Destroy" sid="6833540430817417" type="InvulnerabilityAnimationP2" />
                             </actions>
+                            <sub-events>
+                                <event-block sid="5649957726447054">
+                                    <conditions>
+                                        <condition id="-13" name="Is between angles" sid="607822183650963" type="Bird2">
+                                            <param id="0" name="First angle">270</param>
+                                            <param id="1" name="Second angle">90</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="8" name="Set flipped" sid="85499143533856" type="InvulnerabilityAnimationP2">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9130979355198884">
+                                    <conditions>
+                                        <condition id="-13" name="Is between angles" sid="4946798605634483" type="Bird2">
+                                            <param id="0" name="First angle">91</param>
+                                            <param id="1" name="Second angle">269</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="8" name="Set flipped" sid="6840385916217789" type="InvulnerabilityAnimationP2">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="3805260721040264">
                             <conditions>
@@ -950,79 +1164,11 @@
                             <param id="0" name="Instance variable">Lightning</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="3432339626476175">
-                            <conditions>
-                                <condition id="-13" name="Is between angles" sid="5830448686917716" type="Bird2">
-                                    <param id="0" name="First angle">270</param>
-                                    <param id="1" name="Second angle">90</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Physics" id="9" name="Set angular velocity" sid="3327417301852347" type="Bird2">
-                                    <param id="0" name="Angular velocity">0</param>
-                                </action>
-                                <action id="-8" name="Set angle" sid="5045720798939845" type="StunAnimation">
-                                    <param id="0" name="Angle">Bird2.Angle</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="8754575246258765" type="StunAnimation">
-                                    <param id="0" name="Object">Bird2</param>
-                                    <param id="1" name="Image point (optional)">2</param>
-                                </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="4015666016612457" type="StunAnimation">
-                                    <param id="0" name="Pin to">Bird2</param>
-                                    <param id="1" name="Mode">0</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="3463171559363815" type="System">
-                                    <param id="0" name="Seconds">1.5</param>
-                                </action>
-                                <action behavior="Pin" id="1" name="Unpin" sid="8264024905075306" type="StunAnimation" />
-                                <action id="-3" name="Set position" sid="391893339169144" type="StunAnimation">
-                                    <param id="0" name="X">-1000</param>
-                                    <param id="1" name="Y">-1000</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="606054552094163">
-                            <conditions>
-                                <condition id="-13" name="Is between angles" sid="8894702161259609" type="Bird2">
-                                    <param id="0" name="First angle">91</param>
-                                    <param id="1" name="Second angle">269</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Physics" id="9" name="Set angular velocity" sid="4124275877050557" type="Bird2">
-                                    <param id="0" name="Angular velocity">0</param>
-                                </action>
-                                <action id="-8" name="Set angle" sid="2687037627994845" type="StunAnimation">
-                                    <param id="0" name="Angle">Bird2.Angle</param>
-                                </action>
-                                <action id="8" name="Set flipped" sid="1465760325837383" type="StunAnimation">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="5005316876819255" type="StunAnimation">
-                                    <param id="0" name="Object">Bird2</param>
-                                    <param id="1" name="Image point (optional)">2</param>
-                                </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="4648533760183269" type="StunAnimation">
-                                    <param id="0" name="Pin to">Bird2</param>
-                                    <param id="1" name="Mode">0</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="7589889581705848" type="System">
-                                    <param id="0" name="Seconds">1.5</param>
-                                </action>
-                                <action behavior="Pin" id="1" name="Unpin" sid="7566974504893647" type="StunAnimation" />
-                                <action id="-3" name="Set position" sid="2891564029865073" type="StunAnimation">
-                                    <param id="0" name="X">-1000</param>
-                                    <param id="1" name="Y">-1000</param>
-                                </action>
-                                <action id="8" name="Set flipped" sid="601033862575535" type="StunAnimation">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action behavior="Physics" id="9" name="Set angular velocity" sid="3327417301852347" type="Bird2">
+                            <param id="0" name="Angular velocity">0</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="6530385698637371">
                     <conditions>
@@ -1053,79 +1199,11 @@
                             <param id="0" name="Instance variable">Lightning</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="5366391188152829">
-                            <conditions>
-                                <condition id="-13" name="Is between angles" sid="231130897722554" type="Bird1">
-                                    <param id="0" name="First angle">0</param>
-                                    <param id="1" name="Second angle">180</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Physics" id="9" name="Set angular velocity" sid="5317089964115574" type="Bird1">
-                                    <param id="0" name="Angular velocity">0</param>
-                                </action>
-                                <action id="-8" name="Set angle" sid="5503629435691154" type="StunAnimation">
-                                    <param id="0" name="Angle">Bird1.Angle</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="9356466398911051" type="StunAnimation">
-                                    <param id="0" name="Object">Bird1</param>
-                                    <param id="1" name="Image point (optional)">2</param>
-                                </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="6482859380367567" type="StunAnimation">
-                                    <param id="0" name="Pin to">Bird1</param>
-                                    <param id="1" name="Mode">0</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="6807991195501984" type="System">
-                                    <param id="0" name="Seconds">1.5</param>
-                                </action>
-                                <action behavior="Pin" id="1" name="Unpin" sid="3280994806305557" type="StunAnimation" />
-                                <action id="-3" name="Set position" sid="1170087758614042" type="StunAnimation">
-                                    <param id="0" name="X">-1000</param>
-                                    <param id="1" name="Y">-1000</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="7922584756112721">
-                            <conditions>
-                                <condition id="-13" name="Is between angles" sid="8035193381695197" type="Bird1">
-                                    <param id="0" name="First angle">180</param>
-                                    <param id="1" name="Second angle">360</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Physics" id="9" name="Set angular velocity" sid="1384377105259292" type="Bird1">
-                                    <param id="0" name="Angular velocity">0</param>
-                                </action>
-                                <action id="-8" name="Set angle" sid="8144108298918158" type="StunAnimation">
-                                    <param id="0" name="Angle">Bird1.Angle</param>
-                                </action>
-                                <action id="8" name="Set flipped" sid="8693420187509819" type="StunAnimation">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="4326967698797375" type="StunAnimation">
-                                    <param id="0" name="Object">Bird1</param>
-                                    <param id="1" name="Image point (optional)">2</param>
-                                </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="8184547849401786" type="StunAnimation">
-                                    <param id="0" name="Pin to">Bird1</param>
-                                    <param id="1" name="Mode">0</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="4198572632139884" type="System">
-                                    <param id="0" name="Seconds">1.5</param>
-                                </action>
-                                <action behavior="Pin" id="1" name="Unpin" sid="8994620647720968" type="StunAnimation" />
-                                <action id="-3" name="Set position" sid="1446633511527713" type="StunAnimation">
-                                    <param id="0" name="X">-1000</param>
-                                    <param id="1" name="Y">-1000</param>
-                                </action>
-                                <action id="8" name="Set flipped" sid="4131811367511878" type="StunAnimation">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action behavior="Physics" id="9" name="Set angular velocity" sid="5317089964115574" type="Bird1">
+                            <param id="0" name="Angular velocity">0</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="7963493532530447">
                     <conditions>
@@ -1580,14 +1658,14 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="5341937607147704">
+                <event-block sid="2895384147383295">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="1523966441225112" type="System">
+                        <condition id="-6" name="Every X seconds" sid="7779979494397924" type="System">
                             <param id="0" name="Interval (seconds)">9</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="5833341553145321" type="System">
+                        <action id="-9" name="Set value" sid="6450696778224422" type="System">
                             <param id="0" name="Variable">PowerUpChoice</param>
                             <param id="1" name="Value">1</param>
                         </action>

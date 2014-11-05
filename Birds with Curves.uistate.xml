@@ -12,6 +12,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout>Sky Arena</layout>
         <layout>Title Screen</layout>
+        <layout>Instances</layout>
         <event-sheet active="1">Sky Event Sheet</event-sheet>
     </open-tabs>
     <properties>

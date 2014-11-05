@@ -448,7 +448,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="StunAnimation" sid="1418547932240094">
+            <object-type name="StunAnimationP1" sid="1418547932240094">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="Pin" sid="3528303290860947">
@@ -457,6 +457,49 @@
                 </behaviors>
                 <animation-folder expanded="1">
                     <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2959019928189263" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\Jared.Trail\Downloads\Stun-2014-11-04\Stun\Birds_Stun-Animation1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\Jared.Trail\Downloads\Stun-2014-11-04\Stun\Birds_Stun-Animation2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\Jared.Trail\Downloads\Stun-2014-11-04\Stun\Birds_Stun-Animation3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\Jared.Trail\Downloads\Stun-2014-11-04\Stun\Birds_Stun-Animation4.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\Jared.Trail\Downloads\Stun-2014-11-04\Stun\Birds_Stun-Animation5.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="InvulnerabilityAnimationP1" sid="6301058810526672">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="8013731356792135">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8842718037479469" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="H:\GitHub\Birds\Sprites\Invulnerability_Sphere.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="InvulnerabilityAnimationP2" sid="5290340316144496">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="4793915783088956">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4993809104722832" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="H:\GitHub\Birds\Sprites\Invulnerability_Sphere.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="StunAnimationP2" sid="9672978573357207">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="1830984209461546">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6601296922226302" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\Jared.Trail\Downloads\Stun-2014-11-04\Stun\Birds_Stun-Animation1.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\Jared.Trail\Downloads\Stun-2014-11-04\Stun\Birds_Stun-Animation2.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\Jared.Trail\Downloads\Stun-2014-11-04\Stun\Birds_Stun-Animation3.png" />
@@ -1033,6 +1076,7 @@
         <layout>Character Select.xml</layout>
         <layout>Sky Arena.xml</layout>
         <layout>Title Screen.xml</layout>
+        <layout>Instances.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Game Test.xml</event-sheet>
