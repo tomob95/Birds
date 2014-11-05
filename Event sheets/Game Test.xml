@@ -6,9 +6,9 @@
         <variable constant="0" name="DisparationSpeed" sid="215759270624451" static="0" type="number">2</variable>
         <variable constant="0" name="Player2Score" sid="1395132170908658" static="0" type="number">0</variable>
         <variable constant="0" name="Player1Score" sid="3340489528706963" static="0" type="number">0</variable>
-        <variable constant="0" name="Gravity" sid="86620975964082" static="0" type="number">10</variable>
-        <variable constant="0" name="AngVel" sid="9082232347000361" static="0" type="number">400</variable>
-        <variable constant="0" name="Impulse" sid="2257617201534871" static="0" type="number">25</variable>
+        <variable constant="0" name="Gravity" sid="86620975964082" static="0" type="number">8</variable>
+        <variable comment="400" constant="0" name="AngVel" sid="9082232347000361" static="0" type="number">400</variable>
+        <variable comment="25" constant="0" name="Impulse" sid="2257617201534871" static="0" type="number">30</variable>
         <event-block sid="6508059842941432">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="2123448840046432" type="System" />
@@ -635,23 +635,6 @@
                         <action id="-9" name="Destroy" sid="9653627352143007" type="Lightning" />
                     </actions>
                 </event-block>
-                <event-block sid="6123488033046619">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="5933280643999454" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="7747067705888482" type="System">
-                            <param id="0" name="Object to create">Lightning</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">830</param>
-                            <param id="3" name="Y">755</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="920962281287674" type="System">
-                            <param id="0" name="Seconds">5</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="1346742764966597" type="Lightning" />
-                    </actions>
-                </event-block>
                 <comment>Lightning End</comment>
                 <comment>Invulnerability Start</comment>
                 <event-block sid="9601998885978543">
@@ -750,23 +733,6 @@
                         <action id="-14" name="Toggle boolean" sid="5381224982293876" type="Bird2">
                             <param id="0" name="Instance variable">Invulnerability</param>
                         </action>
-                    </actions>
-                </event-block>
-                <event-block sid="5068080082378708">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="8006954232762103" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="6937045722966564" type="System">
-                            <param id="0" name="Object to create">Invulnerability</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">1100</param>
-                            <param id="3" name="Y">755</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="2508656956054055" type="System">
-                            <param id="0" name="Seconds">5</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="2642069283824504" type="Invulnerability" />
                     </actions>
                 </event-block>
                 <event-block sid="9992372123919606">
@@ -972,23 +938,6 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="9148656968484702">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="5146993734570612" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="2848727188285577" type="System">
-                            <param id="0" name="Object to create">FireTrail</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">1300</param>
-                            <param id="3" name="Y">755</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="8211904164018948" type="System">
-                            <param id="0" name="Seconds">5</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="1676512574131902" type="FireTrail" />
-                    </actions>
-                </event-block>
                 <event-block sid="7917081576368572">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="5075407901805847" type="System">
@@ -1008,7 +957,159 @@
                         <action id="-9" name="Destroy" sid="967817110711138" type="FireTrail" />
                     </actions>
                 </event-block>
+                <comment>FireTrail End</comment>
+                <comment>Blink Start</comment>
+                <event-block sid="7683354786356085">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="510248820650214" type="Bird1">
+                            <param id="0" name="Object">Blink</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="5418472570676876" type="Blink" />
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="1681318510770298" type="Bird1">
+                            <param id="0" name="Impulse">1000</param>
+                            <param id="1" name="Angle">Bird1.Angle</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="9694802226927793" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action behavior="Physics" id="15" name="Set velocity" sid="5656478970310247" type="Bird1">
+                            <param id="0" name="X component">0</param>
+                            <param id="1" name="Y component">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6102855065758268">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="5910524913295191" type="Bird2">
+                            <param id="0" name="Object">Blink</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="236864289558204" type="Blink" />
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="3870146296012748" type="Bird2">
+                            <param id="0" name="Impulse">1000</param>
+                            <param id="1" name="Angle">Bird2.Angle</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="156481569252316" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action behavior="Physics" id="15" name="Set velocity" sid="1950384418015974" type="Bird2">
+                            <param id="0" name="X component">0</param>
+                            <param id="1" name="Y component">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9745053959263287">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="2568424620688809" type="System">
+                            <param id="0" name="Interval (seconds)">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="9363900815287394" type="System">
+                            <param id="0" name="Object to create">Blink</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">600</param>
+                            <param id="3" name="Y">755</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="605617746840987" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1098708473914501" type="Blink" />
+                    </actions>
+                </event-block>
+                <comment>Blink End</comment>
             </sub-events>
         </event-group>
+        <event-group description="" sid="7525466437671726" title="ScoreBoard">
+            <sub-events>
+                <event-block sid="4867949636855675">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="8988960979129379" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="6898334539739286" type="Player1Score">
+                            <param id="0" name="Text">Player1Score</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3285665668471652" type="Player2Score">
+                            <param id="0" name="Text">Player2Score</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3175625381028674">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6971501197300838" type="Bird1">
+                            <param id="0" name="Instance variable">Respawn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="5936666612547445" type="System">
+                            <param id="0" name="Variable">Player2Score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8818450896746569" type="Player2Score">
+                            <param id="0" name="Text">Player2Score</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9316589861250036">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9429236722394655" type="Bird2">
+                            <param id="0" name="Instance variable">Respawn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="1546055300273645" type="System">
+                            <param id="0" name="Variable">Player1Score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="1835416087313651" type="Player1Score">
+                            <param id="0" name="Text">Player1Score</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="3185516114702453" title="Environment Objects" />
+        <event-block sid="2988254944884391">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="9350774717879136" type="System" />
+            </conditions>
+            <actions>
+                <action id="-17" name="Move forward" sid="3523088402282429" type="Cloud">
+                    <param id="0" name="Distance">-5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="30549326522685">
+            <conditions />
+            <actions>
+                <action disabled="1" id="-3" name="Set position" sid="101714982303983" type="Cloud">
+                    <param id="0" name="X">2300</param>
+                    <param id="1" name="Y">random(1080)</param>
+                </action>
+                <action id="-3" name="Set position" sid="9544811043860247" type="Cloud">
+                    <param id="0" name="X">2000</param>
+                    <param id="1" name="Y">random(70, 1080)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4140079968577348">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="3269091273519061" type="Cloud">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="X co-ordinate">-300</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
     </events>
 </c2eventsheet>

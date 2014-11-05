@@ -42,6 +42,10 @@
                         <Lightning>false</Lightning>
                         <Invulnerability>false</Invulnerability>
                         <FireTrail>false</FireTrail>
+                        <LightningStored>false</LightningStored>
+                        <FireTrailStored>false</FireTrailStored>
+                        <InvulnerabilityStored>false</InvulnerabilityStored>
+                        <BlinkStored>false</BlinkStored>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">
@@ -61,7 +65,7 @@
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Custom</obstacles>
-                                <range>200</range>
+                                <range>300</range>
                                 <cone-of-view>60</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
@@ -73,11 +77,11 @@
                         <x>391</x>
                         <y>504</y>
                         <z>0</z>
-                        <width>150</width>
-                        <height>150</height>
+                        <width>400.677978516</width>
+                        <height>400.677978516</height>
                         <depth>0</depth>
-                        <hotspotX>0.508474588</hotspotX>
-                        <hotspotY>0.511864424</hotspotY>
+                        <hotspotX>0.558375657</hotspotX>
+                        <hotspotY>0.611675143</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -269,22 +273,22 @@
                         <x>390</x>
                         <y>504</y>
                         <z>0</z>
-                        <width>150</width>
-                        <height>150</height>
+                        <width>400.677978516</width>
+                        <height>400.677978516</height>
                         <depth>0</depth>
-                        <hotspotX>0.508474588</hotspotX>
-                        <hotspotY>0.511864424</hotspotY>
+                        <hotspotX>0.558375657</hotspotX>
+                        <hotspotY>0.611675143</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Scores" uid="13">
+                <instance type="Player2Score" uid="13">
                     <properties>
-                        <text></text>
+                        <text>0</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-27,400,0</font>
+                        <font>Arial,-64,400,0</font>
                         <color>0,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
+                        <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
@@ -293,11 +297,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>736</x>
-                        <y>9</y>
+                        <x>1834</x>
+                        <y>47</y>
                         <z>0</z>
-                        <width>264</width>
-                        <height>71</height>
+                        <width>210</width>
+                        <height>121</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -320,6 +324,10 @@
                         <Lightning>false</Lightning>
                         <Invulnerability>false</Invulnerability>
                         <FireTrail>false</FireTrail>
+                        <LightningStored>false</LightningStored>
+                        <FireTrailStored>false</FireTrailStored>
+                        <InvulnerabilityStored>false</InvulnerabilityStored>
+                        <BlinkStored>false</BlinkStored>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">
@@ -339,7 +347,7 @@
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Custom</obstacles>
-                                <range>200</range>
+                                <range>300</range>
                                 <cone-of-view>60</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
@@ -351,11 +359,11 @@
                         <x>1237</x>
                         <y>510</y>
                         <z>0</z>
-                        <width>150</width>
-                        <height>150</height>
+                        <width>400.677978516</width>
+                        <height>400.677978516</height>
                         <depth>0</depth>
-                        <hotspotX>0.508474588</hotspotX>
-                        <hotspotY>0.511864424</hotspotY>
+                        <hotspotX>0.558375657</hotspotX>
+                        <hotspotY>0.611675143</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -395,11 +403,11 @@
                         <x>1237</x>
                         <y>511</y>
                         <z>0</z>
-                        <width>150</width>
-                        <height>150</height>
+                        <width>400.677978516</width>
+                        <height>400.677978516</height>
                         <depth>0</depth>
-                        <hotspotX>0.508474588</hotspotX>
-                        <hotspotY>0.511864424</hotspotY>
+                        <hotspotX>0.558375657</hotspotX>
+                        <hotspotY>0.611675143</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -512,8 +520,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>817</x>
-                        <y>240</y>
+                        <x>855</x>
+                        <y>293</y>
                         <z>0</z>
                         <width>250</width>
                         <height>250</height>
@@ -524,7 +532,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite4" uid="9">
+                <instance type="Tester" uid="9">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -569,11 +577,11 @@
                         <x>2201</x>
                         <y>53</y>
                         <z>0</z>
-                        <width>79</width>
-                        <height>74</height>
+                        <width>97.959999084</width>
+                        <height>87.912002563</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.501683474</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -591,10 +599,10 @@
                         <x>2203</x>
                         <y>-50</y>
                         <z>0</z>
-                        <width>81</width>
-                        <height>75</height>
+                        <width>97.524002075</width>
+                        <height>88.800003052</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0.501661122</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -613,11 +621,11 @@
                         <x>2084</x>
                         <y>-97</y>
                         <z>0</z>
-                        <width>80</width>
-                        <height>71</height>
+                        <width>95.36000061</width>
+                        <height>84.347999573</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.501683474</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -656,6 +664,77 @@
                         <height>107</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Blink" uid="33">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2216</x>
+                        <y>-202</y>
+                        <z>0</z>
+                        <width>101.440002441</width>
+                        <height>91.783996582</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501577258</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Player1Score" uid="34">
+                    <properties>
+                        <text>0</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-64,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>567</x>
+                        <y>48</y>
+                        <z>0</z>
+                        <width>184</width>
+                        <height>93</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Cloud" uid="37">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>572</x>
+                        <y>-235</y>
+                        <z>0</z>
+                        <width>4374.784179688</width>
+                        <height>1146.079956055</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>

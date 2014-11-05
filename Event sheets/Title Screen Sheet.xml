@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Title Screen Sheet</name>
+    <events>
+        <event-block sid="4312107940984994">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="8008855694949098" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="12" name="Set world gravity" sid="9651443319719942" type="Bird1">
+                    <param id="0" name="Gravity">Gravity</param>
+                </action>
+                <action id="2" name="Stop" sid="4843005156930865" type="Bird1" />
+                <action id="2" name="Stop" sid="5678095274865904" type="Bird2" />
+                <action behavior="Pin" id="0" name="Pin to object" sid="3759206486023795" type="Beak1">
+                    <param id="0" name="Pin to">Bird1</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="8463951660861784" type="Beak2">
+                    <param id="0" name="Pin to">Bird2</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-18" name="Rotate clockwise" sid="9096121511692012" type="Bird2">
+                    <param id="0" name="Degrees">180</param>
+                </action>
+                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="7466082604354941" type="Beak1">
+                    <param id="0" name="Object">Bird1</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="5208526604617335" type="Beak2">
+                    <param id="0" name="Object">Bird2</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="8948208634171148" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4227154428368616">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4311091517461924" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="4587474532080238">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="621140926955844" type="System">
+                            <param id="0" name="Variable">Player1Score</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">Player2Score</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="177391496108816" type="WinOrLoseLeft">
+                            <param id="0" name="Color">rgb(0, 255, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3806734665615241" type="WinOrLoseLeft">
+                            <param id="0" name="Text">&quot;Winner! Score: &quot;&amp;Player1Score</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="9427279171559645" type="WinOrLoseRight">
+                            <param id="0" name="Color">rgb(255, 0, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3625998896805358" type="WinOrLoseRight">
+                            <param id="0" name="Text">&quot;Loser! Score: &quot;&amp;Player2Score</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4541379430495484">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="489828955228426" type="System">
+                            <param id="0" name="Variable">Player2Score</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">Player1Score</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="7615801755783994" type="WinOrLoseRight">
+                            <param id="0" name="Color">rgb(0, 255, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8078183480181057" type="WinOrLoseRight">
+                            <param id="0" name="Text">&quot;Winner! Score: &quot;&amp;Player2Score</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="1705812170420376" type="WinOrLoseLeft">
+                            <param id="0" name="Color">rgb(255, 0, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="6708607253070096" type="WinOrLoseLeft">
+                            <param id="0" name="Text">&quot;Loser! Score: &quot;&amp;Player1Score</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7730228995786846">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3366870046419857" type="System">
+                            <param id="0" name="Variable">Player1Score</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Player2Score</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="7570357182673635" type="System">
+                            <param id="0" name="Variable">Player1Score</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="4791225602697986" type="System">
+                            <param id="0" name="Variable">Player2Score</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="7534242615209096" type="WinOrLoseLeft">
+                            <param id="0" name="Color">rgb(255, 255, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="665178613340471" type="WinOrLoseLeft">
+                            <param id="0" name="Text">&quot;Tied Score: &quot;&amp;Player2Score</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="3391227868698354" type="WinOrLoseRight">
+                            <param id="0" name="Color">rgb(255, 255, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8266917926739454" type="WinOrLoseRight">
+                            <param id="0" name="Text">&quot;Tied Score: &quot;&amp;Player1Score</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="7837488843859073" title="Sky Player 3">
+            <sub-events>
+                <event-block sid="6053853594747804">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="8162957044638927" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="9" name="Set angular velocity" sid="4165706508177154" type="Bird1">
+                            <param id="0" name="Angular velocity">-AngVel</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6855991756605378">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="1120738599370142" type="Keyboard">
+                            <param id="0" name="Key">68 (D)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="9" name="Set angular velocity" sid="3145805547260966" type="Bird1">
+                            <param id="0" name="Angular velocity">AngVel</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8833575375873781">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="8393287570461643" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="9" name="Set angular velocity" sid="2363601967903919" type="Bird1">
+                            <param id="0" name="Angular velocity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2507616866975822">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="5619308417335532" type="Keyboard">
+                            <param id="0" name="Key">68 (D)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="9" name="Set angular velocity" sid="4691677339919985" type="Bird1">
+                            <param id="0" name="Angular velocity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3649824442512024">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="2434990484419706" type="Keyboard">
+                            <param id="0" name="Key">87 (W)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="24" name="Set prevent rotation" sid="5704933914203704" type="Bird1">
+                            <param id="0" name="Setting">1</param>
+                        </action>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="819306320435141" type="Bird1">
+                            <param id="0" name="Impulse">Impulse</param>
+                            <param id="1" name="Angle">Bird1.Angle</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="2169616164937488" type="Bird1">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action behavior="Physics" id="24" name="Set prevent rotation" sid="344293445025691" type="Bird1">
+                            <param id="0" name="Setting">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9120993255969162">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="6351359397226012" type="Keyboard">
+                            <param id="0" name="Key">87 (W)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="1161780136608967" type="Bird1">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="577589148377096">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="9473409346108424" type="System" />
+                        <condition id="-13" name="Is between angles" sid="6800231431910115" type="Bird1">
+                            <param id="0" name="First angle">270</param>
+                            <param id="1" name="Second angle">90</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set flipped" sid="8032094042715779" type="Bird1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="8" name="Set flipped" sid="1179388822450172" type="Beak1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4331385290435061">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="31860273766826" type="System" />
+                        <condition id="-13" name="Is between angles" sid="9227209952458142" type="Bird1">
+                            <param id="0" name="First angle">91</param>
+                            <param id="1" name="Second angle">269</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set flipped" sid="429295637055569" type="Bird1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="8" name="Set flipped" sid="8198767709198749" type="Beak1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7860361313814033">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2540681603072243" type="Bird1">
+                            <param id="0" name="Object">Button</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="5875835492420603" type="System">
+                            <param id="0" name="Layout">Sky Arena</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="6148344764856068" title="Sky Player 3">
+            <sub-events>
+                <event-block sid="6053853594747804">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="8162957044638927" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="9" name="Set angular velocity" sid="4165706508177154" type="Bird2">
+                            <param id="0" name="Angular velocity">-AngVel</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6855991756605378">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="1120738599370142" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="9" name="Set angular velocity" sid="3145805547260966" type="Bird2">
+                            <param id="0" name="Angular velocity">AngVel</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8833575375873781">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="8393287570461643" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="9" name="Set angular velocity" sid="2363601967903919" type="Bird2">
+                            <param id="0" name="Angular velocity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2507616866975822">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="5619308417335532" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="9" name="Set angular velocity" sid="4691677339919985" type="Bird2">
+                            <param id="0" name="Angular velocity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3649824442512024">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="2434990484419706" type="Keyboard">
+                            <param id="0" name="Key">38 (Up arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="24" name="Set prevent rotation" sid="5372822918248434" type="Bird2">
+                            <param id="0" name="Setting">1</param>
+                        </action>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="819306320435141" type="Bird2">
+                            <param id="0" name="Impulse">Impulse</param>
+                            <param id="1" name="Angle">Bird2.Angle</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="2169616164937488" type="Bird2">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action behavior="Physics" id="24" name="Set prevent rotation" sid="2483675878352761" type="Bird2">
+                            <param id="0" name="Setting">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9120993255969162">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="6351359397226012" type="Keyboard">
+                            <param id="0" name="Key">38 (Up arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="1161780136608967" type="Bird2">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="577589148377096">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="9473409346108424" type="System" />
+                        <condition id="-13" name="Is between angles" sid="6800231431910115" type="Bird2">
+                            <param id="0" name="First angle">270</param>
+                            <param id="1" name="Second angle">90</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set flipped" sid="8032094042715779" type="Bird2">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="8" name="Set flipped" sid="1179388822450172" type="Beak2">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4331385290435061">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="31860273766826" type="System" />
+                        <condition id="-13" name="Is between angles" sid="9227209952458142" type="Bird2">
+                            <param id="0" name="First angle">91</param>
+                            <param id="1" name="Second angle">269</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set flipped" sid="429295637055569" type="Bird2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="8" name="Set flipped" sid="8198767709198749" type="Beak2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1445359953395902">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1213548272269223" type="Bird2">
+                            <param id="0" name="Object">Button</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="5408484505741401" type="System">
+                            <param id="0" name="Layout">Sky Arena</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="3245626543599812">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="757303372984767" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="6679567778656153" type="Sprite4">
+                    <param id="0" name="Object">Bird1</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="1119475530691754" type="Sprite7">
+                    <param id="0" name="Object">Bird2</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
