@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Title Screen Sheet</name>
     <events>
-        <event-block sid="4312107940984994">
+        <event-block collapsed="1" sid="4312107940984994">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="8008855694949098" type="System" />
             </conditions>
@@ -13,201 +13,234 @@
                 </action>
                 <action id="2" name="Stop" sid="4843005156930865" type="Bird1" />
                 <action id="2" name="Stop" sid="5678095274865904" type="Bird2" />
-                <action behavior="Pin" id="0" name="Pin to object" sid="3759206486023795" type="Beak1">
-                    <param id="0" name="Pin to">Bird1</param>
-                    <param id="1" name="Mode">0</param>
-                </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="8463951660861784" type="Beak2">
-                    <param id="0" name="Pin to">Bird2</param>
-                    <param id="1" name="Mode">0</param>
-                </action>
-                <action id="-18" name="Rotate clockwise" sid="9096121511692012" type="Bird2">
-                    <param id="0" name="Degrees">180</param>
-                </action>
-                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="7466082604354941" type="Beak1">
-                    <param id="0" name="Object">Bird1</param>
-                    <param id="1" name="State">0</param>
-                </action>
-                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="5208526604617335" type="Beak2">
-                    <param id="0" name="Object">Bird2</param>
-                    <param id="1" name="State">0</param>
-                </action>
+                <action id="2" name="Stop" sid="7951890048076261" type="Bird3" />
+                <action id="2" name="Stop" sid="7224544230833638" type="Bird4" />
                 <action id="-13" name="Set time scale" sid="8948208634171148" type="System">
                     <param id="0" name="Time scale">1.0</param>
                 </action>
             </actions>
-        </event-block>
-        <event-block sid="4227154428368616">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="4311091517461924" type="System" />
-            </conditions>
-            <actions />
             <sub-events>
-                <event-block sid="4587474532080238">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="621140926955844" type="System">
-                            <param id="0" name="Variable">Player1Score</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">Player2Score</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set font color" sid="177391496108816" type="WinOrLoseLeft">
-                            <param id="0" name="Color">rgb(0, 255, 0)</param>
-                        </action>
-                        <action id="0" name="Set text" sid="3806734665615241" type="WinOrLoseLeft">
-                            <param id="0" name="Text">&quot;Winner! Score: &quot;&amp;Player1Score</param>
-                        </action>
-                        <action id="4" name="Set font color" sid="9427279171559645" type="WinOrLoseRight">
-                            <param id="0" name="Color">rgb(255, 0, 0)</param>
-                        </action>
-                        <action id="0" name="Set text" sid="3625998896805358" type="WinOrLoseRight">
-                            <param id="0" name="Text">&quot;Loser! Score: &quot;&amp;Player2Score</param>
-                        </action>
-                    </actions>
+                <comment>Scoring</comment>
+                <event-block collapsed="1" sid="897373536506102">
+                    <conditions />
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4587474532080238">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="621140926955844" type="System">
+                                    <param id="0" name="Variable">Player1Score</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">Player2Score</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set font color" sid="177391496108816" type="WinOrLoseLeft">
+                                    <param id="0" name="Color">rgb(0, 255, 0)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="3806734665615241" type="WinOrLoseLeft">
+                                    <param id="0" name="Text">&quot;Winner! Score: &quot;&amp;Player1Score</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="9427279171559645" type="WinOrLoseRight">
+                                    <param id="0" name="Color">rgb(255, 0, 0)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="3625998896805358" type="WinOrLoseRight">
+                                    <param id="0" name="Text">&quot;Loser! Score: &quot;&amp;Player2Score</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4541379430495484">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="489828955228426" type="System">
+                                    <param id="0" name="Variable">Player2Score</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">Player1Score</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set font color" sid="7615801755783994" type="WinOrLoseRight">
+                                    <param id="0" name="Color">rgb(0, 255, 0)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="8078183480181057" type="WinOrLoseRight">
+                                    <param id="0" name="Text">&quot;Winner! Score: &quot;&amp;Player2Score</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="1705812170420376" type="WinOrLoseLeft">
+                                    <param id="0" name="Color">rgb(255, 0, 0)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="6708607253070096" type="WinOrLoseLeft">
+                                    <param id="0" name="Text">&quot;Loser! Score: &quot;&amp;Player1Score</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7730228995786846">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="3366870046419857" type="System">
+                                    <param id="0" name="Variable">Player1Score</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Player2Score</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="7570357182673635" type="System">
+                                    <param id="0" name="Variable">Player1Score</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="4791225602697986" type="System">
+                                    <param id="0" name="Variable">Player2Score</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set font color" sid="7534242615209096" type="WinOrLoseLeft">
+                                    <param id="0" name="Color">rgb(255, 255, 0)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="665178613340471" type="WinOrLoseLeft">
+                                    <param id="0" name="Text">&quot;Tied Score: &quot;&amp;Player2Score</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="3391227868698354" type="WinOrLoseRight">
+                                    <param id="0" name="Color">rgb(255, 255, 0)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="8266917926739454" type="WinOrLoseRight">
+                                    <param id="0" name="Text">&quot;Tied Score: &quot;&amp;Player1Score</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <event-block sid="4541379430495484">
+                <event-block sid="2399609115816551">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="489828955228426" type="System">
-                            <param id="0" name="Variable">Player2Score</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">Player1Score</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set font color" sid="7615801755783994" type="WinOrLoseRight">
-                            <param id="0" name="Color">rgb(0, 255, 0)</param>
-                        </action>
-                        <action id="0" name="Set text" sid="8078183480181057" type="WinOrLoseRight">
-                            <param id="0" name="Text">&quot;Winner! Score: &quot;&amp;Player2Score</param>
-                        </action>
-                        <action id="4" name="Set font color" sid="1705812170420376" type="WinOrLoseLeft">
-                            <param id="0" name="Color">rgb(255, 0, 0)</param>
-                        </action>
-                        <action id="0" name="Set text" sid="6708607253070096" type="WinOrLoseLeft">
-                            <param id="0" name="Text">&quot;Loser! Score: &quot;&amp;Player1Score</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7730228995786846">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="3366870046419857" type="System">
-                            <param id="0" name="Variable">Player1Score</param>
+                        <condition id="-14" name="Compare variable" sid="9214817186376425" type="System">
+                            <param id="0" name="Variable">PLAYING_PLAYER1</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">Player2Score</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="7570357182673635" type="System">
-                            <param id="0" name="Variable">Player1Score</param>
-                            <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="4791225602697986" type="System">
-                            <param id="0" name="Variable">Player2Score</param>
-                            <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Value">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set font color" sid="7534242615209096" type="WinOrLoseLeft">
-                            <param id="0" name="Color">rgb(255, 255, 0)</param>
+                        <action id="-3" name="Create object" sid="6956744881236604" type="System">
+                            <param id="0" name="Object to create">Bird1</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">300</param>
+                            <param id="3" name="Y">300</param>
                         </action>
-                        <action id="0" name="Set text" sid="665178613340471" type="WinOrLoseLeft">
-                            <param id="0" name="Text">&quot;Tied Score: &quot;&amp;Player2Score</param>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="1097381737818775" type="Beak1">
+                            <param id="0" name="Pin to">Bird1</param>
+                            <param id="1" name="Mode">0</param>
                         </action>
-                        <action id="4" name="Set font color" sid="3391227868698354" type="WinOrLoseRight">
-                            <param id="0" name="Color">rgb(255, 255, 0)</param>
+                    </actions>
+                </event-block>
+                <event-block sid="4595040340340352">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1089797808355735" type="System">
+                            <param id="0" name="Variable">PLAYING_PLAYER2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="2675830310719089" type="System">
+                            <param id="0" name="Object to create">Bird2</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">2500</param>
+                            <param id="3" name="Y">300</param>
                         </action>
-                        <action id="0" name="Set text" sid="8266917926739454" type="WinOrLoseRight">
-                            <param id="0" name="Text">&quot;Tied Score: &quot;&amp;Player1Score</param>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="1011580086645058" type="Beak2">
+                            <param id="0" name="Pin to">Bird2</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7559247180993307">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6863543570063913" type="System">
+                            <param id="0" name="Variable">PLAYING_PLAYER3</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="7535707441724334" type="System">
+                            <param id="0" name="Object to create">Bird3</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">300</param>
+                            <param id="3" name="Y">1200</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="8981839309411515" type="Beak3">
+                            <param id="0" name="Pin to">Bird3</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9723189616251901">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2729723886441854" type="System">
+                            <param id="0" name="Variable">PLAYING_PLAYER4</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="8237842372422859" type="System">
+                            <param id="0" name="Object to create">Bird4</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">2500</param>
+                            <param id="3" name="Y">1200</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="2500373890027328" type="Beak4">
+                            <param id="0" name="Pin to">Bird4</param>
+                            <param id="1" name="Mode">0</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-block>
-        <event-group description="" sid="7837488843859073" title="Sky Player 3">
+        <event-group collapsed="1" description="" sid="7837488843859073" title="Title Player1">
             <sub-events>
-                <event-block sid="6053853594747804">
+                <event-block sid="3662278678049811">
                     <conditions>
-                        <condition id="2" name="Key is down" sid="8162957044638927" type="Keyboard">
-                            <param id="0" name="Key">65 (A)</param>
+                        <condition id="6" name="On button pressed" sid="5357286271639699" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">9</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Physics" id="9" name="Set angular velocity" sid="4165706508177154" type="Bird1">
-                            <param id="0" name="Angular velocity">-AngVel</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6855991756605378">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="1120738599370142" type="Keyboard">
-                            <param id="0" name="Key">68 (D)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Physics" id="9" name="Set angular velocity" sid="3145805547260966" type="Bird1">
-                            <param id="0" name="Angular velocity">AngVel</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="8833575375873781">
-                    <conditions>
-                        <condition id="3" name="On key released" sid="8393287570461643" type="Keyboard">
-                            <param id="0" name="Key">65 (A)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Physics" id="9" name="Set angular velocity" sid="2363601967903919" type="Bird1">
-                            <param id="0" name="Angular velocity">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2507616866975822">
-                    <conditions>
-                        <condition id="3" name="On key released" sid="5619308417335532" type="Keyboard">
-                            <param id="0" name="Key">68 (D)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Physics" id="9" name="Set angular velocity" sid="4691677339919985" type="Bird1">
-                            <param id="0" name="Angular velocity">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3649824442512024">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="2434990484419706" type="Keyboard">
-                            <param id="0" name="Key">87 (W)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Physics" id="24" name="Set prevent rotation" sid="5704933914203704" type="Bird1">
-                            <param id="0" name="Setting">1</param>
-                        </action>
-                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="819306320435141" type="Bird1">
-                            <param id="0" name="Impulse">Impulse</param>
-                            <param id="1" name="Angle">Bird1.Angle</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action id="5" name="Set frame" sid="2169616164937488" type="Bird1">
-                            <param id="0" name="Frame number">1</param>
-                        </action>
-                        <action behavior="Physics" id="24" name="Set prevent rotation" sid="344293445025691" type="Bird1">
-                            <param id="0" name="Setting">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="9120993255969162">
-                    <conditions>
-                        <condition id="3" name="On key released" sid="6351359397226012" type="Keyboard">
-                            <param id="0" name="Key">87 (W)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="5" name="Set frame" sid="1161780136608967" type="Bird1">
-                            <param id="0" name="Frame number">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5290376622734412">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7593726727604961" type="System">
+                                    <param id="0" name="Variable">PLAYING_PLAYER1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="3232074748450807" type="System">
+                                    <param id="0" name="Variable">PLAYING_PLAYER1</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="6649015842892693" type="System">
+                                    <param id="0" name="Object to create">Bird1</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">300</param>
+                                    <param id="3" name="Y">300</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="6128839153257435" type="Beak1">
+                                    <param id="0" name="Pin to">Bird1</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3213412183932966">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="3394900099844407" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6195187162372892" type="System">
+                                    <param id="0" name="Variable">PLAYING_PLAYER1</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="1337847003221346" type="Bird1" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="577589148377096">
                     <conditions>
@@ -226,6 +259,125 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-group collapsed="1" description="" sid="2640409335613937" title="TitleMovement">
+                    <sub-events>
+                        <event-block any="1" sid="6053853594747804">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="8162957044638927" type="Keyboard">
+                                    <param id="0" name="Key">65 (A)</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" sid="5593747900293558" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">-0.2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="9" name="Set angular velocity" sid="4165706508177154" type="Bird1">
+                                    <param id="0" name="Angular velocity">-AngVel</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="6855991756605378">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="1120738599370142" type="Keyboard">
+                                    <param id="0" name="Key">68 (D)</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" sid="1589522347174899" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">0.2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="9" name="Set angular velocity" sid="3145805547260966" type="Bird1">
+                                    <param id="0" name="Angular velocity">AngVel</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="8833575375873781">
+                            <conditions>
+                                <condition id="3" name="On key released" sid="8393287570461643" type="Keyboard">
+                                    <param id="0" name="Key">65 (A)</param>
+                                </condition>
+                                <condition id="3" name="On key released" sid="5619308417335532" type="Keyboard">
+                                    <param id="0" name="Key">68 (D)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="9" name="Set angular velocity" sid="2363601967903919" type="Bird1">
+                                    <param id="0" name="Angular velocity">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2507616866975822">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="9175894189042107" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">3</param>
+                                    <param id="3" name="Value">0.2</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" sid="5713123857065513" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">5</param>
+                                    <param id="3" name="Value">-0.2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="9" name="Set angular velocity" sid="4691677339919985" type="Bird1">
+                                    <param id="0" name="Angular velocity">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="1086760276175684">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="7516107696160334" type="Keyboard">
+                                    <param id="0" name="Key">87 (W)</param>
+                                </condition>
+                                <condition id="6" name="On button pressed" sid="6285288589016808" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="24" name="Set prevent rotation" sid="2599752653156001" type="Bird1">
+                                    <param id="0" name="Setting">1</param>
+                                </action>
+                                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="5558801574228388" type="Bird1">
+                                    <param id="0" name="Impulse">Impulse</param>
+                                    <param id="1" name="Angle">Bird1.Angle</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="6606427444262895" type="Bird1">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action behavior="Physics" id="24" name="Set prevent rotation" sid="3737337144767121" type="Bird1">
+                                    <param id="0" name="Setting">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="9120993255969162">
+                            <conditions>
+                                <condition id="3" name="On key released" sid="6351359397226012" type="Keyboard">
+                                    <param id="0" name="Key">87 (W)</param>
+                                </condition>
+                                <condition id="7" name="On button released" sid="2796302051809461" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="1161780136608967" type="Bird1">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-block sid="4331385290435061">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="31860273766826" type="System" />
@@ -257,90 +409,55 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6148344764856068" title="Sky Player 3">
+        <event-group collapsed="1" description="" sid="4143805030773482" title="Title Player2">
             <sub-events>
-                <event-block sid="6053853594747804">
+                <event-block sid="3662278678049811">
                     <conditions>
-                        <condition id="2" name="Key is down" sid="8162957044638927" type="Keyboard">
-                            <param id="0" name="Key">37 (Left arrow)</param>
+                        <condition id="6" name="On button pressed" sid="5357286271639699" type="Gamepad">
+                            <param id="0" name="Gamepad">1</param>
+                            <param id="1" name="Button">9</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Physics" id="9" name="Set angular velocity" sid="4165706508177154" type="Bird2">
-                            <param id="0" name="Angular velocity">-AngVel</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6855991756605378">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="1120738599370142" type="Keyboard">
-                            <param id="0" name="Key">39 (Right arrow)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Physics" id="9" name="Set angular velocity" sid="3145805547260966" type="Bird2">
-                            <param id="0" name="Angular velocity">AngVel</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="8833575375873781">
-                    <conditions>
-                        <condition id="3" name="On key released" sid="8393287570461643" type="Keyboard">
-                            <param id="0" name="Key">37 (Left arrow)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Physics" id="9" name="Set angular velocity" sid="2363601967903919" type="Bird2">
-                            <param id="0" name="Angular velocity">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2507616866975822">
-                    <conditions>
-                        <condition id="3" name="On key released" sid="5619308417335532" type="Keyboard">
-                            <param id="0" name="Key">39 (Right arrow)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Physics" id="9" name="Set angular velocity" sid="4691677339919985" type="Bird2">
-                            <param id="0" name="Angular velocity">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3649824442512024">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="2434990484419706" type="Keyboard">
-                            <param id="0" name="Key">38 (Up arrow)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Physics" id="24" name="Set prevent rotation" sid="5372822918248434" type="Bird2">
-                            <param id="0" name="Setting">1</param>
-                        </action>
-                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="819306320435141" type="Bird2">
-                            <param id="0" name="Impulse">Impulse</param>
-                            <param id="1" name="Angle">Bird2.Angle</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action id="5" name="Set frame" sid="2169616164937488" type="Bird2">
-                            <param id="0" name="Frame number">1</param>
-                        </action>
-                        <action behavior="Physics" id="24" name="Set prevent rotation" sid="2483675878352761" type="Bird2">
-                            <param id="0" name="Setting">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="9120993255969162">
-                    <conditions>
-                        <condition id="3" name="On key released" sid="6351359397226012" type="Keyboard">
-                            <param id="0" name="Key">38 (Up arrow)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="5" name="Set frame" sid="1161780136608967" type="Bird2">
-                            <param id="0" name="Frame number">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5290376622734412">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7593726727604961" type="System">
+                                    <param id="0" name="Variable">PLAYING_PLAYER2</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="3232074748450807" type="System">
+                                    <param id="0" name="Variable">PLAYING_PLAYER2</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="6649015842892693" type="System">
+                                    <param id="0" name="Object to create">Bird2</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">2500</param>
+                                    <param id="3" name="Y">300</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="6128839153257435" type="Beak2">
+                                    <param id="0" name="Pin to">Bird2</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3213412183932966">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="3394900099844407" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6195187162372892" type="System">
+                                    <param id="0" name="Variable">PLAYING_PLAYER2</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="1337847003221346" type="Bird2" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="577589148377096">
                     <conditions>
@@ -359,6 +476,125 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-group collapsed="1" description="" sid="2640409335613937" title="TitleMovement2">
+                    <sub-events>
+                        <event-block any="1" sid="6053853594747804">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="8162957044638927" type="Keyboard">
+                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" sid="5593747900293558" type="Gamepad">
+                                    <param id="0" name="Gamepad">1</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">-0.2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="9" name="Set angular velocity" sid="4165706508177154" type="Bird2">
+                                    <param id="0" name="Angular velocity">-AngVel</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="6855991756605378">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="1120738599370142" type="Keyboard">
+                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" sid="1589522347174899" type="Gamepad">
+                                    <param id="0" name="Gamepad">1</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">0.2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="9" name="Set angular velocity" sid="3145805547260966" type="Bird2">
+                                    <param id="0" name="Angular velocity">AngVel</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="8833575375873781">
+                            <conditions>
+                                <condition id="3" name="On key released" sid="8393287570461643" type="Keyboard">
+                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
+                                <condition id="3" name="On key released" sid="5619308417335532" type="Keyboard">
+                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="9" name="Set angular velocity" sid="2363601967903919" type="Bird2">
+                                    <param id="0" name="Angular velocity">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2507616866975822">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="9175894189042107" type="Gamepad">
+                                    <param id="0" name="Gamepad">1</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">3</param>
+                                    <param id="3" name="Value">0.2</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" sid="5713123857065513" type="Gamepad">
+                                    <param id="0" name="Gamepad">1</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">5</param>
+                                    <param id="3" name="Value">-0.2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="9" name="Set angular velocity" sid="4691677339919985" type="Bird2">
+                                    <param id="0" name="Angular velocity">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="1086760276175684">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="7516107696160334" type="Keyboard">
+                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                </condition>
+                                <condition id="6" name="On button pressed" sid="6285288589016808" type="Gamepad">
+                                    <param id="0" name="Gamepad">1</param>
+                                    <param id="1" name="Button">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="24" name="Set prevent rotation" sid="2599752653156001" type="Bird2">
+                                    <param id="0" name="Setting">1</param>
+                                </action>
+                                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="5558801574228388" type="Bird2">
+                                    <param id="0" name="Impulse">Impulse</param>
+                                    <param id="1" name="Angle">Bird2.Angle</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="6606427444262895" type="Bird2">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action behavior="Physics" id="24" name="Set prevent rotation" sid="3737337144767121" type="Bird2">
+                                    <param id="0" name="Setting">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="9120993255969162">
+                            <conditions>
+                                <condition id="3" name="On key released" sid="6351359397226012" type="Keyboard">
+                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                </condition>
+                                <condition id="7" name="On button released" sid="2796302051809461" type="Gamepad">
+                                    <param id="0" name="Gamepad">1</param>
+                                    <param id="1" name="Button">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="1161780136608967" type="Bird2">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-block sid="4331385290435061">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="31860273766826" type="System" />
@@ -376,34 +612,493 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="1445359953395902">
+                <event-block sid="7860361313814033">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="1213548272269223" type="Bird2">
+                        <condition id="0" name="On collision with another object" sid="2540681603072243" type="Bird2">
                             <param id="0" name="Object">Button</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-2" name="Go to layout" sid="5408484505741401" type="System">
+                        <action id="-2" name="Go to layout" sid="5875835492420603" type="System">
                             <param id="0" name="Layout">Sky Arena</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="3245626543599812">
+        <event-group collapsed="1" description="" sid="8503346031953041" title="Title Player3">
+            <sub-events>
+                <event-block sid="3662278678049811">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="5357286271639699" type="Gamepad">
+                            <param id="0" name="Gamepad">2</param>
+                            <param id="1" name="Button">9</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5290376622734412">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7593726727604961" type="System">
+                                    <param id="0" name="Variable">PLAYING_PLAYER3</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="3232074748450807" type="System">
+                                    <param id="0" name="Variable">PLAYING_PLAYER3</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="6649015842892693" type="System">
+                                    <param id="0" name="Object to create">Bird3</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">300</param>
+                                    <param id="3" name="Y">1200</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="6128839153257435" type="Beak3">
+                                    <param id="0" name="Pin to">Bird3</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3213412183932966">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="3394900099844407" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6195187162372892" type="System">
+                                    <param id="0" name="Variable">PLAYING_PLAYER3</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="1337847003221346" type="Bird3" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="577589148377096">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="9473409346108424" type="System" />
+                        <condition id="-13" name="Is between angles" sid="6800231431910115" type="Bird3">
+                            <param id="0" name="First angle">270</param>
+                            <param id="1" name="Second angle">90</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set flipped" sid="8032094042715779" type="Bird3">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="8" name="Set flipped" sid="1179388822450172" type="Beak3">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group collapsed="1" description="" sid="2640409335613937" title="TitleMovement3">
+                    <sub-events>
+                        <event-block any="1" sid="6053853594747804">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="5593747900293558" type="Gamepad">
+                                    <param id="0" name="Gamepad">2</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">-0.2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="9" name="Set angular velocity" sid="4165706508177154" type="Bird3">
+                                    <param id="0" name="Angular velocity">-AngVel</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="6855991756605378">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="1589522347174899" type="Gamepad">
+                                    <param id="0" name="Gamepad">2</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">0.2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="9" name="Set angular velocity" sid="3145805547260966" type="Bird3">
+                                    <param id="0" name="Angular velocity">AngVel</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2507616866975822">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="9175894189042107" type="Gamepad">
+                                    <param id="0" name="Gamepad">2</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">3</param>
+                                    <param id="3" name="Value">0.2</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" sid="5713123857065513" type="Gamepad">
+                                    <param id="0" name="Gamepad">2</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">5</param>
+                                    <param id="3" name="Value">-0.2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="9" name="Set angular velocity" sid="4691677339919985" type="Bird3">
+                                    <param id="0" name="Angular velocity">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="1086760276175684">
+                            <conditions>
+                                <condition id="6" name="On button pressed" sid="6285288589016808" type="Gamepad">
+                                    <param id="0" name="Gamepad">2</param>
+                                    <param id="1" name="Button">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="24" name="Set prevent rotation" sid="2599752653156001" type="Bird3">
+                                    <param id="0" name="Setting">1</param>
+                                </action>
+                                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="5558801574228388" type="Bird3">
+                                    <param id="0" name="Impulse">Impulse</param>
+                                    <param id="1" name="Angle">Bird3.Angle</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="6606427444262895" type="Bird3">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action behavior="Physics" id="24" name="Set prevent rotation" sid="3737337144767121" type="Bird3">
+                                    <param id="0" name="Setting">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="9120993255969162">
+                            <conditions>
+                                <condition id="7" name="On button released" sid="2796302051809461" type="Gamepad">
+                                    <param id="0" name="Gamepad">2</param>
+                                    <param id="1" name="Button">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="1161780136608967" type="Bird3">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="4331385290435061">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="31860273766826" type="System" />
+                        <condition id="-13" name="Is between angles" sid="9227209952458142" type="Bird3">
+                            <param id="0" name="First angle">91</param>
+                            <param id="1" name="Second angle">269</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set flipped" sid="429295637055569" type="Bird3">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="8" name="Set flipped" sid="8198767709198749" type="Beak3">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7860361313814033">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2540681603072243" type="Bird3">
+                            <param id="0" name="Object">Button</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="5875835492420603" type="System">
+                            <param id="0" name="Layout">Sky Arena</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="7082828142309599" title="Title Player4">
+            <sub-events>
+                <event-block sid="3662278678049811">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="5357286271639699" type="Gamepad">
+                            <param id="0" name="Gamepad">3</param>
+                            <param id="1" name="Button">9</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5290376622734412">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7593726727604961" type="System">
+                                    <param id="0" name="Variable">PLAYING_PLAYER4</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="3232074748450807" type="System">
+                                    <param id="0" name="Variable">PLAYING_PLAYER4</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="6649015842892693" type="System">
+                                    <param id="0" name="Object to create">Bird4</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">2500</param>
+                                    <param id="3" name="Y">1200</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="6128839153257435" type="Beak4">
+                                    <param id="0" name="Pin to">Bird4</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3213412183932966">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="3394900099844407" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6195187162372892" type="System">
+                                    <param id="0" name="Variable">PLAYING_PLAYER4</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="1337847003221346" type="Bird4" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="577589148377096">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="9473409346108424" type="System" />
+                        <condition id="-13" name="Is between angles" sid="6800231431910115" type="Bird4">
+                            <param id="0" name="First angle">270</param>
+                            <param id="1" name="Second angle">90</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set flipped" sid="8032094042715779" type="Bird4">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="8" name="Set flipped" sid="1179388822450172" type="Beak4">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="2640409335613937" title="TitleMovement4">
+                    <sub-events>
+                        <event-block any="1" sid="6053853594747804">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="5593747900293558" type="Gamepad">
+                                    <param id="0" name="Gamepad">3</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">-0.2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="9" name="Set angular velocity" sid="4165706508177154" type="Bird4">
+                                    <param id="0" name="Angular velocity">-AngVel</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="6855991756605378">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="1589522347174899" type="Gamepad">
+                                    <param id="0" name="Gamepad">3</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">0.2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="9" name="Set angular velocity" sid="3145805547260966" type="Bird4">
+                                    <param id="0" name="Angular velocity">AngVel</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2507616866975822">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="9175894189042107" type="Gamepad">
+                                    <param id="0" name="Gamepad">3</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">3</param>
+                                    <param id="3" name="Value">0.2</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" sid="5713123857065513" type="Gamepad">
+                                    <param id="0" name="Gamepad">3</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">5</param>
+                                    <param id="3" name="Value">-0.2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="9" name="Set angular velocity" sid="4691677339919985" type="Bird4">
+                                    <param id="0" name="Angular velocity">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="1086760276175684">
+                            <conditions>
+                                <condition id="6" name="On button pressed" sid="6285288589016808" type="Gamepad">
+                                    <param id="0" name="Gamepad">3</param>
+                                    <param id="1" name="Button">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="24" name="Set prevent rotation" sid="2599752653156001" type="Bird4">
+                                    <param id="0" name="Setting">1</param>
+                                </action>
+                                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="5558801574228388" type="Bird4">
+                                    <param id="0" name="Impulse">Impulse</param>
+                                    <param id="1" name="Angle">Bird4.Angle</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="6606427444262895" type="Bird4">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action behavior="Physics" id="24" name="Set prevent rotation" sid="3737337144767121" type="Bird4">
+                                    <param id="0" name="Setting">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="9120993255969162">
+                            <conditions>
+                                <condition id="7" name="On button released" sid="2796302051809461" type="Gamepad">
+                                    <param id="0" name="Gamepad">3</param>
+                                    <param id="1" name="Button">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="1161780136608967" type="Bird4">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="4331385290435061">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="31860273766826" type="System" />
+                        <condition id="-13" name="Is between angles" sid="9227209952458142" type="Bird4">
+                            <param id="0" name="First angle">91</param>
+                            <param id="1" name="Second angle">269</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set flipped" sid="429295637055569" type="Bird4">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="8" name="Set flipped" sid="8198767709198749" type="Beak4">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7860361313814033">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2540681603072243" type="Bird4">
+                            <param id="0" name="Object">Button</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="5875835492420603" type="System">
+                            <param id="0" name="Layout">Sky Arena</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block collapsed="1" sid="8441760071259888">
             <conditions>
-                <condition id="-1" name="Every tick" sid="757303372984767" type="System" />
+                <condition id="0" name="On function" sid="3708284663314819" type="Function">
+                    <param id="0" name="Name">&quot;CreateBird&quot;</param>
+                </condition>
             </conditions>
-            <actions>
-                <action id="-4" name="Set position to another object" sid="6679567778656153" type="Sprite4">
-                    <param id="0" name="Object">Bird1</param>
-                    <param id="1" name="Image point (optional)">0</param>
-                </action>
-                <action id="-4" name="Set position to another object" sid="1119475530691754" type="Sprite7">
-                    <param id="0" name="Object">Bird2</param>
-                    <param id="1" name="Image point (optional)">0</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="7617744028252953">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="7322061408309742" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="4524716483284214" type="System">
+                            <param id="0" name="Object to create">Bird1</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">Function.Param(1)</param>
+                            <param id="3" name="Y">Function.Param(2)</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="432881610095174" type="Beak1">
+                            <param id="0" name="Pin to">Bird1</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3514314263282773">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="5288553685301992" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="9873781840463949" type="System">
+                            <param id="0" name="Object to create">Bird2</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">Function.Param(1)</param>
+                            <param id="3" name="Y">Function.Param(2)</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="9219700741379294" type="Beak2">
+                            <param id="0" name="Pin to">Bird2</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7116796905402427">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="4228082119030003" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="5569446817092675" type="System">
+                            <param id="0" name="Object to create">Bird3</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">Function.Param(1)</param>
+                            <param id="3" name="Y">Function.Param(2)</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="8772414827205397" type="Beak3">
+                            <param id="0" name="Pin to">Bird3</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8806948880570942">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="7035170659223027" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;4&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="2445109642721908" type="System">
+                            <param id="0" name="Object to create">Bird4</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">Function.Param(1)</param>
+                            <param id="3" name="Y">Function.Param(2)</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="6829228001559206" type="Beak4">
+                            <param id="0" name="Pin to">Bird4</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

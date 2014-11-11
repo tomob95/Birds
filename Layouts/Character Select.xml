@@ -344,6 +344,13 @@
                 <depth>1</depth>
             </properties>
         </instance>
+        <instance type="P1Custom" uid="27">
+            <properties>
+                <width>5</width>
+                <height>4</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
     </nonworld-instances>
     <effects />
 </c2layout>

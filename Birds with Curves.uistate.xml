@@ -11,9 +11,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>Sky Arena</layout>
-        <layout>Title Screen</layout>
-        <layout>Instances</layout>
-        <event-sheet active="1">Sky Event Sheet</event-sheet>
+        <layout active="1">Title Screen</layout>
+        <layout>Global Include</layout>
+        <event-sheet>Global Event Sheet</event-sheet>
+        <event-sheet>Sky Event Sheet</event-sheet>
+        <event-sheet>Title Screen Sheet</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -21,5 +23,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="1" />
+    <families-expanded root="1">
+        <family expanded="0" name="Birds" />
+        <family expanded="0" name="Player1Menu" />
+        <family expanded="0" name="Player2Menu" />
+    </families-expanded>
 </c2uistate>

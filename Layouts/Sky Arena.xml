@@ -2,7 +2,7 @@
 <c2layout>
     <name>Sky Arena</name>
     <sid>1337836180969899</sid>
-    <event-sheet>Sky Event Sheet</event-sheet>
+    <event-sheet>Global Event Sheet</event-sheet>
     <size>
         <width>2880</width>
         <height>1620</height>
@@ -81,11 +81,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1447.555175781</x>
-                        <y>814.249816895</y>
+                        <x>1441.669921875</x>
+                        <y>810.939453125</y>
                         <z>0</z>
-                        <width>2895.110351563</width>
-                        <height>1628.499633789</height>
+                        <width>2906.880615234</width>
+                        <height>1635.120361328</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -468,13 +468,29 @@
                         <grow-rate-randomiser>0</grow-rate-randomiser>
                         <particle-lifetime-properties></particle-lifetime-properties>
                         <acceleration>-150</acceleration>
-                        <gravity>100</gravity>
+                        <gravity>0</gravity>
                         <angle-randomiser>0</angle-randomiser>
                         <speed-randomiser>800</speed-randomiser>
                         <opacity-randomiser>0</opacity-randomiser>
                         <destroy-mode>Fade to invisible</destroy-mode>
                         <timeout>2</timeout>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>No</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>No</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -514,12 +530,12 @@
                 </instance>
                 <instance type="FireTrailParticle" uid="56">
                     <properties>
-                        <rate>50</rate>
+                        <rate>15</rate>
                         <spray-cone>60</spray-cone>
                         <type>Continuous spray</type>
                         <initial-particle-properties></initial-particle-properties>
-                        <speed>200</speed>
-                        <size>32</size>
+                        <speed>50</speed>
+                        <size>75</size>
                         <opacity>100</opacity>
                         <grow-rate>0</grow-rate>
                         <x-randomiser>0</x-randomiser>
@@ -1037,6 +1053,31 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="StunAnimation" uid="86">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2813</x>
+                        <y>1999</y>
+                        <z>0</z>
+                        <width>250</width>
+                        <height>250</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

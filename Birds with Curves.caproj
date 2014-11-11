@@ -11,6 +11,7 @@
     <saved-with-version>17800</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
@@ -18,6 +19,7 @@
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
         <plugin author="Scirra" id="sliderbar" version="1">Slider bar</plugin>
     </used-plugins>
     <used-behaviors>
@@ -52,7 +54,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D web</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">Internet Explorer</prop>
+        <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -239,7 +241,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="Technical">
+        <object-folder expanded="0" name="Technical">
             <object-type name="Keyboard" sid="3468836939450099">
                 <plugin id="Keyboard" />
             </object-type>
@@ -351,6 +353,23 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="PlayerReady" sid="2595737026035133">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9955695357833291" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PlayerNotReady" sid="2028573579605878">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7047894052206045" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder expanded="1" name="PowerUps">
             <object-type name="Lightning" sid="8173271990812038">
@@ -415,7 +434,7 @@
             </object-type>
             <object-type name="FireTrailParticle" sid="1964850229244955">
                 <plugin id="Particles" />
-                <texture />
+                <texture original-source="H:\GitHub\Birds\Sprites\Fire_Particle.png" />
             </object-type>
             <object-type name="Blink" sid="6173106099643949">
                 <plugin id="Sprite" />
@@ -448,7 +467,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="StunAnimationP1" sid="1418547932240094">
+            <object-type name="StunAnimation" sid="1418547932240094">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="Pin" sid="3528303290860947">
@@ -465,51 +484,8 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="InvulnerabilityAnimationP1" sid="6301058810526672">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Pin" sid="8013731356792135">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder expanded="1">
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8842718037479469" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="H:\GitHub\Birds\Sprites\Invulnerability_Sphere.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="InvulnerabilityAnimationP2" sid="5290340316144496">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Pin" sid="4793915783088956">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder expanded="1">
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4993809104722832" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="H:\GitHub\Birds\Sprites\Invulnerability_Sphere.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="StunAnimationP2" sid="9672978573357207">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Pin" sid="1830984209461546">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder expanded="1">
-                    <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6601296922226302" speed="10">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\Jared.Trail\Downloads\Stun-2014-11-04\Stun\Birds_Stun-Animation1.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\Jared.Trail\Downloads\Stun-2014-11-04\Stun\Birds_Stun-Animation2.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\Jared.Trail\Downloads\Stun-2014-11-04\Stun\Birds_Stun-Animation3.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\Jared.Trail\Downloads\Stun-2014-11-04\Stun\Birds_Stun-Animation4.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\Jared.Trail\Downloads\Stun-2014-11-04\Stun\Birds_Stun-Animation5.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
         </object-folder>
-        <object-folder expanded="1" name="ScoreBoard">
+        <object-folder expanded="0" name="ScoreBoard">
             <object-type name="Player2Score" sid="5168464840623875">
                 <plugin id="Text" />
             </object-type>
@@ -613,7 +589,7 @@
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="536273017237254" speed="5">
-                        <frame duration="1" hotspotX="0.500252" hotspotY="0.5" original-source="C:\Users\Tom\Documents\GitHub\Birds\Sprites\TitleScreen.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\Jared.Trail\Downloads\mainmenu_.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -708,8 +684,100 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="PowerupControl" sid="7781772316053985">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6411637319564932" speed="5">
+                        <frame duration="1" hotspotX="0.501493" hotspotY="0.501393" original-source="D:\Users\Jared.Trail\Downloads\documents-export-2014-11-04 (1)\MM_Power_Ups_aCTIVATION.png">
+                            <collision-poly>
+                                <point x="0.226471" y="0.0398551" />
+                                <point x="0.5" y="0.111801" />
+                                <point x="0.779412" y="0.0388199" />
+                                <point x="0.676471" y="0.5" />
+                                <point x="0.908824" y="0.983954" />
+                                <point x="0.147059" y="0.97412" />
+                                <point x="0.288235" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Sprite8" sid="5271783255919557">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3489927162304983" speed="5">
+                        <frame duration="1" hotspotX="0.501484" hotspotY="0.501285" original-source="D:\Users\Jared.Trail\Downloads\documents-export-2014-11-04 (1)\MM_Power_Ups_Fire.png">
+                            <collision-poly>
+                                <point x="0.287834" y="0.249357" />
+                                <point x="0.498516" y="0.0539846" />
+                                <point x="0.724036" y="0.239075" />
+                                <point x="0.908012" y="0.920308" />
+                                <point x="0.498516" y="0.830334" />
+                                <point x="0.148368" y="0.871465" />
+                                <point x="0.267062" y="0.498715" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Sprite9" sid="2000548379626562">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4728239695990567" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501279" original-source="D:\Users\Jared.Trail\Downloads\documents-export-2014-11-04 (1)\MM_Power_Ups_Inva.png">
+                            <collision-poly>
+                                <point x="0.281065" y="0.242967" />
+                                <point x="0.5" y="0.0997442" />
+                                <point x="0.704142" y="0.255754" />
+                                <point x="0.739645" y="0.498721" />
+                                <point x="0.872781" y="0.890026" />
+                                <point x="0.127219" y="0.890026" />
+                                <point x="0.242604" y="0.498721" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Sprite10" sid="6114046409191543">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3848108791044283" speed="5">
+                        <frame duration="1" hotspotX="0.501484" hotspotY="0.501279" original-source="D:\Users\Jared.Trail\Downloads\documents-export-2014-11-04 (1)\MM_Power_Ups_stun.png">
+                            <collision-poly>
+                                <point x="0.308605" y="0.265985" />
+                                <point x="0.498516" y="0.104859" />
+                                <point x="0.697329" y="0.26087" />
+                                <point x="0.768546" y="0.498721" />
+                                <point x="0.593472" y="0.649616" />
+                                <point x="0.498516" y="0.859335" />
+                                <point x="0.41543" y="0.641944" />
+                                <point x="0.234421" y="0.498721" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Sprite11" sid="8851624336607373">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8922025915753553" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501279" original-source="D:\Users\Jared.Trail\Downloads\documents-export-2014-11-04 (1)\MM_Power_UpsDash.png">
+                            <collision-poly>
+                                <point x="0.301775" y="0.26087" />
+                                <point x="0.5" y="0.14578" />
+                                <point x="0.736686" y="0.227621" />
+                                <point x="0.772189" y="0.498721" />
+                                <point x="0.597633" y="0.652174" />
+                                <point x="0.5" y="0.959079" />
+                                <point x="0.369822" y="0.680307" />
+                                <point x="0.147929" y="0.498721" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
-        <object-folder expanded="1" name="PowerUps HUD">
+        <object-folder expanded="0" name="PowerUps HUD">
             <object-type name="LightningHUDP1" sid="8200403426538862">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
@@ -851,6 +919,188 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder expanded="1" name="Player3">
+            <object-type name="Beak3" sid="3893395135112039">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="6481958295299631">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                    <behavior-type name="Physics" sid="4529418697486188">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="Solid" sid="6834024139782007">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6653673683006815" speed="5">
+                        <frame duration="1" hotspotX="0.558376" hotspotY="0.611675" original-source="H:\GitHub\Birds\Sprites\Bird\green_beak.png">
+                            <collision-poly>
+                                <point x="0.819837" y="0.642111" />
+                                <point x="0.801625" y="0.590678" />
+                                <point x="0.818187" y="0.544784" />
+                                <point x="0.875427" y="0.504823" />
+                                <point x="0.994143" y="0.582788" />
+                                <point x="0.860421" y="0.679684" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Bird3" sid="7183473920168979">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="SpawnX" sid="9541723851309858" type="number" />
+                    <instance-variable name="SpawnY" sid="9899330833797062" type="number" />
+                    <instance-variable name="Dead" sid="46898949367102" type="number" />
+                    <instance-variable name="Respawn" sid="2684406397149067" type="number" />
+                    <instance-variable name="Lightning" sid="4198791194147026" type="boolean" />
+                    <instance-variable name="Invulnerability" sid="9457916754622069" type="boolean" />
+                    <instance-variable name="FireTrail" sid="1934072557531631" type="boolean" />
+                    <instance-variable name="LightningStored" sid="4008055439391285" type="boolean" />
+                    <instance-variable name="FireTrailStored" sid="3703927763264337" type="boolean" />
+                    <instance-variable name="InvulnerabilityStored" sid="2111985627758617" type="boolean" />
+                    <instance-variable name="BlinkStored" sid="2529365617766645" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Physics" sid="1033707551780108">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="LineOfSight" sid="2484683871847906">
+                        <behavior id="LOS" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3316983939056442" speed="5">
+                        <frame duration="1" hotspotX="0.558376" hotspotY="0.611675" original-source="H:\GitHub\Birds\Sprites\Bird\green.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                            <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                            <collision-poly>
+                                <point x="0.262872" y="0.517505" />
+                                <point x="0.331963" y="0.39775" />
+                                <point x="0.492838" y="0.294504" />
+                                <point x="0.641023" y="0.295319" />
+                                <point x="0.76734" y="0.406087" />
+                                <point x="0.854907" y="0.544989" />
+                                <point x="0.83824" y="0.70946" />
+                                <point x="0.720792" y="0.851577" />
+                                <point x="0.567869" y="0.916096" />
+                                <point x="0.414947" y="0.879092" />
+                                <point x="0.287838" y="0.73011" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.558376" hotspotY="0.596447" original-source="H:\GitHub\Birds\Sprites\Bird\green_flap.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                            <collision-poly>
+                                <point x="0.503989" y="0.28654" />
+                                <point x="0.644147" y="0.291151" />
+                                <point x="0.759726" y="0.401011" />
+                                <point x="0.852369" y="0.52976" />
+                                <point x="0.843317" y="0.679003" />
+                                <point x="0.743635" y="0.843962" />
+                                <point x="0.554541" y="0.919701" />
+                                <point x="0.404692" y="0.866784" />
+                                <point x="0.294235" y="0.743879" />
+                                <point x="0.264387" y="0.525065" />
+                                <point x="0.371595" y="0.362089" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder expanded="1" name="Player4">
+            <object-type name="Bird4" sid="2558643541236961">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="SpawnX" sid="2718377691023512" type="number" />
+                    <instance-variable name="SpawnY" sid="8560098827340884" type="number" />
+                    <instance-variable name="Dead" sid="5608952663991917" type="number" />
+                    <instance-variable name="Respawn" sid="7684950937509831" type="number" />
+                    <instance-variable name="Lightning" sid="630987114017791" type="boolean" />
+                    <instance-variable name="Invulnerability" sid="9220941339771086" type="boolean" />
+                    <instance-variable name="FireTrail" sid="1043871236896293" type="boolean" />
+                    <instance-variable name="LightningStored" sid="187450826387551" type="boolean" />
+                    <instance-variable name="FireTrailStored" sid="8012067097361065" type="boolean" />
+                    <instance-variable name="InvulnerabilityStored" sid="108960661334923" type="boolean" />
+                    <instance-variable name="BlinkStored" sid="5016918153596713" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Physics" sid="9822903338361942">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="LineOfSight" sid="4569784642211464">
+                        <behavior id="LOS" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8911166772996815" speed="5">
+                        <frame duration="1" hotspotX="0.558376" hotspotY="0.611675" original-source="H:\GitHub\Birds\Sprites\Bird\red.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                            <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                            <collision-poly>
+                                <point x="0.262872" y="0.517505" />
+                                <point x="0.331963" y="0.39775" />
+                                <point x="0.492838" y="0.294504" />
+                                <point x="0.641023" y="0.295319" />
+                                <point x="0.76734" y="0.406087" />
+                                <point x="0.854907" y="0.544989" />
+                                <point x="0.83824" y="0.70946" />
+                                <point x="0.720792" y="0.851577" />
+                                <point x="0.567869" y="0.916096" />
+                                <point x="0.414947" y="0.879092" />
+                                <point x="0.287838" y="0.73011" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.558376" hotspotY="0.596447" original-source="H:\GitHub\Birds\Sprites\Bird\red_flap.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                            <collision-poly>
+                                <point x="0.503989" y="0.28654" />
+                                <point x="0.644147" y="0.291151" />
+                                <point x="0.759726" y="0.401011" />
+                                <point x="0.852369" y="0.52976" />
+                                <point x="0.843317" y="0.679003" />
+                                <point x="0.743635" y="0.843962" />
+                                <point x="0.554541" y="0.919701" />
+                                <point x="0.404692" y="0.866784" />
+                                <point x="0.294235" y="0.743879" />
+                                <point x="0.264387" y="0.525065" />
+                                <point x="0.371595" y="0.362089" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Beak4" sid="1642239225430798">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="5304979399085873">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                    <behavior-type name="Physics" sid="1225825597357783">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="Solid" sid="9593086193639925">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9684891503788266" speed="5">
+                        <frame duration="1" hotspotX="0.558376" hotspotY="0.611675" original-source="H:\GitHub\Birds\Sprites\Bird\red_beak.png">
+                            <collision-poly>
+                                <point x="0.819837" y="0.642111" />
+                                <point x="0.801625" y="0.590678" />
+                                <point x="0.818187" y="0.544784" />
+                                <point x="0.875427" y="0.504823" />
+                                <point x="0.994143" y="0.582788" />
+                                <point x="0.860421" y="0.679684" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="Sprite2" sid="1826255207031328">
             <plugin id="Sprite" />
             <behaviors>
@@ -889,7 +1139,12 @@
         </object-type>
         <object-type name="Particles" sid="4932510247084087">
             <plugin id="Particles" />
-            <texture original-source="F:\MDS\GAD1J01 Game Design Principles\MakeAGame\Sprites\feather.png" />
+            <behaviors>
+                <behavior-type name="Physics" sid="9883109316908009">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="D:\Users\Jared.Trail\Downloads\documents-export-2014-11-04\feather_01.png" />
         </object-type>
         <object-type name="Sprite" sid="489327409853344">
             <plugin id="Sprite" />
@@ -1069,24 +1324,62 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Gamepad" sid="7149718995247592">
+            <plugin id="gamepad" />
+        </object-type>
+        <object-type name="Function" sid="4850138982056886">
+            <plugin id="Function" />
+        </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="Birds" plugin-id="Sprite" sid="9219557675514951">
+            <members>
+                <member>Bird1</member>
+                <member>Bird2</member>
+                <member>Bird3</member>
+                <member>Bird4</member>
+            </members>
+        </family>
+        <family name="Player1Menu" plugin-id="Sprite" sid="8469852289783012">
+            <members>
+                <member>Beak1</member>
+                <member>Bird1</member>
+                <member>Sprite4</member>
+            </members>
+        </family>
+        <family name="Player2Menu" plugin-id="Sprite" sid="5782776498701533">
+            <members>
+                <member>Beak2</member>
+                <member>Beak3</member>
+                <member>Beak4</member>
+                <member>Bird2</member>
+                <member>Bird3</member>
+                <member>Bird4</member>
+                <member>Sprite7</member>
+            </members>
+        </family>
+    </families>
     <layout-folder expanded="1">
-        <layout>Game Test.xml</layout>
         <layout>Character Select.xml</layout>
         <layout>Sky Arena.xml</layout>
         <layout>Title Screen.xml</layout>
-        <layout>Instances.xml</layout>
+        <layout>Global Include.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-sheet>Game Test.xml</event-sheet>
         <event-sheet>Character Select.xml</event-sheet>
-        <event-sheet>Sky Event Sheet.xml</event-sheet>
+        <event-sheet>Global Event Sheet.xml</event-sheet>
         <event-sheet>Title Screen Sheet.xml</event-sheet>
+        <event-sheet>Sky Event Sheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="5" />
         <global-instance type="Mouse" uid="41" />
+        <global-instance type="Gamepad" uid="92">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="4" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
